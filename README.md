@@ -926,4 +926,131 @@ Big Data refere-se a grandes volumes de dados complexos que são gerados a uma a
 
 
 # Questoes discursivas
+### Questão 1
+Explique o conceito de Big Data e discuta como os "5 Vs" (Volume, Velocidade, Variedade, Veracidade e Valor) caracterizam este fenômeno. 
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+Big Data refere-se ao conjunto de grandes volumes de dados que são gerados, armazenados e analisados com alta velocidade e em formatos variados. Os "5 Vs" caracterizam o Big Data da seguinte forma:
+
+- **Volume**: Refere-se à quantidade massiva de dados gerados a partir de múltiplas fontes, como redes sociais, sensores IoT e transações financeiras.
+- **Velocidade**: Diz respeito à rapidez com que os dados são gerados e precisam ser processados para fornecer informações em tempo real.
+- **Variedade**: Representa a diversidade de formatos de dados, incluindo dados estruturados, semiestruturados (JSON, XML) e não estruturados (vídeos, imagens).
+- **Veracidade**: Refere-se à qualidade e confiabilidade dos dados, um desafio devido à variabilidade nas fontes.
+- **Valor**: Destaca a importância de extrair insights úteis e acionáveis dos dados para apoiar a tomada de decisões.
+</details>
+
+---
+
+### Questão 2
+Descreva as diferenças entre um Data Warehouse e um Data Lake, destacando os casos de uso para cada um.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+Um **Data Warehouse** é um repositório de dados estruturados otimizado para consultas complexas e relatórios. Ele organiza os dados em tabelas e é ideal para análises de dados históricos e relatórios financeiros. 
+
+Um **Data Lake**, por outro lado, armazena dados em sua forma bruta, sem a necessidade de estruturação prévia. Ele é adequado para armazenar grandes volumes de dados de várias fontes em diferentes formatos (estruturados, semiestruturados e não estruturados) e é amplamente usado em análises exploratórias e aprendizado de máquina.
+
+- **Casos de uso Data Warehouse**: Relatórios financeiros, análises de vendas e indicadores de desempenho.
+- **Casos de uso Data Lake**: Análise de dados de sensores, redes sociais e experimentações com aprendizado de máquina.
+</details>
+
+---
+
+### Questão 3
+Explique o que é um modelo de dados orientado a grafos e forneça um exemplo de aplicação prática onde esse modelo é ideal.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+O modelo de dados orientado a grafos armazena informações como nós (entidades), arestas (relações) e propriedades (atributos de nós e arestas), sendo ideal para representar e consultar conexões complexas entre entidades. Esse modelo é amplamente utilizado para explorar redes sociais, onde se busca identificar conexões entre usuários, como amigos em comum, ou em sistemas de recomendação que identificam itens semelhantes com base nas interações de usuários.
+
+- **Exemplo de aplicação**: Redes sociais como Facebook, onde o modelo de grafos é usado para explorar as conexões entre usuários e para sugerir novas amizades com base nas interações já existentes.
+</details>
+
+---
+
+### Questão 4
+O que é ingestão de dados em lote (batch) e em tempo real (stream)? Compare os dois métodos destacando vantagens e desvantagens.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+**Ingestão em lote (batch)** processa grandes volumes de dados em intervalos regulares, permitindo que dados sejam coletados, agrupados e processados de uma só vez. Vantagens incluem eficiência em grandes volumes e uso de recursos controlado; desvantagens são o atraso no processamento e a falta de suporte para ações em tempo real.
+
+**Ingestão em tempo real (stream)** processa dados continuamente assim que são gerados, permitindo decisões imediatas e ações rápidas. Suas vantagens incluem baixa latência e suporte a ações em tempo real; desvantagens envolvem maior complexidade de implementação e maior uso contínuo de recursos.
+
+- **Batch** é ideal para relatórios periódicos.
+- **Stream** é essencial para monitoramento em tempo real, como detecção de fraudes.
+</details>
+
+---
+
+### Questão 5
+Descreva a função do HDFS (Hadoop Distributed File System) no contexto do Big Data e como ele garante a tolerância a falhas.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+O HDFS é o sistema de arquivos distribuído do Hadoop, projetado para armazenar grandes volumes de dados em clusters de servidores. Ele divide os dados em blocos e os distribui pelos nós do cluster, replicando-os para garantir a disponibilidade e tolerância a falhas. Se um nó falhar, os dados ainda podem ser acessados a partir das réplicas em outros nós, garantindo a continuidade do processamento sem perda de informações.
+</details>
+
+---
+
+### Questão 6
+Explique o que são metadados em bases de dados e qual é sua importância na gestão de dados.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+Metadados são informações que descrevem as características de outros dados, como tipo, formato, estrutura e restrições. Em bases de dados, metadados definem a estrutura das tabelas, tipos de colunas, chaves primárias e estrangeiras, e regras de integridade. Eles são essenciais para garantir a organização, compreensão, e consistência dos dados, facilitando a gestão e o uso eficiente da base de dados.
+</details>
+
+---
+
+### Questão 7
+Discuta as principais características de um SGBD NoSQL e seus casos de uso mais comuns.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+SGBDs NoSQL são sistemas de gerenciamento de bases de dados projetados para lidar com grandes volumes de dados não estruturados ou semiestruturados. Suas principais características incluem flexibilidade de esquema, alta escalabilidade horizontal, e desempenho otimizado para grandes volumes de leitura e escrita.
+
+- **Casos de uso comuns**: Aplicações de redes sociais, armazenando posts e interações em formatos flexíveis, e sistemas de e-commerce, onde a rápida adaptação do modelo de dados é necessária para novos produtos e categorias.
+</details>
+
+---
+
+### Questão 8
+Defina o conceito de Data Lakehouse e explique como ele combina características de Data Lakes e Data Warehouses.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+Data Lakehouse é uma arquitetura de armazenamento que combina a flexibilidade de Data Lakes com a performance e governança de Data Warehouses. Ele permite armazenar dados brutos em formatos variados, ao mesmo tempo que oferece suporte a consultas analíticas rápidas sobre esses dados, com funcionalidades de governança e otimização que são típicas de Data Warehouses.
+</details>
+
+---
+
+### Questão 9
+Explique como o Apache Spark se diferencia do Hadoop MapReduce em termos de processamento de dados.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+O Apache Spark diferencia-se do Hadoop MapReduce principalmente pela sua capacidade de processar dados em memória, o que reduz significativamente o tempo de execução de tarefas, especialmente para análises repetitivas ou interativas. Enquanto o MapReduce utiliza disco para cada etapa do processamento, o Spark mantém os dados em memória, acelerando o processamento e permitindo o uso para análise em tempo real e aprendizado de máquina.
+</details>
+
+---
+
+### Questão 10
+Discuta os principais usos e vantagens do modelo colunar de armazenamento de dados em comparação com o modelo relacional tradicional.
+
+<details>
+<summary><strong>Resposta</strong></summary>
+
+O modelo colunar armazena dados por colunas em vez de linhas, otimizando o armazenamento e a leitura de colunas específicas, o que é vantajoso para consultas analíticas. Comparado ao modelo relacional tradicional, que armazena dados em linhas, o modelo colunar reduz o volume de dados lidos para consultas que envolvem apenas algumas colunas, aumentando significativamente o desempenho de análises e relatórios complexos, especialmente em grandes volumes de dados.
+</details>
 
