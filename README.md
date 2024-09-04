@@ -525,3 +525,405 @@ Big Data refere-se a grandes volumes de dados complexos que são gerados a uma a
 - **Conceito de Big Data**: Questões podem focar nas características dos 5 Vs e em exemplos práticos de Big Data.
 - **Ferramentas de Big Data**: Perguntas podem abordar as funções e características de Hadoop, HDFS, MapReduce e Spark, incluindo suas vantagens e casos de uso específicos.
 - **Diferenças entre MapReduce e Spark**: Pode ser explorada a eficiência de cada ferramenta e seu impacto na velocidade e flexibilidade do processamento de grandes volumes de dados.
+
+# Questoes discursivas
+
+### Questão 1
+**Qual dos seguintes componentes do Apache Hadoop é responsável por armazenar grandes conjuntos de dados de forma distribuída?**
+
+- A) MapReduce
+- B) Spark
+- C) HDFS
+- D) Hive
+
+<details>
+<summary><strong>Resposta: C) HDFS</strong></summary>
+
+**Explicação:**
+- **C) HDFS (Hadoop Distributed File System)** é o sistema de arquivos distribuído do Hadoop que armazena grandes volumes de dados de forma redundante em clusters, garantindo alta disponibilidade.
+- **A) MapReduce** é o modelo de programação do Hadoop para processamento de dados, mas não é responsável pelo armazenamento.
+- **B) Spark** é um motor de processamento paralelo mais rápido que o MapReduce, mas não é usado para armazenamento de dados.
+- **D) Hive** é uma ferramenta para consulta de dados no Hadoop usando SQL-like, mas não armazena dados diretamente.
+</details>
+
+---
+
+### Questão 2
+**Qual é a principal diferença entre ingestão de dados em lote (batch) e em tempo real (stream)?**
+
+- A) Batch processa dados continuamente enquanto Stream processa dados periodicamente.
+- B) Batch lida com grandes volumes de dados em intervalos regulares, enquanto Stream processa dados conforme são gerados.
+- C) Batch é usado para processamento em tempo real e Stream para processamento offline.
+- D) Batch é mais rápido que Stream.
+
+<details>
+<summary><strong>Resposta: B) Batch lida com grandes volumes de dados em intervalos regulares, enquanto Stream processa dados conforme são gerados.</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Batch processa grandes volumes de dados em intervalos específicos, enquanto Stream processa dados continuamente à medida que são gerados.
+- **A) Errado**: É o oposto; Stream é o que processa continuamente.
+- **C) Errado**: Batch não é usado para tempo real, mas para processamentos periódicos.
+- **D) Errado**: Stream geralmente oferece processamento mais rápido por ser contínuo, enquanto Batch pode ter um atraso.
+</details>
+
+---
+
+### Questão 3
+**Qual das seguintes características é típica de um modelo de dados orientado a grafos?**
+
+- A) Armazenamento de dados em pares chave-valor.
+- B) Estruturação de dados em tabelas com colunas e linhas.
+- C) Representação de dados como nós, arestas e propriedades.
+- D) Organização de dados por colunas para leitura rápida.
+
+<details>
+<summary><strong>Resposta: C) Representação de dados como nós, arestas e propriedades.</strong></summary>
+
+**Explicação:**
+- **C) Correto**: O modelo de grafos é ideal para representar conexões complexas, como redes sociais.
+- **A) Errado**: Chave-valor é característico do modelo chave-valor.
+- **B) Errado**: Estruturas de tabelas são típicas de modelos relacionais.
+- **D) Errado**: A organização por colunas refere-se ao modelo colunar.
+</details>
+
+---
+
+### Questão 4
+**O que define um Data Lake em comparação a um Data Warehouse?**
+
+- A) Armazena apenas dados estruturados e altamente organizados.
+- B) Armazena dados em sua forma bruta, suportando diversos formatos.
+- C) É usado exclusivamente para relatórios financeiros.
+- D) Tem capacidade limitada para escalabilidade.
+
+<details>
+<summary><strong>Resposta: B) Armazena dados em sua forma bruta, suportando diversos formatos.</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Data Lakes armazenam dados brutos, sejam eles estruturados, semiestruturados ou não estruturados.
+- **A) Errado**: Esta é uma característica de Data Warehouses, que organizam dados de forma estruturada.
+- **C) Errado**: Data Warehouses são mais usados para relatórios financeiros.
+- **D) Errado**: Data Lakes são altamente escaláveis, ao contrário da opção sugerida.
+</details>
+
+---
+
+### Questão 5
+**Qual é o principal benefício de usar Apache Spark em comparação com MapReduce?**
+
+- A) Menor custo de implementação.
+- B) Suporte exclusivo para dados estruturados.
+- C) Processamento mais rápido devido ao uso de memória.
+- D) Melhor integração com SQL.
+
+<details>
+<summary><strong>Resposta: C) Processamento mais rápido devido ao uso de memória.</strong></summary>
+
+**Explicação:**
+- **C) Correto**: Spark armazena dados na memória durante o processamento, o que o torna significativamente mais rápido que o MapReduce, que usa disco para armazenar dados temporários.
+- **A) Errado**: O custo de implementação depende do contexto, mas não é um benefício específico do Spark.
+- **B) Errado**: Spark suporta tanto dados estruturados quanto não estruturados.
+- **D) Errado**: Ambos suportam SQL, mas a principal vantagem do Spark é sua velocidade.
+</details>
+
+---
+
+### Questão 6
+**Qual tipo de SGBD é mais adequado para aplicações que exigem alta escalabilidade horizontal e flexibilidade de esquema?**
+
+- A) SGBDs Relacionais (SQL)
+- B) SGBDs NoSQL
+- C) SGBDs Hierárquicos
+- D) SGBDs de Redes
+
+<details>
+<summary><strong>Resposta: B) SGBDs NoSQL</strong></summary>
+
+**Explicação:**
+- **B) Correto**: NoSQL é projetado para alta escalabilidade horizontal e flexibilidade de esquema, sendo ideal para aplicações modernas que lidam com grandes volumes de dados dinâmicos.
+- **A) Errado**: SGBDs Relacionais são menos escaláveis horizontalmente e possuem esquemas rígidos.
+- **C) Errado**: SGBDs Hierárquicos são antigos e não são usados para alta escalabilidade.
+- **D) Errado**: SGBDs de Redes são raramente usados atualmente e não oferecem a escalabilidade do NoSQL.
+</details>
+
+---
+
+### Questão 7
+**Em um modelo colunar, qual é a principal vantagem em relação aos modelos tradicionais de tabelas?**
+
+- A) Menor necessidade de armazenamento de dados.
+- B) Execução de consultas que envolvem múltiplas colunas é mais lenta.
+- C) Armazenamento de dados por colunas permite leituras rápidas de colunas específicas.
+- D) Melhor para operações de escrita do que leitura.
+
+<details>
+<summary><strong>Resposta: C) Armazenamento de dados por colunas permite leituras rápidas de colunas específicas.</strong></summary>
+
+**Explicação:**
+- **C) Correto**: Modelos colunares são otimizados para leituras rápidas de colunas específicas, o que acelera as consultas analíticas.
+- **A) Errado**: Embora seja eficiente, a redução do armazenamento depende de técnicas como compressão.
+- **B) Errado**: Consultas que envolvem múltiplas colunas podem ser otimizadas, mas o foco principal é na leitura de colunas isoladas.
+- **D) Errado**: Modelos colunares são mais eficientes para leitura, não escrita.
+</details>
+
+---
+
+### Questão 8
+**Qual das seguintes opções melhor descreve um Data Mart?**
+
+- A) Um repositório de dados brutos e não processados.
+- B) Uma versão focada e segmentada de um Data Warehouse para atender áreas específicas.
+- C) Um sistema de arquivos distribuídos para grandes volumes de dados.
+- D) Uma estrutura para análise de dados em tempo real.
+
+<details>
+<summary><strong>Resposta: B) Uma versão focada e segmentada de um Data Warehouse para atender áreas específicas.</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Data Marts são pequenas partes de um Data Warehouse, focadas em necessidades específicas de departamentos, como vendas ou marketing.
+- **A) Errado**: Essa é uma descrição de um Data Lake.
+- **C) Errado**: Isso descreve HDFS.
+- **D) Errado**: Análises em tempo real são mais características de sistemas de streaming.
+</details>
+
+---
+
+### Questão 9
+**Qual modelo de dados armazena informações como pares chave-valor?**
+
+- A) Modelo Relacional
+- B) Modelo Colunar
+- C) Modelo Orientado a Documentos
+- D) Modelo Chave-Valor
+
+<details>
+<summary><strong>Resposta: D) Modelo Chave-Valor</strong></summary>
+
+**Explicação:**
+- **D) Correto**: Este modelo armazena dados em pares chave-valor, sendo simples e rápido para operações de leitura e escrita.
+- **A) Errado**: O modelo relacional usa tabelas e chaves para relacionar dados.
+- **B) Errado**: Modelos colunares armazenam dados em colunas.
+- **C) Errado**: Modelos orientados a documentos usam estruturas como JSON ou BSON para armazenar dados.
+</details>
+
+---
+
+### Questão 10
+**Qual das seguintes ferramentas é mais adequada para processar grandes volumes de dados em tempo real?**
+
+- A) MapReduce
+- B) Apache Hive
+- C) Apache Spark
+- D) HDFS
+
+<details>
+<summary><strong>Resposta: C) Apache Spark</strong></summary>
+
+**Explicação:**
+- **C) Correto**: Apache Spark é ideal para processamento de dados em tempo real, além de ser mais rápido que MapReduce devido ao uso de memória.
+- **A) Errado**: MapReduce é eficiente para processamento em lote, mas não para tempo real.
+- **B) Errado**: Hive é usado para consultas SQL-like em Hadoop, não para processamento em tempo real.
+- **D) Errado**: HDFS é um sistema de armazenamento e não processa dados diretamente.
+</details>
+
+### Questão 11
+**Um cientista de dados está projetando um sistema para analisar grandes volumes de dados históricos e gerar relatórios complexos. Qual das seguintes opções de armazenamento seria mais apropriada para esta aplicação e por quê?**
+
+- A) Data Mart
+- B) Data Warehouse
+- C) Data Lake
+- D) Vector Store
+
+<details>
+<summary><strong>Resposta: B) Data Warehouse</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Um Data Warehouse é projetado para armazenar grandes volumes de dados históricos e otimizar consultas complexas, ideal para geração de relatórios.
+- **A) Errado**: Data Marts são versões menores de Data Warehouses, focadas em áreas específicas, não para análises complexas e gerais.
+- **C) Errado**: Data Lakes armazenam dados em forma bruta e não são otimizados para consultas estruturadas complexas.
+- **D) Errado**: Vector Stores são usados principalmente para armazenamento de representações vetoriais, não para análises históricas.
+</details>
+
+---
+
+### Questão 12
+**Qual modelo de dados seria mais adequado para um sistema de recomendação que precisa identificar conexões complexas entre diferentes entidades, como produtos e usuários?**
+
+- A) Modelo Relacional
+- B) Modelo Chave-Valor
+- C) Modelo Orientado a Documentos
+- D) Modelo Orientado a Grafos
+
+<details>
+<summary><strong>Resposta: D) Modelo Orientado a Grafos</strong></summary>
+
+**Explicação:**
+- **D) Correto**: O modelo de grafos é ideal para capturar e explorar relações complexas entre entidades, como as que existem em sistemas de recomendação.
+- **A) Errado**: O modelo relacional não é eficiente para consultas complexas de conexões entre entidades.
+- **B) Errado**: O modelo chave-valor é muito simples para capturar conexões complexas.
+- **C) Errado**: O modelo orientado a documentos é mais adequado para armazenar informações sem uma estrutura fixa, mas não para relações complexas.
+</details>
+
+---
+
+### Questão 13
+**Uma aplicação de IoT (Internet of Things) coleta dados de sensores a cada segundo e precisa processá-los imediatamente para gerar alertas. Qual método de ingestão de dados é mais adequado para essa aplicação?**
+
+- A) Ingestão em Lote (Batch)
+- B) Ingestão em Tempo Real (Stream)
+- C) Armazenamento em Data Lake
+- D) Indexação com MapReduce
+
+<details>
+<summary><strong>Resposta: B) Ingestão em Tempo Real (Stream)</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Ingestão em tempo real permite processar dados conforme são gerados, essencial para sistemas de IoT que exigem respostas imediatas.
+- **A) Errado**: Ingestão em lote é lenta e processa dados em intervalos, não adequado para necessidades em tempo real.
+- **C) Errado**: Data Lakes são usados para armazenar grandes volumes de dados brutos, não para processamento imediato.
+- **D) Errado**: MapReduce é usado para processamento distribuído de dados em lote, não em tempo real.
+</details>
+
+---
+
+### Questão 14
+**Uma empresa está desenvolvendo uma aplicação que requer consultas complexas sobre grandes volumes de dados e necessita de forte consistência transacional. Qual SGBD seria a melhor escolha?**
+
+- A) MongoDB
+- B) MySQL
+- C) Cassandra
+- D) Redis
+
+<details>
+<summary><strong>Resposta: B) MySQL</strong></summary>
+
+**Explicação:**
+- **B) Correto**: MySQL é um SGBD relacional que suporta transações ACID, garantindo forte consistência e é otimizado para consultas complexas.
+- **A) Errado**: MongoDB é NoSQL e não fornece consistência transacional como o MySQL.
+- **C) Errado**: Cassandra prioriza disponibilidade e escalabilidade, não consistência forte.
+- **D) Errado**: Redis é um banco de dados chave-valor usado principalmente para caching e não oferece suporte robusto a transações complexas.
+</details>
+
+---
+
+### Questão 15
+**Para um sistema de análise de sentimentos em redes sociais, onde os dados precisam ser processados rapidamente para fornecer insights quase em tempo real, qual ferramenta é mais adequada?**
+
+- A) Apache Hadoop
+- B) Apache Hive
+- C) Apache Spark
+- D) SQL Server
+
+<details>
+<summary><strong>Resposta: C) Apache Spark</strong></summary>
+
+**Explicação:**
+- **C) Correto**: Apache Spark é ideal para processamento em tempo real e é amplamente usado em análises rápidas como a de sentimentos.
+- **A) Errado**: Hadoop é mais lento devido ao uso do MapReduce e é mais adequado para processamento em lote.
+- **B) Errado**: Hive é usado para consultas em Hadoop e não é otimizado para tempo real.
+- **D) Errado**: SQL Server é bom para transações estruturadas, mas não é otimizado para análises rápidas em grandes volumes de dados.
+</details>
+
+---
+
+### Questão 16
+**Qual ferramenta é mais indicada para gerenciar um cluster de servidores de armazenamento de dados, permitindo alta disponibilidade e tolerância a falhas?**
+
+- A) MySQL
+- B) HDFS
+- C) PostgreSQL
+- D) MongoDB
+
+<details>
+<summary><strong>Resposta: B) HDFS</strong></summary>
+
+**Explicação:**
+- **B) Correto**: HDFS (Hadoop Distributed File System) é projetado para armazenar grandes volumes de dados com alta disponibilidade e tolerância a falhas através de replicação de dados entre nós do cluster.
+- **A) Errado**: MySQL pode ser configurado para alta disponibilidade, mas não é um sistema de arquivos distribuído.
+- **C) Errado**: PostgreSQL também pode ser configurado para alta disponibilidade, mas não é especializado em gerenciar clusters distribuídos.
+- **D) Errado**: MongoDB é uma base de dados NoSQL que oferece alta disponibilidade, mas o foco principal de HDFS é o armazenamento distribuído.
+</details>
+
+---
+
+### Questão 17
+**Qual modelo de armazenamento é mais eficiente para análises em que a leitura frequente de colunas específicas é necessária, como em relatórios de negócios?**
+
+- A) Modelo Relacional
+- B) Modelo Colunar
+- C) Modelo Orientado a Documentos
+- D) Modelo Chave-Valor
+
+<details>
+<summary><strong>Resposta: B) Modelo Colunar</strong></summary>
+
+**Explicação:**
+- **B) Correto**: O modelo colunar armazena dados por colunas, o que acelera a leitura de colunas específicas, ideal para consultas analíticas frequentes.
+- **A) Errado**: O modelo relacional armazena dados em linhas, o que pode ser mais lento para consultas que focam em colunas específicas.
+- **C) Errado**: Modelos orientados a documentos não são otimizados para leitura de colunas específicas.
+- **D) Errado**: O modelo chave-valor é muito básico para consultas analíticas complexas.
+</details>
+
+---
+
+### Questão 18
+**Qual das seguintes opções é um benefício do uso de Data Lakehouse em comparação com Data Lakes e Data Warehouses?**
+
+- A) Armazena apenas dados estruturados.
+- B) Combina a flexibilidade de Data Lakes com a performance de Data Warehouses.
+- C) É exclusivo para armazenamento de dados brutos.
+- D) Não oferece suporte para dados não estruturados.
+
+<details>
+<summary><strong>Resposta: B) Combina a flexibilidade de Data Lakes com a performance de Data Warehouses.</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Data Lakehouses combinam o melhor dos Data Lakes (flexibilidade para dados brutos) e dos Data Warehouses (performance para consultas).
+- **A) Errado**: Data Lakehouses suportam tanto dados estruturados quanto não estruturados.
+- **C) Errado**: Eles oferecem mais que armazenamento de dados brutos, permitindo também análises rápidas.
+- **D) Errado**: Suportam todos os tipos de dados, inclusive não estruturados.
+</details>
+
+---
+
+### Questão 19
+**Em uma aplicação que requer alto desempenho na leitura de grandes volumes de dados e suporta operações paralelas, qual modelo é mais adequado?**
+
+- A) Modelo Relacional
+- B) Modelo Colunar
+- C) Modelo Orientado a Grafos
+- D) Modelo Orientado a Documentos
+
+<details>
+<summary><strong>Resposta: B) Modelo Colunar</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Modelos colunares são otimizados para leituras rápidas de grandes volumes de dados, sendo ideais para análises paralelas.
+- **A) Errado**: Modelos relacionais não são tão rápidos quanto os colunares em leituras de dados massivos.
+- **C) Errado**: Modelos de grafos são melhores para explorar relacionamentos complexos.
+- **D) Errado**: Modelos orientados a documentos são flexíveis, mas não têm o desempenho otimizado para consultas massivas como os colunares.
+</details>
+
+---
+
+### Questão 20
+**Qual é a principal razão para escolher um Data Mart em vez de um Data Warehouse para uma equipe de vendas?**
+
+- A) Maior capacidade de armazenamento.
+- B) Focado nas necessidades específicas de um departamento.
+- C) Melhor desempenho para análises de big data.
+- D) Suporte exclusivo a dados não estruturados.
+
+<details>
+<summary><strong>Resposta: B) Focado nas necessidades específicas de um departamento.</strong></summary>
+
+**Explicação:**
+- **B) Correto**: Data Marts são projetados para atender necessidades específicas de um departamento, como vendas, oferecendo dados filtrados e relevantes.
+- **A) Errado**: Data Warehouses têm maior capacidade de armazenamento.
+- **C) Errado**: Data Warehouses são mais adequados para análises complexas de big data.
+- **D) Errado**: Ambos podem suportar dados semiestruturados, mas a característica principal do Data Mart é seu foco específico.
+</details>
+
+
+# Questoes discursivas
+
