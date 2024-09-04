@@ -469,6 +469,20 @@ Big Data refere-se a grandes volumes de dados complexos que são gerados a uma a
 
 ### 7.2 Técnicas e Ferramentas para Lidar com Big Data
 
+| **Aspecto**               | **Apache Spark**                                      | **Apache Hadoop**                               |
+|---------------------------|--------------------------------------------------------|-------------------------------------------------|
+| **Processamento**         | Em memória (rápido, iterativo).                       | Em disco (mais lento, batch).                   |
+| **Velocidade**            | Muito rápido, especialmente para análises iterativas. | Mais lento devido ao uso intensivo de disco.    |
+| **Facilidade de Uso**     | APIs amigáveis (Python, Scala, Java, R).              | Baseado em Java; mais complexo.                 |
+| **Armazenamento**         | Depende de HDFS ou outros sistemas.                   | HDFS (sistema de arquivos nativo).              |
+| **Iteração**              | Ideal para algoritmos iterativos.                     | Iterações custosas e lentas.                    |
+| **Tolerância a Falhas**   | Alta, com RDDs.                                       | Alta, com replicação no HDFS.                   |
+| **Streaming**             | Suporta streaming (Spark Streaming).                  | Não é nativo, mas integra-se com outras ferramentas. |
+| **Escalabilidade**        | Altamente escalável para Big Data.                    | Extremamente escalável.                         |
+| **Casos de Uso**          | Aprendizado de máquina, ETL, análises em tempo real.  | Processamento de batch, grandes arquivos.       |
+| **Complexidade**          | Requer ajustes de memória e configuração.             | Simples, mas menos eficiente sem otimizações.   |
+
+
 #### 7.2.1 Apache Hadoop
 
 - **Definição**: Hadoop é um framework de código aberto que permite o processamento distribuído de grandes volumes de dados em clusters de servidores utilizando um modelo de programação simplificado.
