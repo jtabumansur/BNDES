@@ -469,61 +469,35 @@ Big Data refere-se a grandes volumes de dados complexos que são gerados a uma a
 
 ### 7.2 Técnicas e Ferramentas para Lidar com Big Data
 
-| **Aspecto**               | **Apache Spark**                                      | **Apache Hadoop**                               |
-|---------------------------|--------------------------------------------------------|-------------------------------------------------|
-| **Processamento**         | Em memória (rápido, iterativo).                       | Em disco (mais lento, batch).                   |
-| **Velocidade**            | Muito rápido, especialmente para análises iterativas. | Mais lento devido ao uso intensivo de disco.    |
-| **Facilidade de Uso**     | APIs amigáveis (Python, Scala, Java, R).              | Baseado em Java; mais complexo.                 |
-| **Armazenamento**         | Depende de HDFS ou outros sistemas.                   | HDFS (sistema de arquivos nativo).              |
-| **Iteração**              | Ideal para algoritmos iterativos.                     | Iterações custosas e lentas.                    |
-| **Tolerância a Falhas**   | Alta, com RDDs.                                       | Alta, com replicação no HDFS.                   |
-| **Streaming**             | Suporta streaming (Spark Streaming).                  | Não é nativo, mas integra-se com outras ferramentas. |
-| **Escalabilidade**        | Altamente escalável para Big Data.                    | Extremamente escalável.                         |
-| **Casos de Uso**          | Aprendizado de máquina, ETL, análises em tempo real.  | Processamento de batch, grandes arquivos.       |
-| **Complexidade**          | Requer ajustes de memória e configuração.             | Simples, mas menos eficiente sem otimizações.   |
-
-
 #### 7.2.1 Apache Hadoop
 
 - **Definição**: Hadoop é um framework de código aberto que permite o processamento distribuído de grandes volumes de dados em clusters de servidores utilizando um modelo de programação simplificado.
 
-- **Componentes Principais**:
-  - **HDFS (Hadoop Distributed File System)**: Sistema de arquivos distribuído que armazena dados em múltiplos servidores, garantindo alta disponibilidade e redundância.
-  - **MapReduce**: Modelo de programação que divide tarefas de processamento de dados em dois estágios: map (mapeamento) e reduce (redução).
-
+  
 - **Características**:
   - Processamento paralelo de grandes volumes de dados.
   - Alta tolerância a falhas através da replicação de dados.
   - Escalabilidade horizontal, permitindo a adição de novos nós ao cluster conforme a necessidade.
 
-- **Caso de Uso**: Processamento de grandes conjuntos de dados para análises de mercado, detecção de fraudes, e indexação de grandes volumes de documentos.
+##### Componentes Principais do Hadoop**
 
-#### 7.2.2 HDFS (Hadoop Distributed File System)
-
-- **Definição**: HDFS é um sistema de arquivos distribuído projetado para armazenar grandes conjuntos de dados de forma redundante e acessível em clusters de servidores.
-
+1. Hadoop Distributed File System (HDFS) - **Armazenamento de Dados**
+- **Função**: HDFS é o sistema de arquivos distribuído do Hadoop, responsável por armazenar grandes volumes de dados em clusters de computadores. Ele divide os arquivos em blocos grandes e os distribui por diversos nós para garantir a escalabilidade e a tolerância a falhas.
 - **Características**:
-  - Armazena dados em blocos distribuídos entre múltiplos nós no cluster.
-  - Suporta alta tolerância a falhas replicando os dados em diferentes servidores.
-  - Permite o acesso rápido a dados de grandes volumes para processamento paralelo.
+  - Altamente escalável e robusto.
+  - Ideal para o armazenamento de grandes conjuntos de dados, permitindo leitura e escrita eficientes.
 
-- **Exemplo**: Uma empresa de análise de dados que precisa armazenar petabytes de dados históricos de vendas para análises futuras.
-
-#### 7.2.3 MapReduce
-
-- **Definição**: MapReduce é um modelo de programação utilizado no Hadoop que permite o processamento paralelo de grandes volumes de dados, dividindo o trabalho em duas fases: map (mapeamento) e reduce (redução).
-
-- **Fases**:
-  - **Map**: Divide a tarefa em pequenas partes e distribui para nós no cluster, onde os dados são processados de forma independente.
-  - **Reduce**: Agrega os resultados parciais e gera o resultado final.
-
+ 2. MapReduce - **Processamento de Dados**
+- **Função**: MapReduce é o modelo de programação do Hadoop que processa dados de forma paralela e distribuída. Ele divide as tarefas em dois passos principais:
+  - **Map**: Fase de mapeamento que processa dados de entrada e os transforma em pares de chave-valor.
+  - **Reduce**: Fase de redução que agrega os pares de chave-valor para produzir o resultado final.
 - **Características**:
-  - Permite o processamento escalável de dados em ambientes distribuídos.
-  - Gerencia automaticamente a divisão e recombinação de tarefas.
+  - Focado no processamento em lote.
+  - Ideal para grandes volumes de dados que não exigem processamento em tempo real.
 
-- **Caso de Uso**: Indexação de páginas da web para motores de busca, análise de grandes logs de servidores.
 
-#### 7.2.4 Apache Spark
+
+#### 7.2.2 Apache Spark
 
 - **Definição**: Spark é um motor de processamento de dados em tempo real, que oferece um modelo de programação flexível e acelera o processamento distribuído de grandes volumes de dados.
 
@@ -539,6 +513,21 @@ Big Data refere-se a grandes volumes de dados complexos que são gerados a uma a
 - **Conceito de Big Data**: Questões podem focar nas características dos 5 Vs e em exemplos práticos de Big Data.
 - **Ferramentas de Big Data**: Perguntas podem abordar as funções e características de Hadoop, HDFS, MapReduce e Spark, incluindo suas vantagens e casos de uso específicos.
 - **Diferenças entre MapReduce e Spark**: Pode ser explorada a eficiência de cada ferramenta e seu impacto na velocidade e flexibilidade do processamento de grandes volumes de dados.
+
+
+| **Aspecto**               | **Apache Spark**                                      | **Apache Hadoop**                               |
+|---------------------------|--------------------------------------------------------|-------------------------------------------------|
+| **Processamento**         | Em memória (rápido, iterativo).                       | Em disco (mais lento, batch).                   |
+| **Velocidade**            | Muito rápido, especialmente para análises iterativas. | Mais lento devido ao uso intensivo de disco.    |
+| **Facilidade de Uso**     | APIs amigáveis (Python, Scala, Java, R).              | Baseado em Java; mais complexo.                 |
+| **Armazenamento**         | Depende de HDFS ou outros sistemas.                   | HDFS (sistema de arquivos nativo).              |
+| **Iteração**              | Ideal para algoritmos iterativos.                     | Iterações custosas e lentas.                    |
+| **Tolerância a Falhas**   | Alta, com RDDs.                                       | Alta, com replicação no HDFS.                   |
+| **Streaming**             | Suporta streaming (Spark Streaming).                  | Não é nativo, mas integra-se com outras ferramentas. |
+| **Escalabilidade**        | Altamente escalável para Big Data.                    | Extremamente escalável.                         |
+| **Casos de Uso**          | Aprendizado de máquina, ETL, análises em tempo real.  | Processamento de batch, grandes arquivos.       |
+| **Complexidade**          | Requer ajustes de memória e configuração.             | Simples, mas menos eficiente sem otimizações.   |
+
 
 # Questoes discursivas
 
