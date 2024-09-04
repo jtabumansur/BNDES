@@ -310,5 +310,218 @@ Um Sistema Gerenciador de Base de Dados (SGBD) é um software que permite criar,
 
 - **Caso de Uso**: Melhorar o desempenho de consultas que buscam dados específicos em grandes tabelas.
 
+## 5. Modelo de Dados: modelo de entidade-relacionamento (ER); modelo relacional: tabelas, esquemas, chaves, consultas; dados estruturados, semiestruturados e não estruturados; modelo chave-valor; modelo colunar; modelo orientado a documentos; modelo orientado a grafos.
+
+### 5.1 Modelo de Entidade-Relacionamento (ER)
+
+- **Definição**: O Modelo de Entidade-Relacionamento (ER) é uma abordagem de modelagem de dados que descreve os dados em termos de entidades, atributos e relacionamentos. Ele é usado principalmente para o projeto de bases de dados relacionais.
+
+- **Componentes**:
+  - **Entidades**: Representam objetos ou conceitos do mundo real (ex.: Cliente, Produto).
+  - **Atributos**: Descrevem as propriedades das entidades (ex.: Nome, Idade).
+  - **Relacionamentos**: Definem como as entidades se conectam (ex.: Cliente compra Produto).
+
+- **Diagrama ER**: Visualiza a estrutura da base de dados e como os dados estão interligados.
+
+### 5.2 Modelo Relacional
+
+- **Definição**: O modelo relacional organiza os dados em tabelas (ou relações), onde cada tabela é composta por linhas (registros) e colunas (atributos). É a base dos SGBDs relacionais.
+
+- **Componentes**:
+  - **Tabelas**: Estruturas que armazenam dados organizados em linhas e colunas.
+  - **Esquemas**: Estrutura que define a organização do banco de dados, incluindo tabelas, colunas e relacionamentos.
+  - **Chaves**:
+    - **Chave Primária**: Identifica de forma única cada registro em uma tabela.
+    - **Chave Estrangeira**: Cria relacionamentos entre tabelas diferentes.
+  - **Consultas**: Realizadas através de SQL para inserir, atualizar, deletar e buscar dados.
+
+- **Exemplo**: Uma tabela de "Clientes" com colunas "ID", "Nome" e "Email".
+
+### 5.3 Dados Estruturados, Semiestruturados e Não Estruturados
+
+- **Dados Estruturados**: Organizados em um formato predefinido, como tabelas, onde cada dado segue um padrão específico.
+  - **Exemplo**: Tabelas em um banco de dados SQL.
+
+- **Dados Semiestruturados**: Possuem alguma estrutura, mas não são tão rígidos quanto os dados estruturados. Comuns em formatos como XML e JSON.
+  - **Exemplo**: Arquivos JSON que contêm pares chave-valor.
+
+- **Dados Não Estruturados**: Dados sem uma estrutura fixa, difíceis de categorizar em tabelas.
+  - **Exemplo**: E-mails, imagens, vídeos.
+
+### 5.4 Modelo Chave-Valor
+
+- **Definição**: Armazena dados em pares chave-valor, onde cada chave é única e associada a um valor. É simples e rápido para operações de leitura e escrita.
+
+- **Características**:
+  - Alta flexibilidade e escalabilidade.
+  - Sem estrutura rígida de dados.
+
+- **Caso de Uso**: Sessões de usuário, caching, e armazenamento de configurações.
+
+- **Exemplo**: Redis, Amazon DynamoDB.
+
+### 5.5 Modelo Colunar
+
+- **Definição**: Armazena dados por colunas em vez de linhas. Ideal para consultas que envolvem grandes volumes de dados, pois permite acesso rápido a colunas específicas.
+
+- **Características**:
+  - Otimizado para leitura de grandes volumes de dados.
+  - Suporta compressão eficiente.
+
+- **Caso de Uso**: Análise de grandes volumes de dados em data warehouses.
+
+- **Exemplo**: Apache Cassandra, Google Bigtable.
+
+### 5.6 Modelo Orientado a Documentos
+
+- **Definição**: Armazena dados como documentos, geralmente em formatos como JSON, BSON ou XML. Cada documento é autônomo, contendo todas as informações necessárias para ser compreendido.
+
+- **Características**:
+  - Flexibilidade na estrutura de dados.
+  - Ideal para aplicações que lidam com dados não estruturados.
+
+- **Caso de Uso**: Aplicações que exigem rápido desenvolvimento e iteração de modelos de dados.
+
+- **Exemplo**: MongoDB, CouchDB.
+
+### 5.7 Modelo Orientado a Grafos
+
+- **Definição**: Armazena dados como nós, arestas e propriedades, sendo ideal para representar e consultar relacionamentos complexos entre entidades.
+
+- **Características**:
+  - Otimizado para explorar conexões e relacionamentos.
+  - Excelente para consultas que envolvem redes e hierarquias.
+
+- **Caso de Uso**: Redes sociais, sistemas de recomendação, detecção de fraudes.
+
+- **Exemplo**: Neo4j, Amazon Neptune.
+
+### Resumo das Possíveis Cobranças em Provas:
+
+- **Modelo ER**: Questões podem abordar a criação de diagramas ER e a definição de entidades, atributos e relacionamentos.
+- **Modelo Relacional**: Perguntas podem focar na estrutura das tabelas, uso de chaves primárias e estrangeiras, e exemplos de consultas SQL.
+- **Dados Estruturados vs. Semiestruturados e Não Estruturados**: Podem ser cobradas as diferenças e exemplos de cada tipo de dado.
+- **Modelos de Dados Não Relacionais**: Questões podem explorar as características e casos de uso dos modelos chave-valor, colunar, orientado a documentos e orientado a grafos.
+## 6. Ingestão e Armazenamento de Dados: definição de ingestão em lote (batch) e em tempo real (stream).
+
+### 6.1 Definição de Ingestão de Dados
+
+Ingestão de dados refere-se ao processo de coletar, importar e carregar dados de várias fontes para um sistema de armazenamento, como bancos de dados, data lakes ou data warehouses, para posterior processamento e análise. A ingestão de dados pode ocorrer de duas formas principais: em lote (batch) e em tempo real (stream).
+
+### 6.2 Ingestão em Lote (Batch)
+
+- **Definição**: A ingestão em lote envolve a coleta e o processamento de dados em grandes volumes de uma só vez, em intervalos regulares. Os dados são agrupados e processados de forma sequencial, geralmente durante períodos de baixa atividade para minimizar o impacto no desempenho do sistema.
+
+- **Características**:
+  - Ideal para processar grandes quantidades de dados de uma vez.
+  - Pode ter um atraso significativo entre a coleta dos dados e o processamento.
+  - Requer menor capacidade computacional em tempo real, pois o processamento é agendado.
+  - Adequado para operações que não exigem atualização imediata dos dados.
+
+- **Casos de Uso**:
+  - Processamento de relatórios financeiros diários ou semanais.
+  - Análise de dados históricos para identificar tendências.
+  - Atualização de sistemas de back-office, como inventários.
+
+- **Exemplo**: Um sistema de varejo que processa todas as vendas do dia à noite, gerando relatórios para análise no dia seguinte.
+
+### 6.3 Ingestão em Tempo Real (Stream)
+
+- **Definição**: A ingestão em tempo real, ou streaming, envolve o processamento contínuo e instantâneo de dados conforme eles são gerados. Esse método permite que as informações sejam capturadas e analisadas em tempo real, possibilitando ações imediatas.
+
+- **Características**:
+  - Processa dados continuamente, com latência mínima.
+  - Ideal para aplicações que exigem respostas rápidas e em tempo real.
+  - Requer maior capacidade de processamento e infraestrutura para lidar com o fluxo contínuo de dados.
+  - Suporta decisões rápidas e automação baseada em eventos.
+
+- **Casos de Uso**:
+  - Monitoramento de fraudes em tempo real em transações financeiras.
+  - Análise de tráfego de redes sociais para detectar tendências.
+  - Sistemas de recomendação em tempo real, como sugerir produtos durante uma navegação de e-commerce.
+  - Monitoramento de dispositivos IoT, como sensores de temperatura em ambientes industriais.
+
+- **Exemplo**: Plataformas de streaming de vídeo, como Netflix, que monitoram o comportamento do usuário e ajustam a entrega de conteúdo em tempo real.
+
+### Resumo das Possíveis Cobranças em Provas:
+
+- **Definição e Diferenças**: Questões podem abordar a diferença entre ingestão em lote e em tempo real, incluindo características e vantagens de cada método.
+- **Casos de Uso**: Perguntas podem focar em identificar qual tipo de ingestão é mais adequado para diferentes cenários de aplicação.
+- **Exemplos Práticos**: Pode-se solicitar exemplos de situações em que a ingestão em lote ou em tempo real seria ideal.
 
   
+## 7. Big Data: conceito de big data; conceitos gerais sobre técnicas e ferramentas para lidar com grandes volumes de dados (Spark, Hadoop, HDFS e MapReduce).
+
+### 7.1 Conceito de Big Data
+
+Big Data refere-se a grandes volumes de dados complexos que são gerados a uma alta velocidade e em formatos variados, tornando-os difíceis de gerenciar e processar usando métodos tradicionais. Esses dados são caracterizados pelos "5 Vs":
+
+- **Volume**: Enorme quantidade de dados gerados diariamente.
+- **Velocidade**: A rapidez com que os dados são gerados, coletados e processados.
+- **Variedade**: Diversidade de tipos de dados (estruturados, semiestruturados e não estruturados).
+- **Veracidade**: Qualidade e confiabilidade dos dados.
+- **Valor**: O potencial dos dados para gerar insights valiosos e impactar negócios.
+
+**Exemplos de Big Data**:
+- Registros de redes sociais (tweets, posts, curtidas).
+- Dados de sensores IoT (temperatura, pressão).
+- Logs de servidores e tráfego de websites.
+
+### 7.2 Técnicas e Ferramentas para Lidar com Big Data
+
+#### 7.2.1 Apache Hadoop
+
+- **Definição**: Hadoop é um framework de código aberto que permite o processamento distribuído de grandes volumes de dados em clusters de servidores utilizando um modelo de programação simplificado.
+
+- **Componentes Principais**:
+  - **HDFS (Hadoop Distributed File System)**: Sistema de arquivos distribuído que armazena dados em múltiplos servidores, garantindo alta disponibilidade e redundância.
+  - **MapReduce**: Modelo de programação que divide tarefas de processamento de dados em dois estágios: map (mapeamento) e reduce (redução).
+
+- **Características**:
+  - Processamento paralelo de grandes volumes de dados.
+  - Alta tolerância a falhas através da replicação de dados.
+  - Escalabilidade horizontal, permitindo a adição de novos nós ao cluster conforme a necessidade.
+
+- **Caso de Uso**: Processamento de grandes conjuntos de dados para análises de mercado, detecção de fraudes, e indexação de grandes volumes de documentos.
+
+#### 7.2.2 HDFS (Hadoop Distributed File System)
+
+- **Definição**: HDFS é um sistema de arquivos distribuído projetado para armazenar grandes conjuntos de dados de forma redundante e acessível em clusters de servidores.
+
+- **Características**:
+  - Armazena dados em blocos distribuídos entre múltiplos nós no cluster.
+  - Suporta alta tolerância a falhas replicando os dados em diferentes servidores.
+  - Permite o acesso rápido a dados de grandes volumes para processamento paralelo.
+
+- **Exemplo**: Uma empresa de análise de dados que precisa armazenar petabytes de dados históricos de vendas para análises futuras.
+
+#### 7.2.3 MapReduce
+
+- **Definição**: MapReduce é um modelo de programação utilizado no Hadoop que permite o processamento paralelo de grandes volumes de dados, dividindo o trabalho em duas fases: map (mapeamento) e reduce (redução).
+
+- **Fases**:
+  - **Map**: Divide a tarefa em pequenas partes e distribui para nós no cluster, onde os dados são processados de forma independente.
+  - **Reduce**: Agrega os resultados parciais e gera o resultado final.
+
+- **Características**:
+  - Permite o processamento escalável de dados em ambientes distribuídos.
+  - Gerencia automaticamente a divisão e recombinação de tarefas.
+
+- **Caso de Uso**: Indexação de páginas da web para motores de busca, análise de grandes logs de servidores.
+
+#### 7.2.4 Apache Spark
+
+- **Definição**: Spark é um motor de processamento de dados em tempo real, que oferece um modelo de programação flexível e acelera o processamento distribuído de grandes volumes de dados.
+
+- **Características**:
+  - Suporta processamento em batch e em tempo real.
+  - Usa memória para armazenamento intermediário, o que aumenta a velocidade de processamento comparado ao MapReduce.
+  - Oferece bibliotecas para aprendizado de máquina (MLlib), processamento de gráficos (GraphX), e manipulação de dados estruturados (Spark SQL).
+
+- **Exemplo**: Utilizado por empresas de tecnologia para análise em tempo real de dados de transações financeiras e monitoramento de sistemas.
+
+### Resumo das Possíveis Cobranças em Provas:
+
+- **Conceito de Big Data**: Questões podem focar nas características dos 5 Vs e em exemplos práticos de Big Data.
+- **Ferramentas de Big Data**: Perguntas podem abordar as funções e características de Hadoop, HDFS, MapReduce e Spark, incluindo suas vantagens e casos de uso específicos.
+- **Diferenças entre MapReduce e Spark**: Pode ser explorada a eficiência de cada ferramenta e seu impacto na velocidade e flexibilidade do processamento de grandes volumes de dados.
