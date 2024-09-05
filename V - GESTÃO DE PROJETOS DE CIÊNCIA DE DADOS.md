@@ -138,6 +138,27 @@ O ciclo de vida de um projeto de ciência de dados é um conjunto estruturado de
 
 - **Vantagens**: Foca no usuário, promove inovação e iteração rápida, ajustando soluções de forma ágil.
 
+## Comparação entre Kanban e Scrum
+
+| Aspecto                  | Kanban                                             | Scrum                                           |
+|--------------------------|-----------------------------------------------------|-------------------------------------------------|
+| **Origem**               | Originado na manufatura Toyota.                     | Derivado do Agile e do desenvolvimento de software.|
+| **Foco Principal**       | Fluxo contínuo de trabalho e entrega de valor.      | Desenvolvimento iterativo e incremental em sprints.|
+| **Estrutura**            | Sem papéis definidos específicos.                   | Papéis definidos: Scrum Master, Product Owner, Dev Team.|
+| **Planejamento**         | Planejamento contínuo com entrada de novas tarefas a qualquer momento. | Planejamento em ciclos (sprints) fixos, geralmente de 2-4 semanas.|
+| **Quadro de Tarefas**    | Visualiza o fluxo de trabalho em colunas personalizáveis. | Utiliza colunas como "To Do", "In Progress" e "Done". |
+| **Limite de Trabalho**   | Limitação explícita de trabalho em progresso (WIP). | Limite de trabalho determinado pela capacidade do time na sprint.|
+| **Métricas**             | Métricas como Lead Time, Cycle Time, Throughput.   | Métricas como Velocity, Burndown Chart, Burnup Chart.|
+| **Reuniões**             | Reuniões opcionais, como revisão de fluxo e ajustes conforme necessário. | Reuniões estruturadas: Daily Standup, Sprint Review, Sprint Retrospective.|
+| **Entrega**              | Entregas contínuas conforme o trabalho é concluído. | Entrega ao final de cada sprint.                   |
+| **Mudanças no Trabalho** | Flexível; mudanças podem ser feitas a qualquer momento. | Mudanças evitadas durante a sprint; priorizadas na próxima. |
+| **Papel do Time**        | Autogerenciado com foco na melhoria contínua.       | Time cross-funcional com papéis definidos.         |
+| **Adaptabilidade**       | Altamente adaptável a mudanças no fluxo de trabalho. | Adaptável entre sprints, mas com estrutura rígida durante. |
+| **Uso Comum**            | Manutenção, suporte, e projetos com fluxo contínuo. | Desenvolvimento de novos produtos e funcionalidades. |
+| **Ferramentas Comuns**   | Trello, Jira, Asana.                               | Jira, Scrumwise, Microsoft Azure DevOps.          |
+
+
+
 ### Resumo das Possíveis Cobranças em Provas:
 
 - **Metodologias**: Questões podem abordar a compreensão das metodologias CRISP-DM, TDSP e princípios ágeis, destacando as fases e as vantagens de cada uma.
