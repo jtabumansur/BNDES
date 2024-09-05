@@ -285,13 +285,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Analista de Dados
 
 <details>
-<summary><strong>Resposta: C) Engenheiro de Machine Learning</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: C) Engenheiro de Machine Learning**
 
 **Explicação**:
 - **C) Correto**: O Engenheiro de Machine Learning é responsável por desenvolver, otimizar e implementar modelos de aprendizado de máquina em produção.
 - **A) Errado**: O Cientista de Dados cria modelos, mas não foca na implementação em produção.
 - **B) Errado**: O Engenheiro de Dados cria pipelines de dados, mas não é responsável pelo modelo de machine learning.
 - **D) Errado**: O Analista de Dados foca em gerar insights e relatórios, não em modelos de aprendizado de máquina.
+
 </details>
 
 ---
@@ -305,13 +308,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Analisar dados e gerar relatórios.
 
 <details>
-<summary><strong>Resposta: B) Facilitar as cerimônias ágeis e remover impedimentos.</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: B) Facilitar as cerimônias ágeis e remover impedimentos.**
 
 **Explicação**:
 - **B) Correto**: O Scrum Master facilita as reuniões ágeis e ajuda a remover impedimentos para o progresso da equipe.
 - **A) Errado**: Definir arquitetura é papel do Arquiteto de Dados.
 - **C) Errado**: Treinar modelos é responsabilidade do Cientista de Dados ou Engenheiro de Machine Learning.
 - **D) Errado**: Analisar dados é função do Analista de Dados.
+
 </details>
 
 ---
@@ -325,13 +331,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Product Owner
 
 <details>
-<summary><strong>Resposta: B) Especialista em Governança de Dados</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: B) Especialista em Governança de Dados**
 
 **Explicação**:
 - **B) Correto**: O Especialista em Governança de Dados assegura que os dados estejam em conformidade com as regulamentações e sejam geridos corretamente.
 - **A) Errado**: O Cientista de Dados usa os dados para análises, mas não gerencia sua conformidade.
 - **C) Errado**: O Engenheiro de Machine Learning trabalha com modelos, não com governança de dados.
 - **D) Errado**: O Product Owner é responsável por definir os objetivos de negócios, não pela gestão de dados.
+
 </details>
 
 ---
@@ -345,13 +354,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Cientista de Dados
 
 <details>
-<summary><strong>Resposta: A) Engenheiro de Dados</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: A) Engenheiro de Dados**
 
 **Explicação**:
 - **A) Correto**: O Engenheiro de Dados é responsável por construir e manter a infraestrutura de dados, incluindo pipelines de ETL.
 - **B) Errado**: O Analista de Dados foca em análise e geração de relatórios.
 - **C) Errado**: O Scrum Master facilita o processo ágil e não lida com infraestrutura de dados.
 - **D) Errado**: O Cientista de Dados utiliza a infraestrutura, mas não a constrói.
+
 </details>
 
 ---
@@ -365,13 +377,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Analista de Dados
 
 <details>
-<summary><strong>Resposta: C) Product Owner</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: C) Product Owner**
 
 **Explicação**:
 - **C) Correto**: O Product Owner define a visão do projeto e garante que os objetivos de negócios sejam claros para a equipe técnica.
 - **A) Errado**: O Cientista de Dados trabalha no desenvolvimento de modelos, mas não define a visão do projeto.
 - **B) Errado**: O Engenheiro de Machine Learning é focado na implementação técnica, não na visão de negócios.
 - **D) Errado**: O Analista de Dados gera insights, mas não define a visão do projeto.
+
 </details>
 
 ---
@@ -385,13 +400,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Arquiteto de Dados
 
 <details>
-<summary><strong>Resposta: C) Especialista em Governança de Dados</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: C) Especialista em Governança de Dados**
 
 **Explicação**:
 - **C) Correto**: O Especialista em Governança de Dados garante a qualidade, conformidade e segurança dos dados.
 - **A) Errado**: O Engenheiro de Dados foca na construção de pipelines, não na governança de dados.
 - **B) Errado**: O Cientista de Dados utiliza os dados, mas não garante a qualidade deles.
 - **D) Errado**: O Arquiteto de Dados projeta a estrutura, mas não se concentra especificamente na qualidade dos dados.
+
 </details>
 
 ---
@@ -405,13 +423,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Scrum Master
 
 <details>
-<summary><strong>Resposta: A) Analista de Dados</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: A) Analista de Dados**
 
 **Explicação**:
 - **A) Correto**: O Analista de Dados é responsável por criar relatórios e visualizações que comunicam os insights obtidos dos dados.
 - **B) Errado**: O Engenheiro de Machine Learning se concentra na modelagem de algoritmos.
 - **C) Errado**: O Arquiteto de Dados projeta a estrutura de armazenamento, não cria relatórios.
 - **D) Errado**: O Scrum Master facilita processos, mas não se envolve com relatórios de dados.
+
 </details>
 
 ---
@@ -425,13 +446,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Product Owner
 
 <details>
-<summary><strong>Resposta: B) Arquiteto de Dados</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: B) Arquiteto de Dados**
 
 **Explicação**:
 - **B) Correto**: O Arquiteto de Dados projeta a estrutura de armazenamento de dados e define as melhores práticas de organização.
 - **A) Errado**: O Cientista de Dados usa os dados para análises, mas não define a estrutura.
 - **C) Errado**: O Engenheiro de Dados implementa a estrutura, mas o design é feito pelo Arquiteto de Dados.
 - **D) Errado**: O Product Owner lida com a visão do produto, não com a organização dos dados.
+
 </details>
 
 ---
@@ -445,13 +469,16 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Engenheiro de Dados
 
 <details>
-<summary><strong>Resposta: C) Product Owner</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: C) Product Owner**
 
 **Explicação**:
 - **C) Correto**: O Product Owner é responsável por traduzir problemas de negócios em requisitos técnicos para a equipe.
 - **A) Errado**: O Scrum Master facilita o processo ágil, mas não define requisitos de negócios.
 - **B) Errado**: O Cientista de Dados trabalha nos modelos e análises, não na tradução dos problemas de negócios.
 - **D) Errado**: O Engenheiro de Dados foca na infraestrutura e não na tradução dos requisitos de negócios.
+
 </details>
 
 ---
@@ -465,14 +492,18 @@ Em projetos de ciência de dados, diversos papéis são necessários para garant
 - D) Scrum Master
 
 <details>
-<summary><strong>Resposta: A) Product Owner</strong></summary>
+<summary><strong>Resposta</strong></summary>
+
+**Resposta: A) Product Owner**
 
 **Explicação**:
 - **A) Correto**: O Product Owner facilita a comunicação entre a equipe e os stakeholders, alinhando expectativas e objetivos.
 - **B) Errado**: O Engenheiro de Machine Learning se concentra no desenvolvimento de modelos.
 - **C) Errado**: O Cientista de Dados foca na análise e modelagem dos dados.
 - **D) Errado**: O Scrum Master facilita o processo ágil, mas o Product Owner lida diretamente com os stakeholders.
+
 </details>
+
 
 ---
 
