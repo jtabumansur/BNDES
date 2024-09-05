@@ -80,12 +80,18 @@ O ciclo de vida de um projeto de ciência de dados é um conjunto estruturado de
 - **Definição**: CRISP-DM é uma metodologia de referência amplamente utilizada na ciência de dados que define um processo padrão para projetos de mineração de dados e aprendizado de máquina, dividida em seis fases.
 
 - **Fases**:
-  1. **Entendimento do Negócio**: Compreensão dos objetivos e requisitos do projeto do ponto de vista do negócio.
-  2. **Entendimento dos Dados**: Coleta inicial de dados e familiarização para identificar problemas de qualidade e insights preliminares.
-  3. **Preparação dos Dados**: Limpeza, transformação e preparação dos dados para a modelagem.
-  4. **Modelagem**: Aplicação de técnicas de modelagem para criar modelos preditivos ou descritivos.
-  5. **Avaliação**: Avaliação dos modelos para garantir que atendam aos objetivos do negócio.
-  6. **Implementação**: Implantação dos modelos e integração com sistemas de produção.
+ 
+  1. **Entendimento do negócio**: A primeira etapa é, possivelmente, a mais importante de todo o processo. Caso ela não seja feita da maneira correta, todo o resto do projeto pode ser invalidado futuramente. Nesta etapa, é definido o objetivo do projeto e as necessidades da empresa ou projeto em análise. Por isso, é necessário que todos estejam bem-informados e completamente alinhados.
+
+   2. **Entendimento dos dados**: Depois da primeira etapa, podemos começar a pensar nos dados que serão utilizados no processo. Para isso podemos fazer várias perguntas, como: “A empresa tem banco de dados? Os dados serão acessados de que forma? Quantas fontes de dados serão utilizadas? Quais serão os formatos dos dados? Os dados estão estruturados?”. A partir delas, é feita a coleta dos dados, tomando cuidado para que nenhuma informação importante fique de fora.
+
+  3. **Preparação dos Dados**: Com os dados já coletados, é preciso organizá-los de modo a conseguirmos enxergar o que eles contam. Esta etapa também pode ser guiada por algumas perguntas: “Como os valores nulos devem ser tratados? Os atributos estão nos formatos corretos? Será necessário fazer alguma fusão com outros dados? Quais variáveis serão utilizadas na modelagem?”. Esta costuma ser a parte mais demorada e trabalhosa de todas, porém um bom trabalho aqui significa menos retrabalho futuro.
+
+  4. **Modelagem**: Nesta etapa o modelo começa a tomar forma e podemos ver os primeiros resultados. O tipo de modelagem a ser utilizada normalmente é definida de acordo com a necessidade do negócio e com o tipo de variável a ser analisada. Com a definição de qual modelo será utilizado, devem ser definidos quais atributos serão variáveis na construção deste modelo. “Aqui pode ser muito útil voltar à primeira etapa para conferir objetivos e encontrar novas possibilidades”, aconselha Prado.
+
+  5. **Avaliação**: Com o modelo já em mãos, podemos avaliar se o se o resultado corresponde à expectativa do projeto. Caso a resposta seja negativa ou a equipe considere que há espaço para melhorias, todas as forças devem ser direcionadas para fazer as mudanças necessárias. Estas mudanças podem ter diversas formas, como a retirada de atributos estatisticamente insignificantes, correção na entrada de dados, correção no tratamento dos atributos etc.
+
+  6. **Implementação (deployment)**: Caso o processo tenha sido feito da maneira correta, esta será a última etapa. Aqui, o modelo deve ser colocado em produção, de modo a agregar valor para o negócio. A forma como isso é feito varia muito, dependendo do tipo de modelo e projeto. Esse modelo deve ficar exposto para acesso, normalmente armazenado na nuvem ou em servidores locais da própria empresa.
 
 - **Vantagens**: Estrutura clara e flexível, amplamente aplicável em diferentes indústrias.
 
