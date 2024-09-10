@@ -8,9 +8,9 @@ Uma função é uma relação entre dois conjuntos, onde cada elemento do primei
 
 Matematicamente, uma função \( f \) de um conjunto \( A \) para um conjunto \( B \) é denotada por:
 
-\[
+$$
 f: A \to B
-\]
+$$
 
 Para cada \( x \in A \), existe um único \( y \in B \) tal que \( y = f(x) \). O conjunto \( A \) é chamado de **domínio**, e o conjunto dos valores resultantes \( f(x) \) é chamado de **imagem** da função.
 
