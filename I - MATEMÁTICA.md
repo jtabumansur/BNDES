@@ -1030,6 +1030,95 @@ $$\det(A - \lambda I) = \det\begin{bmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \
 
 Resolvendo $$\lambda^2 - 4\lambda + 3 = 0$$, obtemos os autovalores $$\lambda_1 = 3$$ e $$\lambda_2 = 1$$.
 
+#### 2.8.4 - Aplicações de Autovalores e Autovetores
+
+Autovalores e autovetores têm diversas aplicações, incluindo:
+
+- **Análise de estabilidade**: Em sistemas dinâmicos, autovalores ajudam a determinar a estabilidade de equilíbrios.
+- **Compressão de imagens**: Autovetores são usados na decomposição de matrizes em processamento de imagem.
+- **Análise de redes**: Identificação de propriedades estruturais de redes complexas.
+- **Transformações lineares**: Entendimento de como vetores se transformam em diferentes espaços.
+
+### 2.9 - Decomposição Matricial (Cholesky e Singular Value Decomposition - SVD)
+
+Decomposições matriciais são técnicas fundamentais em Álgebra Linear para simplificar cálculos com matrizes e resolver problemas complexos, como sistemas de equações lineares, otimização, e análise de dados. Entre as decomposições mais comuns estão a Decomposição de Cholesky e a Decomposição em Valores Singulares (SVD).
+
+#### 2.9.1 - Decomposição de Cholesky
+
+A decomposição de Cholesky é usada para decompor uma matriz simétrica, definida positiva, em um produto de uma matriz triangular inferior e sua transposta.
+
+Seja $$A$$ uma matriz simétrica e definida positiva, então a decomposição de Cholesky de $$A$$ é dada por:
+
+$$A = LL^T$$
+
+onde:
+- $$L$$ é uma matriz triangular inferior.
+- $$L^T$$ é a transposta de $$L$$.
+
+**Exemplo:**
+
+Considere a matriz:
+
+$$
+A = \begin{bmatrix} 4 & 2 \\ 2 & 3 \end{bmatrix}
+$$
+
+A decomposição de Cholesky resulta em:
+
+$$
+L = \begin{bmatrix} 2 & 0 \\ 1 & \sqrt{2} \end{bmatrix}
+$$
+
+e
+
+$$
+L^T = \begin{bmatrix} 2 & 1 \\ 0 & \sqrt{2} \end{bmatrix}
+$$
+
+#### 2.9.2 - Singular Value Decomposition (SVD)
+
+A Decomposição em Valores Singulares (SVD) é uma técnica que decompõe qualquer matriz $$A$$ (não necessariamente simétrica ou quadrada) em três matrizes:
+
+$$
+A = U \Sigma V^T
+$$
+
+onde:
+- $$U$$ é uma matriz ortogonal contendo os autovetores da matriz $$AA^T$$.
+- $$\Sigma$$ é uma matriz diagonal contendo os valores singulares (raízes quadradas dos autovalores de $$AA^T$$).
+- $$V^T$$ é a transposta de uma matriz ortogonal contendo os autovetores de $$A^TA$$.
+
+**Exemplo:**
+
+Considere a matriz:
+
+$$
+A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}
+$$
+
+A decomposição SVD de $$A$$ resulta em:
+
+$$
+U = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+$$
+\Sigma = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}
+$$
+
+$$
+V^T = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+
+#### 2.9.3 - Aplicações das Decomposições Matriciais
+
+- **Resolução de sistemas lineares**: A decomposição de Cholesky é usada para resolver sistemas de equações lineares de maneira eficiente.
+- **Compressão de dados**: A SVD é amplamente utilizada na compressão de imagens e redução de dimensionalidade em ciência de dados.
+- **Análise de componentes principais (PCA)**: A SVD é essencial na PCA para identificar padrões nos dados.
+
+
+
+
 # 3 - Otimização Matemática
 
 ## 3.1 - Programação Linear Inteira e Mista
@@ -1373,92 +1462,5 @@ Um autovetor associado é:
 $$
 v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 $$
-
-
-#### 2.8.4 - Aplicações de Autovalores e Autovetores
-
-Autovalores e autovetores têm diversas aplicações, incluindo:
-
-- **Análise de estabilidade**: Em sistemas dinâmicos, autovalores ajudam a determinar a estabilidade de equilíbrios.
-- **Compressão de imagens**: Autovetores são usados na decomposição de matrizes em processamento de imagem.
-- **Análise de redes**: Identificação de propriedades estruturais de redes complexas.
-- **Transformações lineares**: Entendimento de como vetores se transformam em diferentes espaços.
-
-### 2.9 - Decomposição Matricial (Cholesky e Singular Value Decomposition - SVD)
-
-Decomposições matriciais são técnicas fundamentais em Álgebra Linear para simplificar cálculos com matrizes e resolver problemas complexos, como sistemas de equações lineares, otimização, e análise de dados. Entre as decomposições mais comuns estão a Decomposição de Cholesky e a Decomposição em Valores Singulares (SVD).
-
-#### 2.9.1 - Decomposição de Cholesky
-
-A decomposição de Cholesky é usada para decompor uma matriz simétrica, definida positiva, em um produto de uma matriz triangular inferior e sua transposta.
-
-Seja $$A$$ uma matriz simétrica e definida positiva, então a decomposição de Cholesky de $$A$$ é dada por:
-
-$$A = LL^T$$
-
-onde:
-- $$L$$ é uma matriz triangular inferior.
-- $$L^T$$ é a transposta de $$L$$.
-
-**Exemplo:**
-
-Considere a matriz:
-
-$$
-A = \begin{bmatrix} 4 & 2 \\ 2 & 3 \end{bmatrix}
-$$
-
-A decomposição de Cholesky resulta em:
-
-$$
-L = \begin{bmatrix} 2 & 0 \\ 1 & \sqrt{2} \end{bmatrix}
-$$
-
-e
-
-$$
-L^T = \begin{bmatrix} 2 & 1 \\ 0 & \sqrt{2} \end{bmatrix}
-$$
-
-#### 2.9.2 - Singular Value Decomposition (SVD)
-
-A Decomposição em Valores Singulares (SVD) é uma técnica que decompõe qualquer matriz $$A$$ (não necessariamente simétrica ou quadrada) em três matrizes:
-
-$$
-A = U \Sigma V^T
-$$
-
-onde:
-- $$U$$ é uma matriz ortogonal contendo os autovetores da matriz $$AA^T$$.
-- $$\Sigma$$ é uma matriz diagonal contendo os valores singulares (raízes quadradas dos autovalores de $$AA^T$$).
-- $$V^T$$ é a transposta de uma matriz ortogonal contendo os autovetores de $$A^TA$$.
-
-**Exemplo:**
-
-Considere a matriz:
-
-$$
-A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}
-$$
-
-A decomposição SVD de $$A$$ resulta em:
-
-$$
-U = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
-$$
-
-$$
-\Sigma = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}
-$$
-
-$$
-V^T = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
-$$
-
-#### 2.9.3 - Aplicações das Decomposições Matriciais
-
-- **Resolução de sistemas lineares**: A decomposição de Cholesky é usada para resolver sistemas de equações lineares de maneira eficiente.
-- **Compressão de dados**: A SVD é amplamente utilizada na compressão de imagens e redução de dimensionalidade em ciência de dados.
-- **Análise de componentes principais (PCA)**: A SVD é essencial na PCA para identificar padrões nos dados.
 
 
