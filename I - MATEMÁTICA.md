@@ -723,3 +723,171 @@ $$B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$$
 $$C = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 1 & 4 \\ 0 & 0 & 3 \end{bmatrix}$$ 
 
 quanto ao seu tipo.
+
+### 2.4 - Transformações Lineares
+
+#### 2.4.1 - Definição de Transformação Linear
+
+Uma **transformação linear** é uma função que mapeia vetores de um espaço vetorial para outro, preservando as operações de adição de vetores e multiplicação por escalares. Em outras palavras, se $$T: V \to W$$ é uma transformação linear, então para todos os vetores $$u, v \in V$$ e para todo escalar $$c$$, as seguintes propriedades são satisfeitas:
+
+1. **Adição**: 
+
+   $$T(u + v) = T(u) + T(v)$$
+
+2. **Multiplicação por Escalar**: 
+
+   $$T(c \cdot u) = c \cdot T(u)$$
+
+#### 2.4.2 - Representação Matricial de Transformações Lineares
+
+Qualquer transformação linear pode ser representada por uma matriz. Se $$T: \mathbb{R}^n \to \mathbb{R}^m$$ é uma transformação linear, existe uma matriz $$A$$ de dimensão $$m \times n$$ tal que:
+
+$$
+T(x) = A \cdot x
+$$
+
+onde $$x$$ é um vetor em $$\mathbb{R}^n$$.
+
+**Exemplo:**
+
+Considere a transformação linear $$T: \mathbb{R}^2 \to \mathbb{R}^2$$ definida por:
+
+$$
+T\left(\begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} 2x + y \\ 3x - y \end{bmatrix}
+$$
+
+A transformação pode ser representada pela matriz:
+
+$$
+A = \begin{bmatrix} 2 & 1 \\ 3 & -1 \end{bmatrix}
+$$
+
+Então, $$T(x) = A \cdot x$$.
+
+#### 2.4.3 - Aplicações das Transformações Lineares
+
+As transformações lineares são amplamente usadas em diversas áreas, como:
+
+- **Geometria Analítica**: Descrição de rotações, reflexões, projeções e escalonamentos.
+- **Ciência de Dados**: Redução de dimensionalidade, como no PCA (Análise de Componentes Principais).
+- **Gráficos Computacionais**: Transformações de objetos para renderização.
+
+### 2.5 - Espaços e Subespaços Vetoriais de $$R^n$$
+
+#### 2.5.1 - Definição de Espaço Vetorial
+
+Um **espaço vetorial** é um conjunto de vetores que satisfazem determinadas propriedades de adição e multiplicação por escalares. Um espaço vetorial deve satisfazer as seguintes condições:
+
+1. Fechamento sob adição e multiplicação por escalares.
+2. Existência de um vetor nulo.
+3. Existência de um vetor oposto.
+4. Propriedades distributivas e associativas.
+
+#### 2.5.2 - Subespaços Vetoriais
+
+Um **subespaço vetorial** é um subconjunto de um espaço vetorial que é ele próprio um espaço vetorial com as mesmas operações de adição e multiplicação por escalares. Para que um subconjunto seja um subespaço, ele deve incluir o vetor nulo e ser fechado sob adição e multiplicação por escalares.
+
+**Exemplo:**
+
+Considere o espaço vetorial $$R^2$$ e o subconjunto $$S = \{(x, 0) \mid x \in R\}$$. Esse subconjunto é um subespaço de $$R^2$$ pois satisfaz todas as propriedades necessárias.
+
+#### 2.5.3 - Exemplos de Subespaços Comuns
+
+1. **Linhas e Planos que Passam pela Origem:** Em $$R^3$$, linhas e planos que passam pela origem são subespaços.
+
+2. **Espaço Nulo:** O conjunto que contém apenas o vetor nulo é um subespaço.
+
+3. **Espaço de Linhas e Colunas de Matrizes:** Em uma matriz $$A$$, o espaço de linhas e o espaço de colunas são subespaços do espaço vetorial em questão.
+
+### 2.6 - Sistemas de Equações Lineares
+
+#### 2.6.1 - Definição de Sistemas de Equações Lineares
+
+Um **sistema de equações lineares** é um conjunto de equações que têm as mesmas variáveis. A solução de um sistema é o conjunto de valores das variáveis que satisfazem todas as equações ao mesmo tempo.
+
+Um sistema linear de duas equações e duas variáveis tem a forma:
+
+$$
+\begin{cases}
+a_1x + b_1y = c_1 \\
+a_2x + b_2y = c_2
+\end{cases}
+$$
+
+onde \(a_1, b_1, c_1, a_2, b_2, c_2\) são constantes.
+
+#### 2.6.2 - Representação Matricial
+
+Um sistema de equações lineares pode ser representado de forma compacta usando matrizes. A forma geral de um sistema linear pode ser escrita como:
+
+$$
+A\mathbf{x} = \mathbf{b}
+$$
+
+onde:
+- \(A\) é a matriz dos coeficientes.
+- \(\mathbf{x}\) é o vetor das incógnitas.
+- \(\mathbf{b}\) é o vetor dos termos independentes.
+
+**Exemplo:**
+
+Considere o sistema:
+
+$$
+\begin{cases}
+2x + 3y = 5 \\
+4x - y = 1
+\end{cases}
+$$
+
+A forma matricial é:
+
+$$
+\begin{bmatrix} 2 & 3 \\ 4 & -1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 1 \end{bmatrix}
+$$
+
+#### 2.6.3 - Métodos de Resolução
+
+1. **Eliminação de Gauss:** Método que transforma o sistema em uma forma escalonada através de operações elementares com as linhas da matriz.
+
+2. **Substituição:** Método onde se resolve uma das equações para uma variável e substitui-se na outra.
+
+3. **Método de Gauss-Jordan:** Uma extensão da eliminação de Gauss que transforma a matriz do sistema na forma reduzida para resolver diretamente.
+
+4. **Regra de Cramer:** Usa determinantes para resolver sistemas lineares onde o número de equações é igual ao número de incógnitas.
+
+#### 2.6.4 - Tipos de Soluções
+
+1. **Sistema Consistente:** Tem pelo menos uma solução.
+   - **Solução Única:** O sistema possui exatamente uma solução.
+   - **Infinitas Soluções:** O sistema possui mais de uma solução.
+
+2. **Sistema Inconsistente:** Não tem solução (as equações se contradizem).
+
+#### 2.6.5 - Exemplos de Resolução
+
+**Exemplo 1: Solução Única**
+
+Resolva o sistema:
+
+$$
+\begin{cases} 
+3x + 4y = 7 \\ 
+2x - y = 1 
+\end{cases}
+$$
+
+Usando eliminação de Gauss, encontramos a solução \(x = 2\) e \(y = -\frac{1}{4}\).
+
+**Exemplo 2: Sistema Inconsistente**
+
+Considere o sistema:
+
+$$
+\begin{cases} 
+x + 2y = 3 \\ 
+2x + 4y = 7 
+\end{cases}
+$$
+
+As equações representam duas retas paralelas, logo o sistema é inconsistente e não possui solução.
