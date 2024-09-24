@@ -891,3 +891,254 @@ x + 2y = 3 \\
 $$
 
 As equações representam duas retas paralelas, logo o sistema é inconsistente e não possui solução.
+
+
+### 2.7 - Normas
+
+As **normas** são funções que atribuem um comprimento ou "tamanho" a vetores em espaços vetoriais. Elas são amplamente utilizadas para medir a distância, avaliar erros, e para outras aplicações em análise numérica, otimização e álgebra linear. As normas mais comuns incluem as normas \(L_1\), \(L_2\), norma infinita, norma \(p\)-generalizada, de Minkowski, e de Chebyshev.
+
+#### 2.7.1 - Norma \(L_1\) (Norma Manhattan)
+
+A norma \(L_1\) de um vetor é a soma dos valores absolutos de seus componentes. Ela é frequentemente usada para medir distâncias em espaços de alta dimensão.
+
+$$
+\|x\|_1 = |x_1| + |x_2| + \ldots + |x_n|
+$$
+
+**Exemplo:**
+
+Para o vetor \(x = [3, -4, 2]\):
+
+$$
+\|x\|_1 = |3| + |-4| + |2| = 3 + 4 + 2 = 9
+$$
+
+#### 2.7.2 - Norma \(L_2\) (Norma Euclidiana)
+
+A norma \(L_2\) é a norma mais comum, também conhecida como norma Euclidiana, que calcula a raiz quadrada da soma dos quadrados dos componentes do vetor.
+
+$$
+\|x\|_2 = \sqrt{x_1^2 + x_2^2 + \ldots + x_n^2}
+$$
+
+**Exemplo:**
+
+Para o vetor \(x = [3, -4, 2]\):
+
+$$
+\|x\|_2 = \sqrt{3^2 + (-4)^2 + 2^2} = \sqrt{9 + 16 + 4} = \sqrt{29}
+$$
+
+#### 2.7.3 - Norma Infinita (\(\infty\))
+
+A norma infinita de um vetor é o valor absoluto do maior componente do vetor.
+
+$$
+\|x\|_\infty = \max(|x_1|, |x_2|, \ldots, |x_n|)
+$$
+
+**Exemplo:**
+
+Para o vetor \(x = [3, -4, 2]\):
+
+$$
+\|x\|_\infty = \max(3, 4, 2) = 4
+$$
+
+#### 2.7.4 - Norma \(p\)-Generalizada
+
+A norma \(p\)-generalizada é uma generalização das normas \(L_1\) e \(L_2\), definida por:
+
+$$
+\|x\|_p = \left( |x_1|^p + |x_2|^p + \ldots + |x_n|^p \right)^{\frac{1}{p}}
+$$
+
+**Exemplo:**
+
+Para \(p = 3\) e o vetor \(x = [1, -2, 3]\):
+
+$$
+\|x\|_3 = \left( |1|^3 + |-2|^3 + |3|^3 \right)^{\frac{1}{3}} = (1 + 8 + 27)^{\frac{1}{3}} = 36^{\frac{1}{3}} \approx 3.3
+$$
+
+#### 2.7.5 - Norma de Minkowski
+
+A norma de Minkowski é uma extensão da norma \(p\)-generalizada e é utilizada para medir distâncias em espaços métricos.
+
+$$
+\Vert x \Vert_p = \left( \sum_{i=1}^{n} |x_i|^p \right)^{1/p}
+$$
+
+#### 2.7.6 - Norma de Chebyshev
+
+A norma de Chebyshev de um vetor é similar à norma infinita, e mede o maior valor absoluto das diferenças entre os componentes de dois vetores.
+
+**Exemplo:**
+
+Para os vetores \(x = [1, 2, 3]\) e \(y = [2, 4, 1]\):
+
+$$\|x - y\|_{\text{Chebyshev}} = \max(|1 - 2|, |2 - 4|, |3 - 1|) = \max(1, 2, 2) = 2$$
+
+#### 2.7.7 - Aplicações das Normas
+
+As normas são utilizadas em diversas áreas, como:
+
+- **Otimização**: Para minimizar funções de erro.
+- **Análise Numérica**: Para avaliar a precisão de aproximações numéricas.
+- **Aprendizado de Máquina**: Para regularização e ajuste de modelos.
+
+#### Exercícios Práticos
+
+1. Calcule a norma \(L_1\) do vetor \(x = [5, -3, 4]\).
+2. Encontre a norma \(L_2\) do vetor \(y = [7, 1, -2]\).
+3. Determine a norma infinita do vetor \(z = [-3, 0, 8]\).
+
+### 2.8 - Autovalores e Autovetores
+
+Os autovalores (ou valores próprios) e autovetores (ou vetores próprios) são conceitos fundamentais em Álgebra Linear, especialmente em transformações lineares e análise de matrizes. Eles ajudam a entender como uma transformação linear age sobre um vetor, escalando-o sem mudar sua direção.
+
+#### 2.8.1 - Definição de Autovalores e Autovetores
+
+Seja a matriz $$A$$ uma matriz quadrada de ordem $$n$$. Um número $$\lambda$$ é chamado de **autovalor** de $$A$$ se existe um vetor não nulo $$v$$ tal que:
+
+$$Av = \lambda v$$
+
+Nesse caso, o vetor $$v$$ é chamado de **autovetor** associado ao autovalor $$\lambda$$.
+
+#### 2.8.2 - Como Encontrar Autovalores e Autovetores
+
+Para encontrar os autovalores de uma matriz $$A$$, resolvemos a equação característica:
+
+$$\det(A - \lambda I) = 0$$
+
+Onde:
+- $$\det$$ denota o determinante da matriz.
+- $$I$$ é a matriz identidade da mesma ordem de $$A$$.
+- $$\lambda$$ é o autovalor.
+
+Após encontrar os autovalores, os autovetores associados são encontrados resolvendo o sistema linear $$(A - \lambda I)v = 0$$.
+
+#### 2.8.3 - Exemplo de Cálculo de Autovalores e Autovetores
+
+Considere a matriz:
+
+$$A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$$
+
+Para encontrar os autovalores, calculamos:
+
+$$\det(A - \lambda I) = \det\begin{bmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \end{bmatrix} = (2 - \lambda)^2 - 1 = \lambda^2 - 4\lambda + 3$$
+
+Resolvendo $$\lambda^2 - 4\lambda + 3 = 0$$, obtemos os autovalores $$\lambda_1 = 3$$ e $$\lambda_2 = 1$$.
+
+Para $$\lambda_1 = 3$$:
+
+$$
+(A - 3I)v = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = 0
+$$
+
+Um autovetor associado é:
+
+$$
+v_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+$$
+
+Para $$\lambda_2 = 1$$:
+
+$$
+(A - I)v = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = 0
+$$
+
+Um autovetor associado é:
+
+$$
+v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+$$
+
+
+#### 2.8.4 - Aplicações de Autovalores e Autovetores
+
+Autovalores e autovetores têm diversas aplicações, incluindo:
+
+- **Análise de estabilidade**: Em sistemas dinâmicos, autovalores ajudam a determinar a estabilidade de equilíbrios.
+- **Compressão de imagens**: Autovetores são usados na decomposição de matrizes em processamento de imagem.
+- **Análise de redes**: Identificação de propriedades estruturais de redes complexas.
+- **Transformações lineares**: Entendimento de como vetores se transformam em diferentes espaços.
+
+### 2.9 - Decomposição Matricial (Cholesky e Singular Value Decomposition - SVD)
+
+Decomposições matriciais são técnicas fundamentais em Álgebra Linear para simplificar cálculos com matrizes e resolver problemas complexos, como sistemas de equações lineares, otimização, e análise de dados. Entre as decomposições mais comuns estão a Decomposição de Cholesky e a Decomposição em Valores Singulares (SVD).
+
+#### 2.9.1 - Decomposição de Cholesky
+
+A decomposição de Cholesky é usada para decompor uma matriz simétrica, definida positiva, em um produto de uma matriz triangular inferior e sua transposta.
+
+Seja $$A$$ uma matriz simétrica e definida positiva, então a decomposição de Cholesky de $$A$$ é dada por:
+
+$$A = LL^T$$
+
+onde:
+- $$L$$ é uma matriz triangular inferior.
+- $$L^T$$ é a transposta de $$L$$.
+
+**Exemplo:**
+
+Considere a matriz:
+
+$$
+A = \begin{bmatrix} 4 & 2 \\ 2 & 3 \end{bmatrix}
+$$
+
+A decomposição de Cholesky resulta em:
+
+$$
+L = \begin{bmatrix} 2 & 0 \\ 1 & \sqrt{2} \end{bmatrix}
+$$
+
+e
+
+$$
+L^T = \begin{bmatrix} 2 & 1 \\ 0 & \sqrt{2} \end{bmatrix}
+$$
+
+#### 2.9.2 - Singular Value Decomposition (SVD)
+
+A Decomposição em Valores Singulares (SVD) é uma técnica que decompõe qualquer matriz $$A$$ (não necessariamente simétrica ou quadrada) em três matrizes:
+
+$$
+A = U \Sigma V^T
+$$
+
+onde:
+- $$U$$ é uma matriz ortogonal contendo os autovetores da matriz $$AA^T$$.
+- $$\Sigma$$ é uma matriz diagonal contendo os valores singulares (raízes quadradas dos autovalores de $$AA^T$$).
+- $$V^T$$ é a transposta de uma matriz ortogonal contendo os autovetores de $$A^TA$$.
+
+**Exemplo:**
+
+Considere a matriz:
+
+$$
+A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}
+$$
+
+A decomposição SVD de $$A$$ resulta em:
+
+$$
+U = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+$$
+\Sigma = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}
+$$
+
+$$
+V^T = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+
+#### 2.9.3 - Aplicações das Decomposições Matriciais
+
+- **Resolução de sistemas lineares**: A decomposição de Cholesky é usada para resolver sistemas de equações lineares de maneira eficiente.
+- **Compressão de dados**: A SVD é amplamente utilizada na compressão de imagens e redução de dimensionalidade em ciência de dados.
+- **Análise de componentes principais (PCA)**: A SVD é essencial na PCA para identificar padrões nos dados.
+
+
