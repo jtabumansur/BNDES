@@ -456,7 +456,7 @@ $$v = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}$$
 
 $$v = [v_1, v_2, \ldots, v_n]$$
 
-Exemplo de vetor em \( \mathbb{R}^3 \):
+Exemplo de vetor em $$R^3$$:
 
 $$v = \begin{bmatrix} 2 \\ -1 \\ 4 \end{bmatrix}$$
 
@@ -472,13 +472,13 @@ onde:
 - \(m\) é o número de linhas.
 - \(n\) é o número de colunas.
 
-**Exemplo de Matriz \(3 \times 3\):**
+**Exemplo de Matriz $$3 \times 3$$:**
 
 $$A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$$
 
 #### Dimensão de Vetores e Matrizes
-- **Vetor**: A dimensão de um vetor é o número de componentes que ele possui. Um vetor \(v \in \mathbb{R}^n\) tem \(n\) componentes.
-- **Matriz**: A dimensão de uma matriz é dada pelo número de linhas \(m\) e colunas \(n\), representada como \(m \times n\).
+- **Vetor**: A dimensão de um vetor é o número de componentes que ele possui. Um vetor $$v \in R^n$$ tem $$n$$ componentes.
+- **Matriz**: A dimensão de uma matriz é dada pelo número de linhas \(m\) e colunas \(n\), representada como $$m \times n$$:.
 
 #### Aplicações
 Vetores e matrizes são utilizados em:
@@ -826,8 +826,8 @@ $$
 
 onde:
 - \(A\) é a matriz dos coeficientes.
-- \(\mathbf{x}\) é o vetor das incógnitas.
-- \(\mathbf{b}\) é o vetor dos termos independentes.
+- $$\mathbf{x}$$ é o vetor das incógnitas.
+- $$\mathbf{b}$$ é o vetor dos termos independentes.
 
 **Exemplo:**
 
@@ -877,7 +877,7 @@ $$
 \end{cases}
 $$
 
-Usando eliminação de Gauss, encontramos a solução \(x = 2\) e \(y = -\frac{1}{4}\).
+Usando eliminação de Gauss, encontramos a solução $$x = 2$$ e $$y = -\frac{1}{4}$$.
 
 **Exemplo 2: Sistema Inconsistente**
 
@@ -929,7 +929,7 @@ $$
 \|x\|_2 = \sqrt{3^2 + (-4)^2 + 2^2} = \sqrt{9 + 16 + 4} = \sqrt{29}
 $$
 
-#### 2.7.3 - Norma Infinita (\(\infty\))
+#### 2.7.3 - Norma Infinita ($$\infty$$)
 
 A norma infinita de um vetor é o valor absoluto do maior componente do vetor.
 
