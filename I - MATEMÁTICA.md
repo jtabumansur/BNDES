@@ -8,16 +8,16 @@
 
 Uma função é uma relação entre dois conjuntos, onde cada elemento do primeiro conjunto (domínio) está associado a um único elemento do segundo conjunto (contradomínio). A função é uma regra que determina como cada elemento do domínio se relaciona com um elemento do contradomínio.
 
-Matematicamente, uma função \( f \) de um conjunto \( A \) para um conjunto \( B \) é denotada por:
+Matematicamente, uma função $$f$$ de um conjunto $$A$$ para um conjunto $$B$$ é denotada por:
 
 $$f: A \to B$$
 
-Para cada \( x \in A \), existe um único \( y \in B \) tal que \( y = f(x) \). O conjunto \( A \) é chamado de **domínio**, e o conjunto dos valores resultantes \( f(x) \) é chamado de **imagem** da função.
+Para cada $$x \in A$$, existe um único $$y \in B$$ tal que $$y = f(x)$$. O conjunto $$A$$ é chamado de **domínio**, e o conjunto dos valores resultantes $$f(x)$$ é chamado de **imagem** da função.
 
 #### 1.1.2 - Notação e Exemplos Simples
 
-- **Notação**: \( f(x) \), onde \( f \) é o nome da função e \( x \) é a variável independente.
-- **Exemplo**: A função \( f(x) = 2x + 3 \) associa cada número \( x \) a um valor \( y \) que é o dobro de \( x \) somado a 3.
+- **Notação**: $$f(x)$$, onde $$f$$ é o nome da função e $$x$$ é a variável independente.
+- **Exemplo**: A função $$f(x) = 2x + 3$$ associa cada número $$x$$ a um valor $$y$$ que é o dobro de $$x$$ somado a 3.
 
 #### 1.1.3 - Fórmulas e Exemplos de Funções Comuns
 
@@ -28,14 +28,14 @@ Uma função linear tem a forma:
 $$f(x) = ax + b$$
 
 Onde:
-- \( a \) é o coeficiente angular (inclinação da reta).
-- \( b \) é o coeficiente linear (ponto de interseção com o eixo \( y \)).
+- $$a$$ é o coeficiente angular (inclinação da reta).
+- $$b$$ é o coeficiente linear (ponto de interseção com o eixo $$y$$).
 
-**Exemplo**: \( f(x) = 2x + 1 \)
-- Para \( x = 0 \), \( f(0) = 2(0) + 1 = 1 \).
-- Para \( x = 2 \), \( f(2) = 2(2) + 1 = 5 \).
+**Exemplo**: $$f(x) = 2x + 1$$
+- Para $$x = 0$$, $$f(0) = 2(0) + 1 = 1$$.
+- Para $$x = 2$$, $$f(2) = 2(2) + 1 = 5$$.
 
-A função descreve uma reta com inclinação 2 e intercepta o eixo \( y \) no ponto (0, 1).
+A função descreve uma reta com inclinação 2 e intercepta o eixo $$y$$ no ponto (0, 1).
 
 ##### 1.1.3.2 - Função Quadrática
 
@@ -44,12 +44,12 @@ Uma função quadrática tem a forma:
 $$f(x) = ax^2 + bx + c$$
 
 Onde:
-- \( a, b, c \) são constantes.
+- $$a, b, c$$ são constantes.
 - A função forma uma parábola.
 
-**Exemplo**: \( f(x) = x^2 - 4x + 3 \)
-- Para \( x = 0 \), \( f(0) = 0^2 - 4(0) + 3 = 3 \).
-- Para \( x = 1 \), \( f(1) = 1^2 - 4(1) + 3 = 0 \).
+**Exemplo**: $$f(x) = x^2 - 4x + 3$$
+- Para $$x = 0$$, $$f(0) = 0^2 - 4(0) + 3 = 3$$.
+- Para $$x = 1$$, $$f(1) = 1^2 - 4(1) + 3 = 0$$.
 
 ##### 1.1.3.3 - Função Exponencial
 
@@ -58,40 +58,40 @@ A função exponencial é dada por:
 $$f(x) = a \cdot b^x$$
 
 Onde:
-- \( a \) é o valor inicial.
-- \( b \) é a base da função exponencial.
+- $$a$$ é o valor inicial.
+- $$b$$ é a base da função exponencial.
 
-**Exemplo**: \( f(x) = 2 \cdot 3^x \)
-- Para \( x = 0 \), \( f(0) = 2 \cdot 3^0 = 2 \).
-- Para \( x = 2 \), \( f(2) = 2 \cdot 3^2 = 18 \).
+**Exemplo**: $$f(x) = 2 \cdot 3^x$$
+- Para $$x = 0$$, $$f(0) = 2 \cdot 3^0 = 2$$.
+- Para $$x = 2$$, $$f(2) = 2 \cdot 3^2 = 18$$.
 
 #### 1.1.4 - Como Determinar o Domínio de uma Função
 
-O domínio de uma função são todos os valores possíveis de \( x \) que podem ser inseridos na função. Para funções polinomiais (linear, quadrática), o domínio é todos os números reais (\( \mathbb{R} \)).
+O domínio de uma função são todos os valores possíveis de $$x$$ que podem ser inseridos na função. Para funções polinomiais (linear, quadrática), o domínio é todos os números reais ($$\mathbb{R}$$).
 
 **Exemplo de Determinação do Domínio:**
-- Para \( f(x) = \frac{1}{x - 2} \), o domínio é todos os números reais exceto \( x = 2 \), pois dividir por zero não é permitido.
+- Para $$f(x) = \frac{1}{x - 2}$$, o domínio é todos os números reais exceto $$x = 2$$, pois dividir por zero não é permitido.
 
 #### 1.1.5 - Gráficos de Funções
 
 Os gráficos ajudam a visualizar como a função se comporta. O gráfico de uma função linear é uma linha reta, enquanto o de uma função quadrática é uma parábola.
 
 **Exemplo Gráfico:**
-- A função \( f(x) = x^2 - 4x + 3 \) forma uma parábola que cruza o eixo \( x \) nos pontos onde \( f(x) = 0 \).
+- A função $$f(x) = x^2 - 4x + 3$$ forma uma parábola que cruza o eixo $$x$$ nos pontos onde $$f(x) = 0$$.
 
 ### 1.2 - Limites
 
 #### 1.2.1 - Definição de Limite
 
-O limite é um conceito fundamental no cálculo que descreve o comportamento de uma função à medida que a variável independente se aproxima de um determinado valor. Em termos simples, o limite de uma função \( f(x) \) quando \( x \) tende a um valor \( a \) é o valor que \( f(x) \) se aproxima quando \( x \) se aproxima de \( a \).
+O limite é um conceito fundamental no cálculo que descreve o comportamento de uma função à medida que a variável independente se aproxima de um determinado valor. Em termos simples, o limite de uma função $$f(x)$$ quando $$x$$ tende a um valor $$a$$ é o valor que $$f(x)$$ se aproxima quando $$x$$ se aproxima de $$a$$.
 
-Matematicamente, escrevemos o limite de \( f(x) \) quando \( x \) tende a \( a \) da seguinte forma:
+Matematicamente, escrevemos o limite de $$f(x)$$ quando $$x$$ tende a $$a$$ da seguinte forma:
 
 $$\lim_{x \to a} f(x) = L$$
 
 Onde:
-- \( L \) é o valor que a função se aproxima.
-- \( a \) é o valor para o qual \( x \) tende.
+- $$L$$ é o valor que a função se aproxima.
+- $$a$$ é o valor para o qual $$x$$ tende.
 
 #### 1.2.2 - Exemplos Simples de Limites
 
@@ -99,23 +99,23 @@ Onde:
 
    $$\lim_{x \to 3} 5 = 5$$
 
-   Neste caso, não importa o valor de \( x \), o limite é sempre 5.
+   Neste caso, não importa o valor de $$x$$, o limite é sempre 5.
 
 2. **Exemplo 2: Limite de uma função linear**
 
    $$\lim_{x \to 2} (3x + 1) = 3(2) + 1 = 7$$
 
-   A função se aproxima do valor 7 quando \( x \) se aproxima de 2.
+   A função se aproxima do valor 7 quando $$x$$ se aproxima de 2.
 
 3. **Exemplo 3: Limite que não existe**
 
-   Se uma função se aproxima de valores diferentes à medida que \( x \) se aproxima de um ponto de direções diferentes, o limite não existe.
+   Se uma função se aproxima de valores diferentes à medida que $$x$$ se aproxima de um ponto de direções diferentes, o limite não existe.
 
-   Exemplo:
+   **Exemplo:**
 
    $$\lim_{x \to 0} \frac{1}{x}$$
 
-   À medida que \( x \) se aproxima de 0 pela esquerda, o valor da função vai para \( -\infty \). Quando se aproxima pela direita, o valor vai para \( \infty \). Portanto, o limite não existe.
+   À medida que $$x$$ se aproxima de 0 pela esquerda, o valor da função vai para $$-\infty$$. Quando se aproxima pela direita, o valor vai para $$\infty$$. Portanto, o limite não existe.
 
 #### 1.2.3 - Propriedades dos Limites
 
@@ -135,24 +135,24 @@ Onde:
 
    $$\lim_{x \to a} c = c$$
 
-   Onde \( c \) é uma constante.
+   Onde $$c$$ é uma constante.
 
 #### 1.2.4 - Limites Laterais
 
-Os limites laterais são usados para analisar o comportamento de uma função à medida que \( x \) se aproxima de um ponto específico, tanto pela esquerda quanto pela direita.
+Os limites laterais são usados para analisar o comportamento de uma função à medida que $$x$$ se aproxima de um ponto específico, tanto pela esquerda quanto pela direita.
 
-- **Limite pela esquerda**: Denotado por \( \lim_{x \to a^-} f(x) \), indica que \( x \) está se aproximando de \( a \) pela esquerda.
-- **Limite pela direita**: Denotado por \( \lim_{x \to a^+} f(x) \), indica que \( x \) está se aproximando de \( a \) pela direita.
+- **Limite pela esquerda**: Denotado por $$\lim_{x \to a^-} f(x)$$, indica que $$x$$ está se aproximando de $$a$$ pela esquerda.
+- **Limite pela direita**: Denotado por $$\lim_{x \to a^+} f(x)$$, indica que $$x$$ está se aproximando de $$a$$ pela direita.
 
 #### 1.2.5 - Limites no Infinito
 
-Os limites no infinito descrevem o comportamento de uma função quando \( x \) tende a \( \infty \) (ou \( -\infty \)).
+Os limites no infinito descrevem o comportamento de uma função quando $$x$$ tende a $$\infty$$ (ou $$-\infty$$).
 
 - **Exemplo**:
 
   $$\lim_{x \to \infty} \frac{1}{x} = 0$$
 
-  À medida que \( x \) cresce, o valor da função \( \frac{1}{x} \) se aproxima de 0.
+  À medida que $$x$$ cresce, o valor da função $$\frac{1}{x}$$ se aproxima de 0.
 
 ### 1.3 - Derivadas
 
@@ -160,15 +160,15 @@ Os limites no infinito descrevem o comportamento de uma função quando \( x \) 
 
 A derivada de uma função mede a taxa de variação instantânea de uma função em relação a uma variável. Geometricamente, a derivada representa a inclinação da reta tangente à curva de uma função em um ponto específico.
 
-Matematicamente, a derivada de \(f(x)\) em relação a \(x\) é definida como:
+Matematicamente, a derivada de $$f(x)$$ em relação a $$x$$ é definida como:
 
 $$f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$
 
 #### 1.3.2 - Notações Comuns
 
-- Leibniz: \(\frac{dy}{dx}\)
-- Lagrange: \(f'(x)\)
-- Newton: \(\dot{y}\)
+- Leibniz: $$\frac{dy}{dx}$$
+- Lagrange: $$f'(x)$$
+- Newton: $$\dot{y}$$
 
 #### 1.3.3 - Regras Básicas de Derivação
 
@@ -194,7 +194,7 @@ $$f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$
 
    **Exemplo:**
 
-   Para \(f(x) = x^2\) e \(g(x) = 3x\):
+   Para $$f(x) = x^2$$ e $$g(x) = 3x$$:
 
    $$\frac{d}{dx} (x^2 \cdot 3x) = 2x \cdot 3x + x^2 \cdot 3 = 6x^2 + 3x^2 = 9x^2$$
 
@@ -204,19 +204,19 @@ $$f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$
 
    **Exemplo:**
 
-   Para \(f(x) = x^2\) e \(g(x) = x + 1\):
+   Para $$f(x) = x^2$$ e $$g(x) = x + 1$$:
 
    $$\frac{d}{dx} \left(\frac{x^2}{x + 1}\right) = \frac{2x \cdot (x + 1) - x^2 \cdot 1}{(x + 1)^2} = \frac{x(2x + 2 - x)}{(x + 1)^2}$$
 
 6. **Regra da Cadeia (Chain Rule):**
 
-   Se \(y = f(u)\) e \(u = g(x)\), então:
+   Se $$y = f(u)$$ e $$u = g(x)$$, então:
 
    $$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$
 
    **Exemplo:**
 
-   Para \(y = (3x + 1)^2\):
+   Para $$y = (3x + 1)^2$$:
 
    $$u = 3x + 1 \implies \frac{du}{dx} = 3$$
    
@@ -226,13 +226,13 @@ $$f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$
 
 #### 1.3.4 - Derivadas de Funções Trigonométricas
 
-1. \(\frac{d}{dx}(\sin x) = \cos x\)
-2. \(\frac{d}{dx}(\cos x) = -\sin x\)
-3. \(\frac{d}{dx}(\tan x) = \sec^2 x\)
+1. $$\frac{d}{dx}(\sin x) = \cos x$$
+2. $$\frac{d}{dx}(\cos x) = -\sin x$$
+3. $$\frac{d}{dx}(\tan x) = \sec^2 x$$
 
 **Exemplo:**
 
-Para \(f(x) = \sin x + \cos x\):
+Para $$f(x) = \sin x + \cos x$$:
 
 $$f'(x) = \cos x - \sin x$$
 
@@ -248,7 +248,7 @@ $$f'(x) = \cos x - \sin x$$
 
 As **derivadas parciais** são usadas quando uma função depende de mais de uma variável. A derivada parcial de uma função em relação a uma variável mede a taxa de variação da função mantendo as outras variáveis constantes.
 
-Seja \( f(x, y) \) uma função de duas variáveis, a derivada parcial de \( f \) em relação a \( x \) é denotada por:
+Seja $$f(x, y)$$ uma função de duas variáveis, a derivada parcial de $$f$$ em relação a $$x$$ é denotada por:
 
 $$\frac{\partial f}{\partial x}$$
 
@@ -258,62 +258,62 @@ $$\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y)
 
 #### 1.4.2 - Notações Comuns
 
-- \(\frac{\partial f}{\partial x}\) ou \(f_x\)
-- \(\frac{\partial f}{\partial y}\) ou \(f_y\)
+- $$\frac{\partial f}{\partial x}$$ ou $$f_x$$
+- $$\frac{\partial f}{\partial y}$$ ou $$f_y$$
 
 #### 1.4.3 - Exemplos de Derivadas Parciais
 
 1. **Função de Duas Variáveis:**
 
-   Considere \( f(x, y) = x^2 + y^2 \).
+   Considere $$f(x, y) = x^2 + y^2$$.
 
-   - Derivada parcial em relação a \( x \):
+   - Derivada parcial em relação a $$x$$:
 
      $$\frac{\partial f}{\partial x} = 2x$$
 
-   - Derivada parcial em relação a \( y \):
+   - Derivada parcial em relação a $$y$$:
 
      $$\frac{\partial f}{\partial y} = 2y$$
 
 2. **Função Mista:**
 
-   Para \( f(x, y) = x^2y + 3xy^2 \):
+   Para $$f(x, y) = x^2y + 3xy^2$$:
 
-   - Derivada parcial em relação a \( x \):
+   - Derivada parcial em relação a $$x$$:
 
      $$\frac{\partial f}{\partial x} = 2xy + 3y^2$$
 
-   - Derivada parcial em relação a \( y \):
+   - Derivada parcial em relação a $$y$$:
 
      $$\frac{\partial f}{\partial y} = x^2 + 6xy$$
 
 #### 1.4.4 - Derivadas Parciais de Funções com Mais de Duas Variáveis
 
-Para funções com mais de duas variáveis, como \( f(x, y, z) \), as derivadas parciais são calculadas em relação a cada uma das variáveis, mantendo as outras constantes.
+Para funções com mais de duas variáveis, como $$f(x, y, z)$$, as derivadas parciais são calculadas em relação a cada uma das variáveis, mantendo as outras constantes.
 
 **Exemplo:**
 
-Para \( f(x, y, z) = x^2 + y^2 + z^2 \):
+Para $$f(x, y, z) = x^2 + y^2 + z^2$$:
 
-- \(\frac{\partial f}{\partial x} = 2x\)
-- \(\frac{\partial f}{\partial y} = 2y\)
-- \(\frac{\partial f}{\partial z} = 2z\)
+- $$\frac{\partial f}{\partial x} = 2x$$
+- $$\frac{\partial f}{\partial y} = 2y$$
+- $$\frac{\partial f}{\partial z} = 2z$$
 
 #### 1.4.5 - Derivadas de Segunda Ordem
 
-As derivadas parciais podem ser estendidas a derivadas de segunda ordem. Se \(f(x, y)\) é uma função, suas derivadas de segunda ordem são:
+As derivadas parciais podem ser estendidas a derivadas de segunda ordem. Se $$f(x, y)$$ é uma função, suas derivadas de segunda ordem são:
 
-- \(\frac{\partial^2 f}{\partial x^2}\) - Derivada parcial de segunda ordem em relação a \(x\).
-- \(\frac{\partial^2 f}{\partial y^2}\) - Derivada parcial de segunda ordem em relação a \(y\).
-- \(\frac{\partial^2 f}{\partial x \partial y}\) ou \(\frac{\partial^2 f}{\partial y \partial x}\) - Derivadas mistas.
+- $$\frac{\partial^2 f}{\partial x^2}$$ - Derivada parcial de segunda ordem em relação a $$x$$.
+- $$\frac{\partial^2 f}{\partial y^2}$$ - Derivada parcial de segunda ordem em relação a $$y$$.
+- $$\frac{\partial^2 f}{\partial x \partial y}$$ ou $$\frac{\partial^2 f}{\partial y \partial x}$$ - Derivadas mistas.
 
 **Exemplo de Derivadas de Segunda Ordem:**
 
-Para \( f(x, y) = x^2y + y^3 \):
+Para $$f(x, y) = x^2y + y^3$$:
 
-- \(\frac{\partial^2 f}{\partial x^2} = 2y\)
-- \(\frac{\partial^2 f}{\partial y^2} = 6y\)
-- \(\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = 2x\)
+- $$\frac{\partial^2 f}{\partial x^2} = 2y$$
+- $$\frac{\partial^2 f}{\partial y^2} = 6y$$
+- $$\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = 2x$$
 
 ### 1.5 - Máximos e Mínimos
 
@@ -321,8 +321,8 @@ Para \( f(x, y) = x^2y + y^3 \):
 
 Os pontos de máximo e mínimo de uma função são valores específicos onde a função atinge seus picos (máximos) ou vales (mínimos). Estes pontos são importantes em várias aplicações, como otimização e análise de comportamento de funções.
 
-- **Máximo Local:** Um ponto \(x = c\) é um máximo local se \(f(c) \geq f(x)\) para todos os \(x\) próximos de \(c\).
-- **Mínimo Local:** Um ponto \(x = c\) é um mínimo local se \(f(c) \leq f(x)\) para todos os \(x\) próximos de \(c\).
+- **Máximo Local:** Um ponto $$x = c$$ é um máximo local se $$f(c) \geq f(x)$$ para todos os $$x$$ próximos de $$c$$.
+- **Mínimo Local:** Um ponto $$x = c$$ é um mínimo local se $$f(c) \leq f(x)$$ para todos os $$x$$ próximos de $$c$$.
 - **Máximo Global:** O ponto onde a função atinge seu maior valor em todo o domínio.
 - **Mínimo Global:** O ponto onde a função atinge seu menor valor em todo o domínio.
 
@@ -334,15 +334,15 @@ Os pontos de máximo e mínimo de uma função são valores específicos onde a 
 
 2. **Segunda Derivada:** A segunda derivada é usada para determinar se o ponto crítico é um máximo ou um mínimo.
 
-   - Se \(f''(x) > 0\), o ponto é um **mínimo local** (concavidade para cima).
-   - Se \(f''(x) < 0\), o ponto é um **máximo local** (concavidade para baixo).
-   - Se \(f''(x) = 0\), a análise é inconclusiva; pode ser necessário um teste adicional.
+   - Se $$f''(x) > 0$$, o ponto é um **mínimo local** (concavidade para cima).
+   - Se $$f''(x) < 0$$, o ponto é um **máximo local** (concavidade para baixo).
+   - Se $$f''(x) = 0$$, a análise é inconclusiva; pode ser necessário um teste adicional.
 
 #### 1.5.3 - Exemplos de Máximos e Mínimos
 
 1. **Exemplo 1:**
 
-   Considere a função \(f(x) = x^2 - 4x + 3\).
+   Considere a função $$f(x) = x^2 - 4x + 3$$.
 
    - Primeira derivada: 
 
@@ -356,7 +356,7 @@ Os pontos de máximo e mínimo de uma função são valores específicos onde a 
 
      $$f''(x) = 2$$
 
-     Como \(f''(2) > 0\), \(x = 2\) é um **mínimo local**.
+     Como $$f''(2) > 0$$, $$x = 2$$ é um **mínimo local**.
 
    - Valor mínimo: 
 
@@ -364,7 +364,7 @@ Os pontos de máximo e mínimo de uma função são valores específicos onde a 
 
 2. **Exemplo 2:**
 
-   Para \(f(x) = -x^2 + 4x - 3\).
+   Para $$f(x) = -x^2 + 4x - 3$$.
 
    - Primeira derivada: 
 
@@ -378,7 +378,7 @@ Os pontos de máximo e mínimo de uma função são valores específicos onde a 
 
      $$f''(x) = -2$$
 
-     Como \(f''(2) < 0\), \(x = 2\) é um **máximo local**.
+     Como $$f''(2) < 0$$, $$x = 2$$ é um **máximo local**.
 
    - Valor máximo:
 
@@ -428,13 +428,13 @@ A integral de uma função representa a soma contínua de valores, calculando a 
 
 1. **Exemplo 1:**
 
-   Calcule a integral indefinida de \(f(x) = 3x^2\).
+   Calcule a integral indefinida de $$f(x) = 3x^2$$.
 
    $$\int 3x^2 \, dx = x^3 + C$$
 
 2. **Exemplo 2:**
 
-   Calcule a integral definida de \(f(x) = x\) de \(0\) a \(3\).
+   Calcule a integral definida de $$f(x) = x$$ de $$0$$ a $$3$$.
 
    $$\int_0^3 x \, dx = \left[\frac{x^2}{2}\right]_0^3 = \frac{9}{2}$$
 
@@ -454,7 +454,7 @@ $$v = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}$$
 
 - **Vetor Linha:**
 
-  $$v = [v_1, v_2, \ldots, v_n]$$
+$$v = [v_1, v_2, \ldots, v_n]$$
 
 Exemplo de vetor em \( \mathbb{R}^3 \):
 
@@ -488,7 +488,10 @@ Vetores e matrizes são utilizados em:
 
 #### Exercícios Práticos
 1. Represente o vetor \(v = [3, -2, 5]\) como um vetor coluna.
-2. Determine a dimensão da matriz \(B = \begin{bmatrix} 2 & -1 \\ 4 & 0 \\ -3 & 5 \end{bmatrix}\).
+2. Determine a dimensão da matriz 
+
+$$B = \begin{bmatrix} 2 & -1 \\ 4 & 0 \\ -3 & 5 \end{bmatrix}.$$
+
 3. Escreva uma matriz \(2 \times 3\) contendo números inteiros.
 
 ### 2.2 - Operações com Vetores e Matrizes
@@ -499,25 +502,49 @@ Vetores e matrizes são utilizados em:
 
    **Exemplo:**
 
-   Se \(u = [1, 2, 3]\) e \(v = [4, -1, 2]\), então:
+   Se 
 
-   $$u + v = [1 + 4, 2 + (-1), 3 + 2] = [5, 1, 5]$$
+$$u = [1, 2, 3]$$ 
+
+e 
+
+$$v = [4, -1, 2],$$ 
+
+então:
+
+$$u + v = [1 + 4, 2 + (-1), 3 + 2] = [5, 1, 5].$$
 
 2. **Multiplicação por Escalar**: Multiplicar um vetor por um escalar consiste em multiplicar cada componente do vetor pelo escalar.
 
    **Exemplo:**
 
-   Se \(v = [2, -3, 4]\) e \(k = 3\), então:
+   Se 
 
-   $$k \cdot v = 3 \cdot [2, -3, 4] = [6, -9, 12]$$
+$$v = [2, -3, 4]$$ 
+
+e 
+
+$$k = 3,$$ 
+
+então:
+
+$$k \cdot v = 3 \cdot [2, -3, 4] = [6, -9, 12].$$
 
 3. **Produto Escalar (Dot Product)**: O produto escalar de dois vetores é uma soma dos produtos de seus elementos correspondentes.
 
    **Exemplo:**
 
-   Para \(u = [1, 2, 3]\) e \(v = [4, -1, 2]\):
+   Para 
 
-   $$u \cdot v = (1 \times 4) + (2 \times -1) + (3 \times 2) = 4 - 2 + 6 = 8$$
+$$u = [1, 2, 3]$$ 
+
+e 
+
+$$v = [4, -1, 2],$$ 
+
+temos:
+
+$$u \cdot v = (1 \times 4) + (2 \times -1) + (3 \times 2) = 4 - 2 + 6 = 8.$$
 
 #### Operações com Matrizes
 
@@ -525,44 +552,82 @@ Vetores e matrizes são utilizados em:
 
    **Exemplo:**
 
-   Se \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\) e \(B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}\), então:
+   Se 
 
-   $$A + B = \begin{bmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{bmatrix} = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}$$
+$$A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$$ 
+
+e 
+
+$$B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix},$$ 
+
+então:
+
+$$A + B = \begin{bmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{bmatrix} = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}.$$
 
 2. **Multiplicação por Escalar**: Cada elemento da matriz é multiplicado pelo escalar.
 
    **Exemplo:**
 
-   Para \(A = \begin{bmatrix} 2 & 4 \\ 1 & -3 \end{bmatrix}\) e \(k = 3\):
+   Para 
 
-   $$k \cdot A = \begin{bmatrix} 3 \cdot 2 & 3 \cdot 4 \\ 3 \cdot 1 & 3 \cdot -3 \end{bmatrix} = \begin{bmatrix} 6 & 12 \\ 3 & -9 \end{bmatrix}$$
+$$A = \begin{bmatrix} 2 & 4 \\ 1 & -3 \end{bmatrix}$$ 
+
+e 
+
+$$k = 3,$$ 
+
+temos:
+
+$$k \cdot A = \begin{bmatrix} 3 \cdot 2 & 3 \cdot 4 \\ 3 \cdot 1 & 3 \cdot -3 \end{bmatrix} = \begin{bmatrix} 6 & 12 \\ 3 & -9 \end{bmatrix}.$$
 
 3. **Multiplicação de Matrizes**: Para multiplicar duas matrizes \(A\) e \(B\), o número de colunas de \(A\) deve ser igual ao número de linhas de \(B\). O produto é obtido multiplicando-se as linhas da primeira matriz pelas colunas da segunda.
 
    **Exemplo:**
 
-   Se \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\) e \(B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}\), então:
+   Se 
 
-   $$A \cdot B = \begin{bmatrix} (1 \times 5 + 2 \times 7) & (1 \times 6 + 2 \times 8) \\ (3 \times 5 + 4 \times 7) & (3 \times 6 + 4 \times 8) \end{bmatrix} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}$$
+$$A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$$ 
+
+e 
+
+$$B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix},$$ 
+
+então:
+
+$$A \cdot B = \begin{bmatrix} (1 \times 5 + 2 \times 7) & (1 \times 6 + 2 \times 8) \\ (3 \times 5 + 4 \times 7) & (3 \times 6 + 4 \times 8) \end{bmatrix} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}.$$
 
 4. **Transposição de Matrizes**: A transposição de uma matriz é obtida trocando suas linhas por colunas.
 
    **Exemplo:**
 
-   Para \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\):
+   Para 
 
-   $$A^T = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}$$
+$$A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix},$$ 
+
+temos:
+
+$$A^T = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}.$$
 
 #### Aplicações
 Operações com vetores e matrizes são amplamente usadas em:
-- **Resolução de Sistemas Lineares**.
-- **Transformações Lineares**.
+- **Resolução de Sistemas Lineares.**
+- **Transformações Lineares.**
 - **Modelagem de Dados** na Ciência de Dados e Machine Learning.
 
 #### Exercícios Práticos
 1. Calcule o produto escalar de \(u = [2, -1, 3]\) e \(v = [4, 0, -2]\).
-2. Encontre o produto da matriz \(A = \begin{bmatrix} 1 & -2 \\ 0 & 3 \end{bmatrix}\) com o escalar \(5\).
-3. Multiplique \(A = \begin{bmatrix} 1 & 0 \\ 2 & 3 \end{bmatrix}\) pela matriz \(B = \begin{bmatrix} 4 & 1 \\ 2 & -1 \end{bmatrix}\).
+2. Encontre o produto da matriz 
+
+$$A = \begin{bmatrix} 1 & -2 \\ 0 & 3 \end{bmatrix}$$ 
+
+com o escalar \(5\).
+3. Multiplique 
+
+$$A = \begin{bmatrix} 1 & 0 \\ 2 & 3 \end{bmatrix}$$ 
+
+pela matriz 
+
+$$B = \begin{bmatrix} 4 & 1 \\ 2 & -1 \end{bmatrix}.$$
 
 ### 2.3 - Tipos de Matrizes
 
@@ -571,70 +636,70 @@ Uma matriz é dita quadrada quando o número de linhas é igual ao número de co
 
 **Exemplo:**
 
-$$A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$$
+$$A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}.$$
 
 #### 2. Matriz Diagonal
 Uma matriz diagonal é uma matriz quadrada onde todos os elementos fora da diagonal principal são zero.
 
 **Exemplo:**
 
-$$D = \begin{bmatrix} 4 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 6 \end{bmatrix}$$
+$$D = \begin{bmatrix} 4 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 6 \end{bmatrix}.$$
 
 #### 3. Matriz Identidade
 Uma matriz identidade é uma matriz diagonal onde todos os elementos da diagonal principal são iguais a 1. Representada por \(I\).
 
 **Exemplo:**
 
-$$I = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+$$I = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}.$$
 
 #### 4. Matriz Nula (ou Zero)
 Uma matriz nula é uma matriz onde todos os seus elementos são iguais a zero.
 
 **Exemplo:**
 
-$$O = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}$$
+$$O = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}.$$
 
 #### 5. Matriz Simétrica
 Uma matriz simétrica é uma matriz quadrada que é igual à sua transposta (\(A = A^T\)).
 
 **Exemplo:**
 
-$$S = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 4 & 5 \\ 3 & 5 & 6 \end{bmatrix}$$
+$$S = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 4 & 5 \\ 3 & 5 & 6 \end{bmatrix}.$$
 
 #### 6. Matriz Anti-Simétrica (ou Matriz Skew-Simétrica)
 Uma matriz anti-simétrica é uma matriz quadrada onde a transposta é igual à matriz original multiplicada por \(-1\) (\(A^T = -A\)).
 
 **Exemplo:**
 
-$$A = \begin{bmatrix} 0 & -2 & 3 \\ 2 & 0 & -1 \\ -3 & 1 & 0 \end{bmatrix}$$
+$$A = \begin{bmatrix} 0 & -2 & 3 \\ 2 & 0 & -1 \\ -3 & 1 & 0 \end{bmatrix}.$$
 
 #### 7. Matriz Triangular Superior
 Uma matriz triangular superior é uma matriz quadrada onde todos os elementos abaixo da diagonal principal são zero.
 
 **Exemplo:**
 
-$$U = \begin{bmatrix} 2 & 3 & 4 \\ 0 & 5 & 6 \\ 0 & 0 & 7 \end{bmatrix}$$
+$$U = \begin{bmatrix} 2 & 3 & 4 \\ 0 & 5 & 6 \\ 0 & 0 & 7 \end{bmatrix}.$$
 
 #### 8. Matriz Triangular Inferior
 Uma matriz triangular inferior é uma matriz quadrada onde todos os elementos acima da diagonal principal são zero.
 
 **Exemplo:**
 
-$$L = \begin{bmatrix} 1 & 0 & 0 \\ 4 & 2 & 0 \\ 7 & 8 & 3 \end{bmatrix}$$
+$$L = \begin{bmatrix} 1 & 0 & 0 \\ 4 & 2 & 0 \\ 7 & 8 & 3 \end{bmatrix}.$$
 
 #### 9. Matriz Ortogonal
 Uma matriz ortogonal é uma matriz quadrada cuja transposta é igual à sua inversa (\(A^T A = I\)).
 
 **Exemplo:**
 
-$$Q = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$$
+$$Q = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}.$$
 
 #### 10. Matriz de Permutação
 Uma matriz de permutação é uma matriz obtida trocando as linhas de uma matriz identidade.
 
 **Exemplo:**
 
-$$P = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+$$P = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}.$$
 
 #### Aplicações
 Diferentes tipos de matrizes são usados em diversas áreas, como:
@@ -643,7 +708,18 @@ Diferentes tipos de matrizes são usados em diversas áreas, como:
 - **Análise de Dados e Algoritmos Computacionais.**
 
 #### Exercícios Práticos
-1. Determine se a matriz \(A = \begin{bmatrix} 0 & -3 \\ 3 & 0 \end{bmatrix}\) é simétrica ou anti-simétrica.
-2. Verifique se a matriz \(B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}\) é diagonal.
-3. Classifique a matriz \(C = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 1 & 4 \\ 0 & 0 & 3 \end{bmatrix}\) quanto ao seu tipo.
+1. Determine se a matriz 
 
+$$A = \begin{bmatrix} 0 & -3 \\ 3 & 0 \end{bmatrix}$$ 
+
+é simétrica ou anti-simétrica.
+2. Verifique se a matriz 
+
+$$B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$$ 
+
+é diagonal.
+3. Classifique a matriz 
+
+$$C = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 1 & 4 \\ 0 & 0 & 3 \end{bmatrix}$$ 
+
+quanto ao seu tipo.
