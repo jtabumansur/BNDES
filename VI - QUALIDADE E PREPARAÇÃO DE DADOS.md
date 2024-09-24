@@ -1,4 +1,4 @@
-# VI - QUALIDADE E PREPARAÇÃO DE DADOS
+k# VI - QUALIDADE E PREPARAÇÃO DE DADOS
 
 ## 1. Metadados: a sua importância para avaliação da qualidade de dados; linhagem de dados.
 
@@ -307,6 +307,216 @@ Data Profiling é o processo de examinar os dados para coletar estatísticas e i
 - **Detecção de Vieses**: Perguntas podem explorar métodos para identificar e corrigir vieses em conjuntos de dados e como isso impacta a imparcialidade dos modelos.
 - **Data Profiling**: Questões podem focar na definição e aplicação do data profiling, explorando como ele ajuda na avaliação da qualidade dos dados e na preparação para análises mais robustas.
 
+## 5. Pré-processamento de Dados: Técnicas de Normalização e Padronização; Discretização; Metodologias de Codificação de Variáveis Categóricas (Encoding).
+
+### 5.1 Técnicas de Normalização e Padronização
+
+Normalização e padronização são técnicas de pré-processamento utilizadas para ajustar as escalas dos dados, facilitando o trabalho de algoritmos de aprendizado de máquina que são sensíveis às magnitudes dos atributos.
+
+#### 5.1.1 Normalização
+
+- **Descrição**: A normalização redimensiona os valores das variáveis para um intervalo específico, geralmente entre 0 e 1, preservando as relações proporcionais entre os dados.
+
+- **Fórmula**: 
+  \[
+  X_{\text{norm}} = \frac{X - \min(X)}{\max(X) - \min(X)}
+  \]
+
+- **Exemplo**: Normalizar os valores de renda de uma população para o intervalo [0, 1] para uso em modelos de redes neurais.
+
+- **Vantagens**:
+  - Melhora a performance de algoritmos sensíveis à escala, como redes neurais e K-means.
+  - Ajuda na convergência de modelos durante o treinamento.
+
+#### 5.1.2 Padronização
+
+- **Descrição**: A padronização transforma os dados para que tenham média 0 e desvio padrão 1, ajustando-os para uma distribuição normal.
+
+- **Fórmula**: 
+  \[
+  X_{\text{padronizado}} = \frac{X - \mu}{\sigma}
+  \]
+  Onde \(\mu\) é a média e \(\sigma\) é o desvio padrão.
+
+- **Exemplo**: Padronizar as notas de exames de alunos para analisar o desempenho relativo em relação à média.
+
+- **Vantagens**:
+  - Útil quando os dados têm distribuição gaussiana.
+  - Reduz a influência de escalas diferentes entre variáveis no aprendizado de modelos.
+
+### 5.2 Discretização
+
+- **Descrição**: Discretização é o processo de converter variáveis contínuas em discretas, dividindo o intervalo de valores em bins ou categorias.
+
+- **Técnicas Comuns**:
+  - **Binning Equidistante**: Divide o intervalo em bins de largura igual.
+  - **Binning com Frequência Igual**: Cada bin contém aproximadamente o mesmo número de observações.
+  - **Discretização baseada em Entropia**: Ajusta os limites dos bins com base na minimização da entropia para maximizar a homogeneidade dentro dos bins.
+
+- **Exemplo**: Discretizar a idade em categorias como "Jovem", "Adulto" e "Idoso" para simplificar a análise.
+
+- **Vantagens**:
+  - Facilita a interpretação de variáveis contínuas.
+  - Útil para reduzir o impacto de outliers e para preparar dados para algoritmos que exigem entradas discretas.
+
+### 5.3 Metodologias de Codificação de Variáveis Categóricas (Encoding)
+
+Variáveis categóricas representam atributos qualitativos e precisam ser convertidas em um formato numérico que os algoritmos de aprendizado de máquina possam entender.
+
+#### 5.3.1 One-Hot Encoding
+
+- **Descrição**: Converte cada categoria em uma nova coluna binária (0 ou 1), indicando a presença ou ausência da categoria.
+
+- **Exemplo**: Uma variável "Cor" com categorias "Vermelho", "Azul" e "Verde" se tornaria três colunas: "Cor_Vermelho", "Cor_Azul" e "Cor_Verde".
+
+- **Vantagens**:
+  - Preserva toda a informação sem assumir hierarquia entre categorias.
+  - Ideal para variáveis com poucas categorias.
+
+- **Desvantagens**:
+  - Pode gerar um grande número de colunas se houver muitas categorias, aumentando a dimensionalidade.
+
+#### 5.3.2 Label Encoding
+
+- **Descrição**: Atribui um número inteiro a cada categoria, transformando-as em uma sequência numérica.
+
+- **Exemplo**: A variável "Animal" com "Gato", "Cachorro" e "Pássaro" poderia ser codificada como 0, 1 e 2, respectivamente.
+
+- **Vantagens**:
+  - Simples de implementar e reduz a complexidade dos dados.
+  - Mantém a variável em um único atributo numérico.
+
+- **Desvantagens**:
+  - Introduz uma ordem artificial entre categorias, o que pode confundir algoritmos que assumem relações matemáticas.
+
+#### 5.3.3 Ordinal Encoding
+
+- **Descrição**: Similar ao label encoding, mas preserva a ordem natural das categorias, usado quando há uma relação hierárquica.
+
+- **Exemplo**: A variável "Tamanho" com categorias "Pequeno", "Médio" e "Grande" pode ser codificada como 1, 2 e 3, refletindo a ordem.
+
+- **Vantagens**:
+  - Ideal para variáveis onde há uma progressão ou ordem.
+  - Simples e eficaz para representações ordenadas.
+
+#### 5.3.4 Target Encoding
+
+- **Descrição**: Substitui as categorias por uma média (ou outro valor estatístico) da variável alvo associada àquela categoria, baseada em dados históricos.
+
+- **Exemplo**: Em um modelo de previsão de compra, categorias de "Região" podem ser codificadas pela média de compras históricas associadas a cada região.
+
+- **Vantagens**:
+  - Pode capturar informações de forma mais eficiente do que one-hot ou label encoding.
+  - Útil para variáveis categóricas com muitas classes.
+
+- **Desvantagens**:
+  - Pode introduzir viés se não for usado com técnicas de validação adequadas.
+
+### Resumo das Possíveis Cobranças em Provas:
+
+- **Normalização vs. Padronização**: Questões podem abordar as diferenças e quando usar cada técnica.
+- **Discretização**: Perguntas podem explorar os métodos de binning e sua aplicação em simplificação de variáveis contínuas.
+- **Encoding de Variáveis Categóricas**: Questões podem comparar diferentes métodos de encoding, suas vantagens e desvantagens, e cenários de aplicação.
+
+## 6. Feature Engineering: Processos para Enriquecimento de Dados, com Criação e Seleção de Features Relevantes; Transformações Matemáticas e Estatísticas Comuns em Variáveis.
+
+### 6.1 Feature Engineering: Definição e Importância
+
+Feature Engineering é o processo de criar, modificar e selecionar variáveis (features) que melhor representem os padrões nos dados, com o objetivo de melhorar a performance dos modelos de aprendizado de máquina. Um bom trabalho de feature engineering pode transformar um modelo simples em um de alta precisão, extraindo mais valor das informações disponíveis.
+
+### 6.2 Processos para Enriquecimento de Dados
+
+O enriquecimento de dados envolve adicionar novas informações ou transformar as existentes para aumentar o poder preditivo do modelo.
+
+#### 6.2.1 Criação de Novas Features
+
+- **Descrição**: Consiste em derivar novas variáveis a partir das já existentes para capturar relações e padrões não evidentes nos dados originais.
+
+- **Exemplos**:
+  - **Interações**: Criar variáveis que representem a interação entre duas ou mais features (ex.: multiplicar idade pelo número de compras).
+  - **Agregações**: Calcular médias, somas, ou contagens de variáveis relacionadas (ex.: média de transações por mês).
+  - **Extração de Componentes**: Extrair partes específicas de uma variável, como o mês e o ano de uma data.
+
+- **Benefícios**:
+  - Melhora a representação do problema para o modelo.
+  - Captura relacionamentos complexos entre as variáveis.
+
+#### 6.2.2 Seleção de Features Relevantes
+
+- **Descrição**: A seleção de features envolve escolher as variáveis mais relevantes para o modelo, eliminando as que são redundantes ou não agregam valor.
+
+- **Técnicas Comuns**:
+  - **Filtragem**: Seleção baseada em testes estatísticos, como correlação ou ANOVA, para identificar as variáveis mais relacionadas à variável alvo.
+  - **Métodos de Wrapper**: Utilizam algoritmos de busca, como Forward Selection e Backward Elimination, para adicionar ou remover features e avaliar o impacto na performance do modelo.
+  - **Métodos Baseados em Importância**: Modelos como árvores de decisão calculam a importância de cada feature, permitindo selecionar apenas as mais impactantes.
+
+- **Exemplos**:
+  - Remover features com alta colinearidade para evitar redundâncias.
+  - Selecionar as variáveis mais relevantes com base na importância atribuída por um modelo de árvore de decisão.
+
+- **Benefícios**:
+  - Reduz a complexidade do modelo, melhorando a interpretabilidade.
+  - Minimiza o risco de overfitting.
+
+### 6.3 Transformações Matemáticas e Estatísticas Comuns em Variáveis
+
+Transformações matemáticas e estatísticas são usadas para ajustar a distribuição dos dados, lidar com outliers, e melhorar o desempenho dos algoritmos de aprendizado de máquina.
+
+#### 6.3.1 Logaritmo
+
+- **Descrição**: Aplicação da função logarítmica para reduzir a amplitude de variáveis com distribuição assimétrica ou com outliers.
+
+- **Exemplo**: Transformar a variável "renda" usando logaritmo para suavizar valores extremos e melhorar a modelagem.
+
+- **Benefícios**:
+  - Reduz o impacto de outliers.
+  - Aproxima a distribuição dos dados de uma normal.
+
+#### 6.3.2 Raiz Quadrada e Raiz Cúbica
+
+- **Descrição**: Utilização de raízes para reduzir a magnitude de variáveis de forma menos agressiva que o logaritmo, especialmente útil quando há valores zero.
+
+- **Exemplo**: Aplicar raiz quadrada em contagens de eventos raros para reduzir a variação extrema.
+
+- **Benefícios**:
+  - Suaviza a distribuição sem eliminar valores zero.
+  - Melhora a normalidade de variáveis com variação alta.
+
+#### 6.3.3 Escalonamento Min-Max
+
+- **Descrição**: Redimensiona os valores de uma variável para um intervalo específico, geralmente [0, 1].
+
+- **Exemplo**: Usar escalonamento Min-Max em atributos de imagens para normalizar os pixels.
+
+- **Benefícios**:
+  - Uniformiza as variáveis para comparações diretas.
+  - Facilita a convergência de algoritmos que utilizam gradientes.
+
+#### 6.3.4 Transformação Box-Cox
+
+- **Descrição**: Transformação parametrizada que ajusta variáveis para melhorar a simetria da distribuição e atender pressupostos de normalidade.
+
+- **Exemplo**: Aplicar Box-Cox em vendas diárias para melhorar a performance de modelos que assumem normalidade.
+
+- **Benefícios**:
+  - Flexível e ajustável a diferentes tipos de distribuição.
+  - Otimiza variáveis para modelos lineares.
+
+#### 6.3.5 Normalização Z-score
+
+- **Descrição**: Padroniza os dados subtraindo a média e dividindo pelo desvio padrão, resultando em uma distribuição com média 0 e desvio padrão 1.
+
+- **Exemplo**: Aplicar Z-score em notas de exames para comparar desempenhos relativos.
+
+- **Benefícios**:
+  - Facilita a detecção de outliers.
+  - Ajusta dados para algoritmos sensíveis a escalas.
+
+### Resumo das Possíveis Cobranças em Provas:
+
+- **Criação e Seleção de Features**: Questões podem focar em como criar novas features e selecionar as mais relevantes para melhorar a performance do modelo.
+- **Transformações Matemáticas e Estatísticas**: Perguntas podem explorar quando e como aplicar transformações como logaritmos, raiz quadrada, e normalizações.
+- **Aplicação Prática**: Questões podem apresentar cenários onde é necessário aplicar técnicas de feature engineering, testando o conhecimento sobre quais métodos utilizar e o impacto esperado.
 
 ## 7. Divisão de Dados: Técnicas de Amostragem; Divisão entre Treinamento, Validação e Teste; Abordagens para Cross-Validation.
 
