@@ -1030,6 +1030,326 @@ $$\det(A - \lambda I) = \det\begin{bmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \
 
 Resolvendo $$\lambda^2 - 4\lambda + 3 = 0$$, obtemos os autovalores $$\lambda_1 = 3$$ e $$\lambda_2 = 1$$.
 
+# 3 - Otimização Matemática
+
+## 3.1 - Programação Linear Inteira e Mista
+
+A **Programação Linear Inteira (PLI)** e a **Programação Linear Mista (PLM)** são subcampos da programação linear onde algumas ou todas as variáveis de decisão são restritas a serem inteiros. Esses métodos são amplamente usados em problemas onde decisões discretas são necessárias, como planejamento de produção, alocação de recursos e otimização de rotas.
+
+### 3.1.1 - Definição de Programação Linear Inteira
+
+A Programação Linear Inteira envolve a otimização de uma função objetivo linear sujeita a um conjunto de restrições lineares, onde todas as variáveis de decisão devem assumir valores inteiros.
+
+**Exemplo de Formulação de um Problema de PLI:**
+
+Maximizar:
+
+$$
+Z = 3x_1 + 2x_2
+$$
+
+Sujeito a:
+
+$$
+\begin{cases}
+x_1 + x_2 \leq 4 \\
+2x_1 + x_2 \leq 5 \\
+x_1, x_2 \geq 0 \\
+x_1, x_2 \in \mathbb{Z}
+\end{cases}
+$$
+
+Nesse exemplo, o objetivo é maximizar \(Z\) com restrições lineares, onde \(x_1\) e \(x_2\) devem ser inteiros.
+
+### 3.1.2 - Programação Linear Mista
+
+A Programação Linear Mista permite que algumas variáveis sejam inteiras, enquanto outras podem assumir valores contínuos. Essa flexibilidade é útil em problemas onde certas decisões são discretas (como o número de unidades produzidas), enquanto outras podem ser fracionárias (como a quantidade de matéria-prima).
+
+**Exemplo de Formulação de um Problema de PLM:**
+
+Maximizar:
+
+$$
+Z = 5x_1 + 4x_2 + 3x_3
+$$
+
+Sujeito a:
+
+$$
+\begin{cases}
+x_1 + 2x_2 + x_3 \leq 6 \\
+2x_1 + x_2 + 3x_3 \leq 8 \\
+x_1, x_2 \geq 0, \ x_3 \in \mathbb{Z}
+\end{cases}
+$$
+
+Nesse caso, \(x_1\) e \(x_2\) são variáveis contínuas, enquanto \(x_3\) é uma variável inteira.
+
+### 3.1.3 - Métodos de Resolução
+
+1. **Método do Plano de Corte (Branch and Bound):** Um dos métodos mais comuns para resolver PLI, que consiste em dividir o problema em subproblemas menores e excluir regiões inviáveis.
+
+2. **Método do Branch and Cut:** Uma extensão do Branch and Bound que inclui cortes para remover soluções fracionárias, refinando a busca por soluções inteiras.
+
+3. **Método de Relaxação Linear:** Resolver o problema como um problema de programação linear contínua e, em seguida, ajustar as soluções para atender às restrições inteiras.
+
+### 3.1.4 - Aplicações de PLI e PLM
+
+- **Planejamento de Produção:** Decisões sobre quantidades a produzir, transportes e estoques.
+- **Problemas de Roteamento:** Otimização de rotas de veículos, minimização de custos de transporte.
+- **Alocação de Recursos:** Distribuição ótima de recursos escassos em diferentes atividades.
+
+## 3.2 - Problemas de Otimização Unidimensionais e Multidimensionais, com e sem Restrições
+
+Os problemas de otimização podem ser classificados em unidimensionais e multidimensionais, dependendo do número de variáveis envolvidas. Esses problemas podem ainda ser com ou sem restrições, dependendo se há condições adicionais que as soluções devem satisfazer.
+
+### 3.2.1 - Otimização Unidimensional
+
+Na otimização unidimensional, a função objetivo depende de uma única variável. O objetivo é encontrar o ponto onde a função atinge seu máximo ou mínimo.
+
+**Exemplo de Problema Unidimensional Sem Restrições:**
+
+Minimizar:
+
+$$
+f(x) = (x - 3)^2 + 4
+$$
+
+Para encontrar o mínimo, derivamos a função:
+
+$$
+f'(x) = 2(x - 3)
+$$
+
+Igualando a zero:
+
+$$
+2(x - 3) = 0 \implies x = 3
+$$
+
+Neste exemplo, o mínimo ocorre em \(x = 3\).
+
+### 3.2.2 - Otimização Multidimensional
+
+A otimização multidimensional envolve funções que dependem de múltiplas variáveis. Essas funções podem ser otimizadas com ou sem restrições, e os métodos utilizados são geralmente mais complexos.
+
+**Exemplo de Problema Multidimensional Sem Restrições:**
+
+Minimizar:
+
+$$
+f(x, y) = x^2 + y^2 + 4x - 2y
+$$
+
+Calculando as derivadas parciais:
+
+$$
+\frac{\partial f}{\partial x} = 2x + 4, \quad \frac{\partial f}{\partial y} = 2y - 2
+$$
+
+Igualando a zero:
+
+$$
+2x + 4 = 0 \implies x = -2, \quad 2y - 2 = 0 \implies y = 1
+$$
+
+A solução é \( (x, y) = (-2, 1) \).
+
+### 3.2.3 - Otimização com Restrições
+
+Na otimização com restrições, além da função objetivo, o problema inclui condições adicionais que devem ser satisfeitas.
+
+**Exemplo de Problema com Restrições:**
+
+Minimizar:
+
+$$
+f(x, y) = x^2 + y^2
+$$
+
+Sujeito a:
+
+$$
+x + y = 1
+$$
+
+Usando o método dos multiplicadores de Lagrange, definimos:
+
+$$
+\mathcal{L}(x, y, \lambda) = x^2 + y^2 + \lambda (x + y - 1)
+$$
+
+Derivando e igualando a zero:
+
+$$
+\frac{\partial \mathcal{L}}{\partial x} = 2x + \lambda = 0, \quad \frac{\partial \mathcal{L}}{\partial y} = 2y + \lambda = 0, \quad \frac{\partial \mathcal{L}}{\partial \lambda} = x + y - 1 = 0
+$$
+
+Resolvendo, obtemos \(x = 0.5\) e \(y = 0.5\).
+
+### 3.2.4 - Métodos de Resolução
+
+1. **Método do Gradiente:** Utilizado para encontrar máximos ou mínimos locais de funções contínuas deriváveis.
+   
+2. **Método de Newton:** Um método iterativo que utiliza a derivada e a segunda derivada da função para encontrar raízes, e é amplamente usado em otimização unidimensional.
+
+3. **Método dos Multiplicadores de Lagrange:** Utilizado para resolver problemas de otimização com restrições de igualdade.
+
+### 3.2.5 - Aplicações
+
+- **Economia:** Maximização de lucros ou minimização de custos em função de várias variáveis econômicas.
+- **Engenharia:** Design de sistemas otimizados para desempenho máximo com restrições de recursos.
+- **Ciência de Dados:** Ajuste de modelos complexos com múltiplas variáveis para minimizar erros de previsão.
+
+## 3.3 - Otimização Convexa
+
+### 3.3.1 - Definição de Problema Convexo
+
+Um problema de otimização é considerado convexo se:
+
+1. A função objetivo $$f(x)$$ é convexa, ou seja, para quaisquer $$x_1, x_2$$ e para $$\theta \in [0, 1]$$:
+
+   $$f(\theta x_1 + (1 - \theta) x_2) \leq \theta f(x_1) + (1 - \theta) f(x_2)$$
+
+2. O conjunto de restrições forma um conjunto convexo, ou seja, qualquer combinação linear de dois pontos viáveis também é viável.
+
+### 3.3.2 - Exemplos de Funções Convexas
+
+- **Função Quadrática:**
+
+  $$f(x) = ax^2 + bx + c, \quad \text{com} \ a > 0$$
+
+  A função é convexa porque sua segunda derivada é positiva.
+
+- **Função Exponencial:**
+
+  $$f(x) = e^x$$
+
+  É convexa porque sua derivada é sempre positiva.
+
+- **Função Normas:**
+
+  $$f(x) = \|x\|_2^2$$
+
+  É convexa devido à propriedade das normas.
+
+### 3.3.3 - Problemas de Otimização Convexa
+
+**Exemplo: Problema Convexo de Minimização**
+
+Minimizar:
+
+$$
+f(x) = x_1^2 + x_2^2
+$$
+
+Sujeito a:
+
+$$
+x_1 + x_2 \geq 1
+$$
+
+O conjunto de restrições é convexo (um meio-espaço) e a função objetivo é convexa. Este problema pode ser resolvido por métodos como o Método do Gradiente ou Programação Quadrática.
+
+### 3.3.4 - Métodos de Resolução
+
+1. **Método do Gradiente:** Utiliza as derivadas para buscar o mínimo da função, ajustando iterativamente as variáveis.
+   
+2. **Método do Gradiente Projetado:** Útil quando há restrições; projeta o gradiente na região viável.
+
+3. **Método de Programação Quadrática:** Resolve problemas convexos onde a função objetivo é quadrática e as restrições são lineares.
+
+4. **Método de Ponto Interior:** Utilizado para resolver problemas convexos grandes, navegando no interior da região viável até encontrar a solução ótima.
+
+### 3.3.5 - Aplicações de Otimização Convexa
+
+- **Portfólios Financeiros:** Otimização do retorno esperado de investimentos com risco mínimo.
+- **Machine Learning:** Ajuste de modelos como a regressão linear, onde a minimização da função de perda é um problema convexo.
+- **Redes de Transporte:** Minimização de custos de transporte e rotas em redes complexas.
+
+### 3.3.6 - Propriedades Importantes
+
+1. **Unicidade da Solução:** Em problemas convexos, se existe uma solução viável, ela é única.
+   
+2. **Eficiência Computacional:** A convexidade permite o uso de algoritmos eficientes que garantem a convergência para o ótimo global.
+
+3. **Estabilidade:** Pequenas alterações nos dados de entrada resultam em pequenas mudanças na solução, tornando-a robusta.
+
+A otimização convexa é amplamente utilizada devido à sua garantia de encontrar soluções globais, simplicidade analítica e eficiência computacional.
+
+## 3.4 - Programação Dinâmica
+
+A Programação Dinâmica é uma técnica de otimização utilizada para resolver problemas complexos quebrando-os em subproblemas mais simples e armazenando suas soluções para evitar cálculos repetitivos. Ela é amplamente usada em problemas de otimização onde as soluções podem ser construídas a partir de subproblemas sobrepostos e repetidos.
+
+### 3.4.1 - Princípio de Optimalidade
+
+O princípio de optimalidade estabelece que uma solução ótima de um problema contém soluções ótimas dos seus subproblemas. Portanto, ao resolver cada subproblema e armazenar sua solução, é possível construir a solução para o problema maior.
+
+### 3.4.2 - Estrutura de um Problema de Programação Dinâmica
+
+Um problema pode ser resolvido por Programação Dinâmica se apresentar:
+
+1. **Subproblemas Sobrepostos:** O problema pode ser dividido em subproblemas menores que se repetem várias vezes.
+2. **Optimalidade Estrutural:** A solução ótima para o problema pode ser construída a partir das soluções ótimas dos subproblemas.
+
+### 3.4.3 - Métodos de Implementação
+
+1. **Memorização (Top-Down):** Solução recursiva que armazena os resultados dos subproblemas já resolvidos, evitando cálculos redundantes.
+   
+2. **Tabela (Bottom-Up):** Constrói a solução de forma iterativa preenchendo uma tabela, partindo dos subproblemas mais simples até chegar ao problema maior.
+
+### 3.4.4 - Exemplo de Programação Dinâmica
+
+**Exemplo: Problema da Mochila (Knapsack Problem)**
+
+Dado um conjunto de itens, cada um com um peso e um valor, determine o número de cada item a ser incluído na mochila para que o valor total seja maximizado sem exceder a capacidade da mochila.
+
+**Definição Recursiva:**
+
+Seja \( V[i, w] \) o valor máximo que pode ser obtido com os primeiros \( i \) itens e capacidade \( w \). A relação de recorrência é:
+
+$$
+V[i, w] = \max(V[i-1, w], V[i-1, w - w_i] + v_i)
+$$
+
+Onde:
+- \( w_i \) é o peso do item \( i \).
+- \( v_i \) é o valor do item \( i \).
+
+**Solução:**
+
+Preencher uma tabela usando a relação de recorrência, começando do caso base onde a capacidade é zero.
+
+### 3.4.5 - Aplicações da Programação Dinâmica
+
+- **Problemas de Sequenciamento:** Como a sequência ótima de atividades.
+- **Teoria dos Jogos:** Determinação de estratégias vencedoras.
+- **Bioinformática:** Alinhamento de sequências genéticas.
+- **Controle Ótimo:** Sistemas que precisam otimizar recursos ao longo do tempo.
+
+### 3.4.6 - Vantagens e Desvantagens
+
+**Vantagens:**
+
+- **Eficiência Computacional:** Reduz o tempo de execução ao evitar cálculos redundantes.
+- **Simplicidade na Implementação:** Fornece uma abordagem sistemática para resolver problemas complexos.
+
+**Desvantagens:**
+
+- **Alto Consumo de Memória:** Pode requerer grande quantidade de memória para armazenar as soluções dos subproblemas.
+- **Complexidade de Implementação para Problemas Multidimensionais:** Pode ser difícil de programar em problemas que envolvem muitas variáveis.
+
+### 3.4.7 - Técnicas Avançadas
+
+1. **Programação Dinâmica com Espaço Reduzido:** Otimiza o uso de memória, mantendo apenas as linhas necessárias de uma tabela.
+   
+2. **Programação Dinâmica Estocástica:** Lida com problemas onde as entradas possuem incertezas e variabilidades.
+
+3. **Programação Dinâmica Aproximada:** Usa aproximações para resolver problemas muito grandes, sacrificando precisão por velocidade e menor uso de recursos.
+
+A Programação Dinâmica é uma ferramenta poderosa na otimização, particularmente útil em problemas onde a solução exata pode ser composta por soluções de subproblemas menores, tornando-a essencial em várias áreas da ciência e engenharia.
+
+
 Para $$\lambda_1 = 3$$:
 
 $$
