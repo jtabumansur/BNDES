@@ -382,6 +382,15 @@ As técnicas de regressão têm como principal objetivo modelar e quantificar a 
 - **Exemplo Prático**: Prever o consumo de energia com base em temperatura usando uma relação logarítmica devido ao comportamento não linear dos sistemas de aquecimento e refrigeração.
 
 
+------------
+| **Técnica**                    | **Objetivo Principal**                                                              | **Uso Comum (Exemplos em Bancos de Desenvolvimento)**                                   | **Vantagens**                                          |
+|--------------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------|--------------------------------------------------------|
+| **Redução de Dimensionalidade** | Simplificar dados, reduzindo o número de variáveis, mantendo o máximo de informação. | Análise de crédito, reduzindo o número de indicadores econômicos e financeiros.         | Reduz complexidade, melhora desempenho, elimina ruídos. |
+| **Clusterização**        | Agrupar dados semelhantes sem rótulos pré-definidos.                               | Segmentação de clientes para programas de financiamento; Identificação de padrões de inadimplência.     | Descobre padrões ocultos, facilita a exploração de dados. |
+| **Classificação**        | Categorizar dados em classes distintas com base em características.                | Aprovação de crédito (aprovado/rejeitado); Classificação de projetos de investimento por risco.           | Alta precisão na predição de categorias, fácil interpretação. |
+| **Regressão**            | Modelar e quantificar a relação entre variáveis para prever valores contínuos.     | Previsão de demanda de financiamento; Avaliação do impacto de políticas econômicas nos projetos.         | Identifica relações entre variáveis, auxilia na tomada de decisões. |
+
+
 ## 5. Ensembling de Modelos
 
 ### 5.1 Bagging (Bootstrap Aggregating)
