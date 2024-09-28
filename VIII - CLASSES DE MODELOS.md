@@ -2,6 +2,20 @@
 
 ## 1. Redução de Dimensionalidade
 
+A redução de dimensionalidade é uma técnica usada para simplificar um conjunto de dados, diminuindo o número de variáveis (dimensões) enquanto se retém o máximo de informação relevante possível. A finalidade principal é:
+
+**Finalidades da Redução de Dimensionalidade:**
+
+- **Reduzir Complexidade**: Simplificar modelos ao diminuir o número de variáveis, o que facilita a visualização e interpretação dos dados.
+
+- **Melhorar Desempenho**: Aumentar a eficiência de algoritmos de aprendizado de máquina, reduzindo o tempo de processamento e evitando o sobreajuste (overfitting).
+
+- **Eliminar Redundância**: Remover variáveis redundantes ou irrelevantes que não agregam valor, concentrando-se nas características mais importantes.
+
+- **Facilitar a Visualização**: Tornar possível a visualização de dados complexos em duas ou três dimensões, o que ajuda na compreensão de padrões.
+
+- **Reduzir Ruído**: Eliminar variações e ruídos nos dados que podem interferir nos resultados do modelo.
+
 ### 1.1 Principal Component Analysis (PCA)
 - **Conceito Básico**: PCA é uma técnica de redução de dimensionalidade que transforma variáveis correlacionadas em um conjunto de variáveis não correlacionadas chamadas de componentes principais. A ideia é capturar a maior variância dos dados com o menor número possível de componentes.
 - **Como Funciona**: 
@@ -87,6 +101,21 @@
 
 ## 2. Técnicas de Clusterização
 
+As técnicas de clusterização (ou agrupamento) têm como principal finalidade identificar e agrupar dados semelhantes dentro de um conjunto de dados, sem a necessidade de rótulos pré-definidos.
+
+**Finalidades da Clusterização:**
+
+- **Descoberta de Padrões**: Identificar padrões ocultos ou segmentos naturais nos dados, ajudando a entender melhor as relações entre os dados.
+
+- **Segmentação de Mercado**: Separar clientes ou usuários em grupos com comportamentos semelhantes para estratégias de marketing personalizadas.
+
+- **Redução de Complexidade**: Resumir grandes volumes de dados em grupos representativos, facilitando a análise e a tomada de decisões.
+
+- **Detecção de Anomalias**: Identificar comportamentos ou pontos de dados que se desviam significativamente dos grupos principais, útil em aplicações como detecção de fraudes.
+
+- **Exploração de Dados**: Auxiliar na exploração inicial de um conjunto de dados para identificar estruturas e padrões antes de aplicar outros métodos analíticos.
+
+
 ### 2.1 K-Means
 - **Conceito Básico**: K-Means é uma técnica de clusterização que divide um conjunto de dados em k grupos (clusters), minimizando a distância entre os pontos de cada cluster e seu centroide.
 - **Como Funciona**:
@@ -154,6 +183,20 @@
 - **Exemplo Prático**: Detectar anomalias em uma rede social, como contas de spam que não se ajustam aos padrões de comportamento de outros usuários.
 
 ## 3. Técnicas de Classificação
+As técnicas de classificação têm como finalidade principal categorizar ou rotular dados em classes ou grupos distintos com base em características específicas. Elas são amplamente utilizadas em aprendizado supervisionado para prever a categoria de novos dados com base em dados rotulados previamente.
+
+**Finalidades das Técnicas de Classificação:**
+
+- **Previsão de Categorias**: Estimar valores futuros ou desconhecidos da variável dependente com base nas variáveis independentes (ex.: prever vendas futuras com base em gastos de marketing).
+
+- **Tomada de Decisões**: Apoiar decisões automatizadas com base em classificações, como aprovar ou negar um pedido de empréstimo.
+
+- **Diagnóstico e Detecção**: Identificar condições específicas, como diagnosticar doenças em medicina ou detectar fraudes financeiras.
+
+- **Segmentação Automatizada**: Classificar automaticamente dados em segmentos predefinidos, útil em marketing para segmentar clientes com base no comportamento.
+
+- **Análise de Sentimento**: Categorizar textos, como avaliações de produtos, para determinar se o sentimento é positivo, negativo ou neutro.
+
 
 ### 3.1 Regressão Logística
 - **Conceito Básico**: A Regressão Logística é um modelo de classificação usado para prever a probabilidade de uma amostra pertencer a uma classe binária (0 ou 1). Ao invés de prever valores contínuos, como na regressão linear, ela transforma a saída usando a função sigmoide para retornar um valor entre 0 e 1, representando a probabilidade de uma classe.
@@ -267,6 +310,21 @@
 - **Exemplo Prático**: Classificação de clientes com base em características demográficas e comportamentais para campanhas de marketing direcionadas.
 
 ## 4. Introdução à Regressão
+
+As técnicas de regressão têm como principal objetivo modelar e quantificar a relação entre uma variável dependente (resposta) e uma ou mais variáveis independentes (preditoras). A regressão é usada para:
+
+**Objetivos Principais das Técnicas de Regressão:**
+
+- **Previsão e Predição**: Estimar valores futuros ou desconhecidos da variável dependente com base nas variáveis independentes (ex.: prever vendas futuras com base em gastos de marketing).
+
+- **Entendimento da Relação entre Variáveis**: Identificar e entender como as variáveis independentes afetam a variável dependente, ajudando a quantificar a força e a direção dessa relação.
+
+- **Tomada de Decisões**: Ajudar na tomada de decisões informadas com base na relação entre variáveis, como definir estratégias de negócio ou políticas públicas.
+
+- **Avaliação de Impacto**: Medir o impacto de uma variável sobre outra (ex.: medir o efeito de uma nova política sobre o crescimento econômico).
+
+- **Detecção de Tendências e Padrões**: Identificar padrões nos dados que podem não ser imediatamente visíveis, ajudando a encontrar tendências significativas.
+
 
 ### 4.1 Regressão Linear Simples e Múltipla
 - **Conceito Básico**: A regressão linear é uma técnica estatística usada para modelar a relação entre uma variável dependente (resposta) e uma ou mais variáveis independentes (preditoras). Na regressão linear simples, há apenas uma variável independente, enquanto na regressão múltipla, há duas ou mais.
