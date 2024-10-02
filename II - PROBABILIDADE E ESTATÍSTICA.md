@@ -103,15 +103,15 @@ $$
 
 - **Discreta**: Todos os resultados possíveis têm a mesma probabilidade.
 
-  $$ 
-  P(X = x) = \frac{1}{n}
-  $$
+$$
+P(X = x) = \frac{1}{n}
+$$
 
 - **Contínua**: Distribui igualmente sobre um intervalo \( [a, b] \).
 
-  $$
-  f(x) = \frac{1}{b - a}, \quad a \leq x \leq b
-  $$
+$$
+f(x) = \frac{1}{b - a}, \quad a \leq x \leq b
+$$
 
 #### 2. Distribuição Binomial
 
@@ -145,6 +145,19 @@ $$
 f(x) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
 $$
 
+
+#### 3. Distribuição Normal
+
+Distribuição contínua que é simétrica e em forma de sino, caracterizada pela média `μ` (mu) e desvio padrão `σ` (sigma).
+
+    f(x) = (1 / (σ * sqrt(2π))) * exp(-(x - μ)^2 / (2σ^2))
+
+#### Exemplo
+
+Para uma variável normal com `μ = 0` e `σ = 1` (distribuição normal padrão):
+
+    f(x) = (1 / sqrt(2π)) * exp(-x^2 / 2)
+
 ## 3. Estatísticas Descritivas
 
 As estatísticas descritivas são utilizadas para resumir e descrever os principais aspectos de um conjunto de dados. Elas incluem medidas de tendência central, dispersão e posição.
@@ -155,15 +168,11 @@ As medidas de tendência central descrevem o ponto em torno do qual os dados se 
 
 1. **Média (Média Aritmética)**: A soma de todos os valores dividida pelo número de valores.
 
-   $$ 
-   \text{Média} = \frac{\sum_{i=1}^{n} x_i}{n}
-   $$
+   Média = (Σ xᵢ) / n
 
    **Exemplo**: Para os valores 2, 4, 6:
 
-   $$
-   \text{Média} = \frac{2 + 4 + 6}{3} = 4
-   $$
+   Média = (2 + 4 + 6) / 3 = 4
 
 2. **Mediana**: O valor central de um conjunto de dados ordenado. Se o número de elementos for par, é a média dos dois valores centrais.
 
@@ -179,33 +188,27 @@ As medidas de dispersão indicam o grau de variação ou dispersão dos dados em
 
 1. **Variância**: Mede a média dos quadrados das diferenças dos valores em relação à média.
 
-   $$ 
-   \text{Variância} = \frac{\sum_{i=1}^{n} (x_i - \text{Média})^2}{n}
-   $$
+   Variância = (Σ (xᵢ - Média)²) / n
 
    **Exemplo**: Para 2, 4, 4, 4, 5, 5, 7, 9:
 
-   $$
-   \text{Média} = 5, \quad \text{Variância} = \frac{(2-5)^2 + (4-5)^2 + ... + (9-5)^2}{8} = 4
-   $$
+   Média = 5, Variância = ((2-5)² + (4-5)² + ... + (9-5)²) / 8 = 4
 
 2. **Desvio Padrão**: É a raiz quadrada da variância, medindo a dispersão em unidades da mesma medida dos dados.
 
-   $$
-   \text{Desvio Padrão} = \sqrt{\text{Variância}}
-   $$
+   Desvio Padrão = √Variância
 
-   **Exemplo**: Com a variância \( 4 \), o desvio padrão é \( \sqrt{4} = 2 \).
+   **Exemplo**: Com a variância 4, o desvio padrão é √4 = 2.
 
 3. **Amplitude**: Diferença entre o maior e o menor valor do conjunto.
 
-   **Exemplo**: Para 1, 3, 6, 7, 10, a amplitude é \( 10 - 1 = 9 \).
+   **Exemplo**: Para 1, 3, 6, 7, 10, a amplitude é 10 - 1 = 9.
 
 ### Medidas de Posição
 
 As medidas de posição indicam a localização de um valor específico dentro de um conjunto de dados.
 
-1. **Percentis**: Dividem os dados em 100 partes iguais. O percentil \( p \) é o valor abaixo do qual \( p \% \) dos dados estão localizados.
+1. **Percentis**: Dividem os dados em 100 partes iguais. O percentil `p` é o valor abaixo do qual `p%` dos dados estão localizados.
 
    **Exemplo**: O 50º percentil é a mediana.
 
@@ -217,9 +220,9 @@ As medidas de posição indicam a localização de um valor específico dentro d
 
    **Exemplo**: Para 1, 2, 3, 4, 5, 6, 7, 8, 9:
 
-   - \( Q1 = 2.5 \)
-   - \( Q2 = 5 \)
-   - \( Q3 = 7.5 \)
+   - Q1 = 2.5
+   - Q2 = 5
+   - Q3 = 7.5
 
 
 #### 4. Distribuição de Poisson
@@ -261,7 +264,6 @@ Para \( \lambda = 2 \), a densidade de probabilidade para \( x = 1 \):
 $$
 f(1) = 2 e^{-2 \times 1} = 2 \times 0,1353 = 0,2706
 $$
-
 
 ## 4. Teoremas Fundamentais da Probabilidade
 
@@ -355,6 +357,7 @@ $$
 \bar{X} \sim N\left(170, \frac{10}{\sqrt{100}}\right) = N(170, 1)
 $$
 
+
 ## 5. Distribuições Amostrais
 
 As distribuições amostrais descrevem o comportamento das estatísticas calculadas a partir de amostras, em vez de populações inteiras. Elas são fundamentais para a inferência estatística.
@@ -365,20 +368,20 @@ A distribuição amostral da média mostra como a média das amostras varia. Se 
 
 #### Propriedades
 
-- Média da distribuição amostral (\(\mu_{\bar{X}}\)) é igual à média da população (\(\mu\)).
-- Desvio padrão da distribuição amostral (\(\sigma_{\bar{X}}\)) é:
+- A média da distribuição amostral (\(\mu_{\bar{X}}\)) é igual à média da população (\(\mu\)).
+- O desvio padrão da distribuição amostral (\(\sigma_{\bar{X}}\)) é:
 
-  $$
+  \[
   \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
-  $$
+  \]
 
 #### Exemplo
 
 Para uma população com média 50 e desvio padrão 10, se extraímos amostras de tamanho 25, o desvio padrão da média amostral é:
 
-$$
+\[
 \sigma_{\bar{X}} = \frac{10}{\sqrt{25}} = 2
-$$
+\]
 
 ### Distribuição Amostral da Proporção
 
@@ -386,20 +389,20 @@ Usada para descrever a distribuição da proporção de sucessos em amostras.
 
 #### Propriedades
 
-- Média da distribuição amostral (\(\mu_{\hat{p}}\)) é igual à proporção da população (\(p\)).
-- Desvio padrão da distribuição amostral (\(\sigma_{\hat{p}}\)) é:
+- A média da distribuição amostral (\(\mu_{\hat{p}}\)) é igual à proporção da população (\(p\)).
+- O desvio padrão da distribuição amostral (\(\sigma_{\hat{p}}\)) é:
 
-  $$
+  \[
   \sigma_{\hat{p}} = \sqrt{\frac{p(1 - p)}{n}}
-  $$
+  \]
 
 #### Exemplo
 
 Se 60% de uma população possui uma característica específica, e a amostra tem tamanho 100, o desvio padrão da proporção amostral é:
 
-$$
+\[
 \sigma_{\hat{p}} = \sqrt{\frac{0,6 \times 0,4}{100}} = 0,049
-$$
+\]
 
 ### Distribuição Qui-Quadrado (\(\chi^2\))
 
@@ -408,7 +411,7 @@ Usada principalmente para testar variâncias e independência de variáveis cate
 #### Propriedades
 
 - Não é simétrica, especialmente para pequenos graus de liberdade.
-- Somatória dos quadrados de \( n \) variáveis normais padronizadas.
+- É a somatória dos quadrados de \( n \) variáveis normais padronizadas.
 
 #### Exemplo
 
@@ -420,17 +423,17 @@ Usada quando o tamanho da amostra é pequeno e a variância populacional é desc
 
 #### Fórmula
 
-$$
+\[
 t = \frac{\bar{X} - \mu}{\frac{s}{\sqrt{n}}}
-$$
+\]
 
 #### Exemplo
 
 Para uma amostra de 10 observações com média 20, desvio padrão 5, e média populacional 18:
 
-$$
+\[
 t = \frac{20 - 18}{\frac{5}{\sqrt{10}}} = 1,264
-$$
+\]
 
 ### Distribuição F
 
@@ -445,6 +448,7 @@ Usada para comparar variâncias de duas populações e em ANOVA (análise de var
 
 Comparando duas variâncias, se \( F = 2,5 \) com \( df_1 = 10 \) e \( df_2 = 15 \), indica que a variância do numerador é 2,5 vezes a do denominador.
 
+
 ## 6. Inferência Estatística
 
 A inferência estatística envolve fazer estimativas ou tomar decisões sobre uma população com base em uma amostra. As principais técnicas incluem a estimação e os testes de hipóteses.
@@ -453,7 +457,7 @@ A inferência estatística envolve fazer estimativas ou tomar decisões sobre um
 
 #### Estimação Pontual
 
-A estimação pontual é um único valor que serve como melhor estimativa de um parâmetro populacional. Por exemplo, a média amostral (\(\bar{X}\)) é uma estimativa pontual da média populacional (\(\mu\)).
+A estimação pontual é um único valor que serve como melhor estimativa de um parâmetro populacional. Por exemplo, a média amostral (X̄) é uma estimativa pontual da média populacional (μ).
 
 #### Intervalos de Confiança
 
@@ -461,64 +465,54 @@ Um intervalo de confiança fornece uma faixa de valores dentro da qual o parâme
 
 #### Fórmula do Intervalo de Confiança para a Média
 
-Para uma amostra de tamanho \( n \), média \( \bar{X} \), desvio padrão \( s \), e nível de confiança \( (1 - \alpha) \), o intervalo é dado por:
+Para uma amostra de tamanho n, média X̄, desvio padrão s, e nível de confiança (1 - α), o intervalo é dado por:
 
-$$
-IC = \bar{X} \pm t_{\alpha/2, \, n-1} \cdot \frac{s}{\sqrt{n}}
-$$
+    IC = X̄ ± t(α/2, n-1) * (s / sqrt(n))
 
 #### Exemplo
 
-Para uma média amostral de 50, \( s = 10 \), \( n = 25 \), e nível de confiança de 95%, o intervalo de confiança é:
+Para uma média amostral de 50, s = 10, n = 25, e nível de confiança de 95%, o intervalo de confiança é:
 
-$$
-IC = 50 \pm 2,064 \times \frac{10}{\sqrt{25}} = 50 \pm 4,128
-$$
+    IC = 50 ± 2,064 * (10 / sqrt(25)) = 50 ± 4,128
 
 ### Testes de Hipóteses
 
-Os testes de hipóteses são usados para tomar decisões sobre parâmetros populacionais. Envolvem formular uma hipótese nula (\( H_0 \)) e uma hipótese alternativa (\( H_1 \)).
+Os testes de hipóteses são usados para tomar decisões sobre parâmetros populacionais. Envolvem formular uma hipótese nula (H₀) e uma hipótese alternativa (H₁).
 
 #### Passos para Testar Hipóteses
 
-1. **Formular \( H_0 \) e \( H_1 \)**.
-2. **Escolher o nível de significância** (\( \alpha \), normalmente 0,05).
+1. **Formular H₀ e H₁**.
+2. **Escolher o nível de significância** (α, normalmente 0,05).
 3. **Calcular a estatística de teste**.
 4. **Determinar a região crítica** ou p-valor.
-5. **Tomar uma decisão**: rejeitar ou não rejeitar \( H_0 \).
+5. **Tomar uma decisão**: rejeitar ou não rejeitar H₀.
 
 #### Tipos de Erros
 
-- **Erro Tipo I (\(\alpha\))**: Rejeitar \( H_0 \) quando é verdadeira.
-- **Erro Tipo II (\(\beta\))**: Não rejeitar \( H_0 \) quando é falsa.
+- **Erro Tipo I (α)**: Rejeitar H₀ quando é verdadeira.
+- **Erro Tipo II (β)**: Não rejeitar H₀ quando é falsa.
 
 #### Poder do Teste
 
-O poder do teste (\( 1 - \beta \)) é a probabilidade de rejeitar \( H_0 \) quando \( H_1 \) é verdadeira.
+O poder do teste (1 - β) é a probabilidade de rejeitar H₀ quando H₁ é verdadeira.
 
 ### Testes Específicos
 
 #### Testes z e t para Médias
 
-- **Teste z**: usado quando o tamanho da amostra é grande (\( n > 30 \)) ou a variância populacional é conhecida.
+- **Teste z**: usado quando o tamanho da amostra é grande (n > 30) ou a variância populacional é conhecida.
   
-  $$
-  z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}
-  $$
+    z = (X̄ - μ) / (σ / sqrt(n))
 
 - **Teste t**: usado quando o tamanho da amostra é pequeno e a variância populacional é desconhecida.
 
-  $$
-  t = \frac{\bar{X} - \mu}{\frac{s}{\sqrt{n}}}
-  $$
+    t = (X̄ - μ) / (s / sqrt(n))
 
 #### Testes de Proporções
 
 Testa se a proporção populacional é igual a um valor especificado.
 
-$$
-z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1 - p_0)}{n}}}
-$$
+    z = (p̂ - p₀) / sqrt((p₀ * (1 - p₀)) / n)
 
 #### Testes Qui-Quadrado
 
@@ -533,13 +527,11 @@ Usado para comparar dois grupos e determinar qual é melhor em termos de desempe
 
 ### Exemplo de Teste t para Médias
 
-Se uma amostra de 20 estudantes tem média 80, desvio padrão 10, e estamos testando se a média é 75 com \( \alpha = 0,05 \):
+Se uma amostra de 20 estudantes tem média 80, desvio padrão 10, e estamos testando se a média é 75 com α = 0,05:
 
-$$
-t = \frac{80 - 75}{\frac{10}{\sqrt{20}}} = 2,236
-$$
+    t = (80 - 75) / (10 / sqrt(20)) = 2,236
 
-Com 19 graus de liberdade, compare \( t \) com o valor crítico para decidir se rejeita \( H_0 \).
+Com 19 graus de liberdade, compare t com o valor crítico para decidir se rejeita H₀.
 
 ## 7. Correlação
 
