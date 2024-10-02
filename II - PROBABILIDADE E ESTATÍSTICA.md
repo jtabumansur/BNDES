@@ -4,77 +4,64 @@
 
 ### Definições Básicas de Probabilidade
 
-A probabilidade é um campo da matemática que estuda a chance de eventos ocorrerem. A probabilidade de um evento \( A \), denotada como \( P(A) \), mede o quão provável é que \( A \) ocorra. Ela varia entre 0 (evento impossível) e 1 (evento certo).
+A probabilidade é um campo da matemática que estuda a chance de eventos ocorrerem. A probabilidade de um evento \( A \), denotada como P(A), mede o quão provável é que A ocorra. Ela varia entre 0 (evento impossível) e 1 (evento certo).
 
 #### Fórmula Básica
 
-A fórmula básica para calcular a probabilidade de um evento \( A \) é:
+A fórmula básica para calcular a probabilidade de um evento A é:
 
-$$
-P(A) = \frac{\text{número de resultados favoráveis}}{\text{número total de resultados}}
-$$
+P(A) = (número de resultados favoráveis) / (número total de resultados)
 
 #### Exemplo
 
 Se um dado é lançado, a probabilidade de obter um número par (2, 4, ou 6) é:
 
-$$
-P(\text{número par}) = \frac{3}{6} = 0,5
-$$
+P(número par) = 3/6 = 0,5
 
 ### Axiomas da Probabilidade
 
 Os axiomas de probabilidade, formulados por Kolmogorov, são as regras fundamentais que qualquer medida de probabilidade deve seguir:
 
-1. **Não Negatividade**: Para qualquer evento \( A \), \( P(A) \geq 0 \).
-2. **Normalização**: A probabilidade do espaço amostral inteiro é 1, ou seja, \( P(S) = 1 \).
-3. **Adição**: Para dois eventos mutuamente exclusivos \( A \) e \( B \), \( P(A \cup B) = P(A) + P(B) \).
+1. **Não Negatividade**: Para qualquer evento A, P(A) ≥ 0.
+2. **Normalização**: A probabilidade do espaço amostral inteiro é 1, ou seja, P(S) = 1.
+3. **Adição**: Para dois eventos mutuamente exclusivos A e B, P(A ∪ B) = P(A) + P(B).
 
 ### Probabilidade Condicional
 
-A probabilidade condicional calcula a probabilidade de um evento \( A \) ocorrer, dado que um evento \( B \) já ocorreu. É denotada por \( P(A|B) \).
+A probabilidade condicional calcula a probabilidade de um evento A ocorrer, dado que um evento B já ocorreu. É denotada por P(A|B).
 
 #### Fórmula da Probabilidade Condicional
 
-$$
-P(A|B) = \frac{P(A \cap B)}{P(B)}, \quad \text{se } P(B) > 0
-$$
+P(A|B) = P(A ∩ B) / P(B), se P(B) > 0
 
 #### Exemplo
 
 Se uma urna contém 3 bolas vermelhas e 2 azuis, e uma bola é retirada e não devolvida, a probabilidade de a segunda bola ser azul dado que a primeira era vermelha é:
 
-- \( P(\text{primeira vermelha}) = \frac{3}{5} \).
-- \( P(\text{segunda azul} | \text{primeira vermelha}) = \frac{2}{4} = 0,5 \).
+- P(primeira vermelha) = 3/5
+- P(segunda azul | primeira vermelha) = 2/4 = 0,5
 
 ### Probabilidade da União de Eventos
 
-Para eventos quaisquer \( A \) e \( B \), a probabilidade de ocorrer \( A \) ou \( B \) é dada por:
+Para eventos quaisquer A e B, a probabilidade de ocorrer A ou B é dada por:
 
-$$
-P(A \cup B) = P(A) + P(B) - P(A \cap B)
-$$
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
 
 #### Exemplo
 
 Se a probabilidade de chover é 0,3 e a probabilidade de haver um trânsito pesado é 0,4, e a probabilidade de ambos ocorrerem é 0,1:
 
-$$
-P(\text{chuva ou trânsito}) = 0,3 + 0,4 - 0,1 = 0,6
-$$
+P(chuva ou trânsito) = 0,3 + 0,4 - 0,1 = 0,6
 
 ### Independência de Eventos
 
-Dois eventos \( A \) e \( B \) são independentes se a ocorrência de um não afeta a ocorrência do outro, ou seja, \( P(A \cap B) = P(A) \times P(B) \).
+Dois eventos A e B são independentes se a ocorrência de um não afeta a ocorrência do outro, ou seja, P(A ∩ B) = P(A) × P(B).
 
 #### Exemplo
 
-Se \( P(A) = 0,5 \) e \( P(B) = 0,2 \), e \( A \) e \( B \) são independentes:
+Se P(A) = 0,5 e P(B) = 0,2, e A e B são independentes:
 
-$$
-P(A \cap B) = 0,5 \times 0,2 = 0,1
-$$
-
+P(A ∩ B) = 0,5 × 0,2 = 0,1
 
 ## 2. Variáveis Aleatórias e Distribuições de Probabilidades
 
@@ -368,20 +355,16 @@ A distribuição amostral da média mostra como a média das amostras varia. Se 
 
 #### Propriedades
 
-- A média da distribuição amostral (\(\mu_{\bar{X}}\)) é igual à média da população (\(\mu\)).
-- O desvio padrão da distribuição amostral (\(\sigma_{\bar{X}}\)) é:
+- A média da distribuição amostral (μ_X̄) é igual à média da população (μ).
+- O desvio padrão da distribuição amostral (σ_X̄) é:
 
-  \[
-  \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
-  \]
+  σ_X̄ = σ / √n
 
 #### Exemplo
 
 Para uma população com média 50 e desvio padrão 10, se extraímos amostras de tamanho 25, o desvio padrão da média amostral é:
 
-\[
-\sigma_{\bar{X}} = \frac{10}{\sqrt{25}} = 2
-\]
+σ_X̄ = 10 / √25 = 2
 
 ### Distribuição Amostral da Proporção
 
@@ -389,29 +372,25 @@ Usada para descrever a distribuição da proporção de sucessos em amostras.
 
 #### Propriedades
 
-- A média da distribuição amostral (\(\mu_{\hat{p}}\)) é igual à proporção da população (\(p\)).
-- O desvio padrão da distribuição amostral (\(\sigma_{\hat{p}}\)) é:
+- A média da distribuição amostral (μ_p̂) é igual à proporção da população (p).
+- O desvio padrão da distribuição amostral (σ_p̂) é:
 
-  \[
-  \sigma_{\hat{p}} = \sqrt{\frac{p(1 - p)}{n}}
-  \]
+  σ_p̂ = √[p(1 - p) / n]
 
 #### Exemplo
 
 Se 60% de uma população possui uma característica específica, e a amostra tem tamanho 100, o desvio padrão da proporção amostral é:
 
-\[
-\sigma_{\hat{p}} = \sqrt{\frac{0,6 \times 0,4}{100}} = 0,049
-\]
+σ_p̂ = √[(0,6 × 0,4) / 100] = 0,049
 
-### Distribuição Qui-Quadrado (\(\chi^2\))
+### Distribuição Qui-Quadrado (χ²)
 
 Usada principalmente para testar variâncias e independência de variáveis categóricas.
 
 #### Propriedades
 
 - Não é simétrica, especialmente para pequenos graus de liberdade.
-- É a somatória dos quadrados de \( n \) variáveis normais padronizadas.
+- É a somatória dos quadrados de n variáveis normais padronizadas.
 
 #### Exemplo
 
@@ -423,17 +402,13 @@ Usada quando o tamanho da amostra é pequeno e a variância populacional é desc
 
 #### Fórmula
 
-\[
-t = \frac{\bar{X} - \mu}{\frac{s}{\sqrt{n}}}
-\]
+t = (X̄ - μ) / (s / √n)
 
 #### Exemplo
 
 Para uma amostra de 10 observações com média 20, desvio padrão 5, e média populacional 18:
 
-\[
-t = \frac{20 - 18}{\frac{5}{\sqrt{10}}} = 1,264
-\]
+t = (20 - 18) / (5 / √10) = 1,264
 
 ### Distribuição F
 
@@ -446,7 +421,7 @@ Usada para comparar variâncias de duas populações e em ANOVA (análise de var
 
 #### Exemplo
 
-Comparando duas variâncias, se \( F = 2,5 \) com \( df_1 = 10 \) e \( df_2 = 15 \), indica que a variância do numerador é 2,5 vezes a do denominador.
+Comparando duas variâncias, se F = 2,5 com 10 graus de liberdade no numerador (df₁ = 10) e 15 graus de liberdade no denominador (df₂ = 15), isso indica que a variância do numerador é 2,5 vezes a do denominador.
 
 
 ## 6. Inferência Estatística
