@@ -240,3 +240,224 @@ $$
   - **Problemas de Decisão**: Como alocação de recursos e planejamento de inventário.
 - **Exemplo**: Problema da Mochila: Determinar quais itens levar em uma mochila para maximizar o valor total sem ultrapassar a capacidade.
 
+
+# II - Probabilidade e Estatística
+
+## 1. Fundamentos de Probabilidade
+- **Definições Básicas de Probabilidade**:
+  - A probabilidade de um evento é uma medida do quão provável ele é de ocorrer.
+  - **Fórmula**: Se um evento $A$ pode ocorrer de $n_A$ maneiras distintas e existe um total de $n$ resultados possíveis, então a probabilidade de $A$ é:
+    
+$$
+P(A) = \frac{n_A}{n}
+$$
+    
+- **Axiomas da Probabilidade**:
+  1. $0 \leq P(A) \leq 1$ para qualquer evento $A$.
+  2. $P(\Omega) = 1$, onde $\Omega$ é o espaço amostral.
+  3. Se $A$ e $B$ são eventos mutuamente exclusivos, então $P(A \cup B) = P(A) + P(B)$.
+- **Probabilidade Condicional**:
+  - A probabilidade de um evento $A$ dado que outro evento $B$ ocorreu é:
+    
+$$
+P(A | B) = \frac{P(A \cap B)}{P(B)}, \quad \text{se } P(B) > 0
+$$
+
+## 2. Variáveis Aleatórias e Distribuições de Probabilidades
+- **Variáveis Aleatórias**:
+  - Variáveis que assumem valores numéricos como resultado de experimentos aleatórios.
+  - **Tipos**: Discretas (valores contáveis) e contínuas (valores em um intervalo).
+- **Funções de Probabilidade**:
+  - **Função de Massa de Probabilidade (FMP)** para variáveis discretas: $P(X = x)$.
+  - **Função Densidade de Probabilidade (FDP)** para variáveis contínuas: $f(x)$, onde a área sob a curva $f(x)$ em um intervalo é a probabilidade.
+- **Principais Distribuições**:
+  - **Uniforme**:
+    - Discreta: Cada valor tem a mesma probabilidade. $P(X = x) = \frac{1}{n}$.
+    - Contínua: Probabilidade constante em um intervalo $[a, b]$.
+  - **Binomial**:
+    - Modela o número de sucessos em $n$ ensaios independentes com probabilidade de sucesso $p$.
+    - **Fórmula**: $P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}$.
+  - **Normal**:
+    - Distribuição contínua com curva em forma de sino.
+    - **Fórmula**: $f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}}$.
+  - **Poisson**:
+    - Modela o número de eventos que ocorrem em um intervalo de tempo ou espaço.
+    - **Fórmula**: $P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$.
+  - **Bernoulli**:
+    - Modela experimentos com dois resultados possíveis (sucesso/f
+
+## 4. Teoremas Fundamentais da Probabilidade
+- **Independência de Eventos**:
+  - Dois eventos $A$ e $B$ são independentes se a ocorrência de um não influencia a ocorrência do outro.
+  - **Fórmula**:
+    
+$$
+P(A \cap B) = P(A) \cdot P(B)
+$$
+
+- **Teorema de Bayes**:
+  - Relaciona a probabilidade de um evento dado um outro evento com as probabilidades condicionais inversas.
+  - **Fórmula**:
+    
+$$
+P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}, \quad \text{se } P(B) > 0
+$$
+
+- **Teorema da Probabilidade Total**:
+  - Se $\{B_1, B_2, \ldots, B_n\}$ é uma partição do espaço amostral, então:
+    
+$$
+P(A) = \sum_{i=1}^n P(A | B_i) \cdot P(B_i)
+$$
+
+- **Lei dos Grandes Números**:
+  - À medida que o tamanho da amostra aumenta, a média amostral tende a se aproximar da média populacional.
+  - **Fórmula** (Forma simplificada): $\bar{X}_n \to \mu$ quando $n \to \infty$.
+
+- **Teorema Central do Limite (TCL)**:
+  - A soma (ou média) de um grande número de variáveis aleatórias independentes e identicamente distribuídas tende a seguir uma distribuição normal, independentemente da distribuição original.
+  - **Fórmula**: Se $X_1, X_2, \ldots, X_n$ são variáveis independentes com média $\mu$ e variância $\sigma^2$, então:
+    
+$$
+\frac{\sum_{i=1}^n X_i - n\mu}{\sqrt{n\sigma^2}} \approx N(0, 1) \quad \text{para } n \text{ grande}
+$$
+
+## 5. Distribuições Amostrais
+- **Distribuição Amostral da Média**:
+  - A distribuição da média de uma amostra de tamanho $n$ de uma população com média $\mu$ e variância $\sigma^2$.
+  - **Fórmula**: $\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$ para amostras grandes (pelo TCL).
+  
+- **Distribuição Amostral da Proporção**:
+  - A distribuição da proporção de sucessos em uma amostra de tamanho $n$.
+  - **Fórmula**: $\hat{p} \sim N\left(p, \frac{p(1 - p)}{n}\right)$ para amostras grandes.
+
+- **Distribuição Qui-Quadrado ($\chi^2$)**:
+  - Usada para variáveis que são somas de quadrados de variáveis normais padronizadas.
+  - **Fórmula**: $\chi^2 = \sum_{i=1}^n Z_i^2$, onde $Z_i \sim N(0, 1)$.
+
+- **Distribuição $t$ de Student**:
+  - Usada quando a amostra é pequena e a variância populacional é desconhecida.
+  - **Fórmula**: $t = \frac{\bar{X} - \mu}{S / \sqrt{n}}$, onde $S$ é o desvio padrão amostral.
+
+- **Distribuição $F$**:
+  - Razão de duas variâncias amostrais independentes.
+  - **Fórmula**: $F = \frac{\chi^2_1 / \nu_1}{\chi^2_2 / \nu_2}$, onde $\nu_1$ e $\nu_2$ são os graus de liberdade.
+
+## 6. Inferência Estatística
+- **Estimação Pontual e Intervalar**:
+  - **Estimação Pontual**: Um único valor que serve como melhor estimativa de um parâmetro populacional (ex.: $\bar{x}$ para $\mu$).
+  - **Estimação Intervalar**: Intervalo de valores que, com um certo nível de confiança, contém o parâmetro populacional.
+  
+- **Intervalos de Confiança**:
+  - Intervalos que indicam a precisão de uma estimativa.
+  - **Fórmula** para média com variância conhecida:
+    
+$$
+\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}
+$$
+
+- **Testes de Hipóteses**:
+  - **Formulação**: Define uma hipótese nula ($H_0$) e uma alternativa ($H_1$) e testa qual delas é suportada pelos dados.
+  - **Tipos de Erros**:
+    - **Erro Tipo I** ($\alpha$): Rejeitar $H_0$ quando ela é verdadeira.
+    - **Erro Tipo II** ($\beta$): Não rejeitar $H_0$ quando $H_1$ é verdadeira.
+  - **Poder do Teste**: Probabilidade de rejeitar $H_0$ quando $H_1$ é verdadeira ($1 - \beta$).
+
+- **Testes $z$ e $t$ para Médias**:
+  - **Teste $z$**: Usado quando a variância populacional é conhecida e a amostra é grande.
+  - **Teste $t$**: Usado quando a variância populacional é desconhecida e/ou a amostra é pequena.
+  
+- **Testes de Proporções**:
+  - Compara proporções em duas amostras.
+  - **Fórmula**:
+    
+$$
+z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1 - \hat{p}) \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}}
+$$
+  - Onde $\hat{p}$ é a proporção combinada.
+
+- **Testes Qui-Quadrado para Independência e Ajuste (Goodness-of-Fit)**:
+  - **Independência**: Testa se duas variáveis categóricas são independentes.
+  - **Goodness-of-Fit**: Testa se uma distribuição observada se ajusta a uma distribuição esperada.
+  - **Fórmula**:
+    
+$$
+\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+$$
+  - Onde $O_i$ são os valores observados e $E_i$ são os valores esperados.
+
+- **Teste A/B**:
+  - Compara duas versões de uma variável para determinar qual é mais eficaz.
+  - **Aplicação**: Testes de marketing, otimização de páginas web, etc.
+
+
+# II - Probabilidade e Estatística (Continuação)
+
+## 7. Correlação
+- **Correlação e Causalidade**:
+  - **Correlação**: Medida que indica a força e a direção da relação linear entre duas variáveis.
+  - **Causalidade**: Indica que uma mudança em uma variável causa mudança em outra, o que é diferente de uma simples correlação.
+  - **Atenção**: Correlação não implica causalidade!
+
+- **Correlação de Pearson**:
+  - Medida da força e direção da relação linear entre duas variáveis contínuas.
+  - **Fórmula**: 
+
+$$
+r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}
+$$
+
+  - Onde $r$ varia de -1 (correlação negativa perfeita) a 1 (correlação positiva perfeita), sendo 0 uma ausência de correlação linear.
+
+- **Correlação de Spearman**:
+  - Mede a correlação entre variáveis usando seus ranks.
+  - **Fórmula**: 
+
+$$
+\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+$$
+
+  - Onde $d_i$ é a diferença entre os ranks de $x$ e $y$ e $n$ é o número de pares de dados.
+
+- **Correlação Parcial**:
+  - Mede a correlação entre duas variáveis enquanto controla o efeito de uma ou mais variáveis adicionais.
+  - **Fórmula** para duas variáveis $X$ e $Y$, controlando $Z$: 
+
+$$
+r_{XY \cdot Z} = \frac{r_{XY} - r_{XZ} \cdot r_{YZ}}{\sqrt{(1 - r_{XZ}^2)(1 - r_{YZ}^2)}}
+$$
+
+## 8. Inferência Bayesiana
+- **Distribuições a Priori e a Posteriori**:
+  - **Distribuição a Priori**: Representa o conhecimento inicial sobre um parâmetro antes de observar os dados.
+  - **Distribuição a Posteriori**: Atualiza a distribuição a priori com a informação dos dados observados.
+  - **Fórmula**: 
+
+$$
+P(\theta | X) = \frac{P(X | \theta) \cdot P(\theta)}{P(X)}
+$$
+
+  - Onde $P(\theta | X)$ é a distribuição a posteriori, $P(X | \theta)$ é a verossimilhança e $P(\theta)$ é a distribuição a priori.
+
+- **Estimativa Pontual e Intervalar**:
+  - **Estimativa Pontual**: Valor único que é a melhor estimativa do parâmetro (ex.: média a posteriori).
+  - **Estimativa Intervalar**: Intervalo de valores com uma certa probabilidade de conter o parâmetro (ex.: intervalo de credibilidade).
+
+- **Predição e Testes de Hipóteses Bayesianos**:
+  - **Predição**: Determina a distribuição de novos dados usando a distribuição a posteriori.
+  - **Testes de Hipóteses**: Compara hipóteses usando a razão de verossimilhanças e distribuições a posteriori.
+
+- **Critérios de Seleção de Modelos**:
+  - **BIC (Bayesian Information Criterion)** e **AIC (Akaike Information Criterion)** são usados para comparar modelos, penalizando a complexidade do modelo.
+  - **Fórmula do BIC**: 
+
+$$
+\text{BIC} = -2 \ln(\hat{L}) + k \ln(n)
+$$
+
+  - Onde $\hat{L}$ é a verossimilhança do modelo ajustado, $k$ é o número de parâmetros e $n$ é o tamanho da amostra.
+
+- **Métodos MCMC (Markov Chain Monte Carlo)**:
+  - Usados para gerar amostras de distribuições complexas, quando não é possível obter uma solução analítica para a distribuição a posteriori.
+  - **Exemplos de Métodos**: Algoritmo de Metropolis-Hastings, Amostragem de Gibbs.
+  - **Aplicação**: Geração de amostras da distribuição a posteriori de um parâmetro para fazer inferência Bayesiana.
