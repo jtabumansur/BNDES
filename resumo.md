@@ -948,3 +948,217 @@ $$
 - **Modelos de Markov Ocultos**: Modelam sistemas onde o estado observado depende de um estado interno oculto.
 - **Aprendizado Profundo Probabilístico**: Combina deep learning com modelos probabilísticos para capturar incertezas.
 - **Conformal Prediction**: Método que fornece intervalos de confiança para predições individuais, garantindo cobertura estatística.
+
+
+# Técnicas de Pré-Processamento de Texto
+
+**Resumo**: O pré-processamento de texto é fundamental para transformar dados brutos em um formato adequado para análise e modelagem. Essas técnicas ajudam a simplificar o texto, reduzir sua variabilidade e garantir que apenas as informações mais relevantes sejam consideradas, resultando em uma base de dados mais limpa e eficiente para o treinamento de modelos de NLP. 
+
+O pré-processamento de texto é uma etapa essencial no Processamento de Linguagem Natural (PLN), pois prepara os dados textuais para serem analisados de forma eficiente por modelos de linguagem. Aqui estão algumas das principais técnicas de pré-processamento:
+
+## Limpeza
+- **O que é?** Remover elementos indesejados do texto, como pontuação, números, links, emojis e caracteres especiais.
+- **Exemplo**: Transformar "Olá! Visite nosso site: www.exemplo.com 😊" em "Olá Visite nosso site".
+- **Para que serve?** Simplifica o texto, mantendo apenas as informações relevantes, e facilita a análise posterior.
+
+## Normalização
+- **O que é?** Padronizar o texto para eliminar variações que não são relevantes para o modelo.
+- **Como funciona?** Pode incluir transformar todas as palavras para minúsculas (ex.: "Texto" vira "texto") e corrigir erros ortográficos.
+- **Para que serve?** Reduz a quantidade de variações desnecessárias, como palavras que diferem apenas por estarem em caixa alta ou baixa, melhorando a consistência dos dados.
+
+## Remoção de Stop Words
+- **O que é?** Excluir palavras muito comuns que não adicionam significado relevante ao texto, como "o", "de", "a" em português ou "the", "is", "and" em inglês.
+- **Para que serve?** Reduz o tamanho do texto e melhora o foco do modelo nas palavras mais significativas para a análise.
+- **Exemplo**: Transformar "O gato está na casa" em "gato casa".
+
+## Stemming
+- **O que é?** Reduzir palavras ao seu radical ou raiz, removendo sufixos.
+- **Como funciona?** Corta as terminações para reduzir palavras diferentes ao mesmo tronco básico.
+- **Exemplo**: As palavras "correr", "correndo" e "correu" se tornam "corr".
+- **Para que serve?** Diminui a complexidade dos dados, agrupando palavras que têm o mesmo significado.
+
+## Lematização
+- **O que é?** Reduzir palavras à sua forma canônica ou dicionário, considerando o contexto gramatical.
+- **Como funciona?** Em vez de cortar sufixos de forma arbitrária como no stemming, converte palavras para o seu "lema" correto.
+- **Exemplo**: "Correr", "correndo" e "correu" são todos convertidos para "correr".
+- **Para que serve?** Mantém uma representação mais precisa das palavras, facilitando a análise do significado.
+
+## Demais Técnicas
+- **Tokenização**: Dividir o texto em unidades menores chamadas "tokens", como palavras ou frases. 
+  - **Exemplo**: Transformar "Eu gosto de maçãs" em ["Eu", "gosto", "de", "maçãs"].
+- **Remoção de Números**: Eliminar números do texto, caso não sejam relevantes para a análise. 
+  - **Exemplo**: "Hoje é dia 10" se torna "Hoje é dia".
+- **Expansão de Contrações**: Transformar contrações em suas formas completas, como "não é" em "não é" e "isn't" em "is not".
+- **Correção Ortográfica**: Ajustar erros de digitação ou gramática para garantir que as palavras estejam corretas.
+
+# Representação de Texto
+
+Técnicas que transformam textos em números que os computadores podem entender, preservando o significado e contexto das palavras. Isso é essencial para tarefas como tradução automática, análise de sentimentos, busca inteligente e muito mais.
+
+## N-grams
+- **O que são?** Sequências de n palavras ou caracteres consecutivos em um texto.
+- **Exemplo**: Para n = 2 (bigramas), na frase "Eu gosto de maçãs", temos "Eu gosto", "gosto de", "de maçãs".
+- **Para que servem?** Capturam a relação entre palavras vizinhas e ajudam na análise de padrões de linguagem.
+
+## CBoW (Continuous Bag of Words)
+- **O que é?** Um modelo que prevê uma palavra com base nas palavras que a cercam (contexto).
+- **Como funciona?** Se você tem uma frase com uma palavra faltando, o modelo tenta adivinhar essa palavra usando as demais.
+- **Exemplo**: Em "_ gosto de maçãs", o modelo pode prever "Eu".
+
+## TF-IDF (Term Frequency-Inverse Document Frequency)
+- **O que é?** Avalia a importância de uma palavra em um documento em relação a um conjunto de documentos.
+- **Como funciona?** Combina a frequência da palavra no documento (TF) e a raridade da palavra em todos os documentos (IDF).
+- **Para que serve?** Destaca palavras que são importantes em um documento específico, mas não comuns em geral.
+
+## Word Embeddings
+- **O que são?** Representações numéricas de palavras em forma de vetores que capturam significados e relações semânticas.
+- **Word2Vec**: Treina palavras com base no contexto, posicionando palavras similares próximas em um espaço vetorial.
+- **GloVe**: Combina estatísticas globais de coocorrência de palavras para criar embeddings que capturam relações semânticas.
+- **Outros**: FastText, que considera subpalavras para lidar com palavras raras ou desconhecidas.
+
+## Document Embeddings
+- **O que são?** Extensão dos word embeddings para representar frases, parágrafos ou documentos inteiros como vetores.
+- **Doc2Vec**: Gera vetores para documentos inteiros, permitindo comparar e analisar textos completos.
+- **BERT (Bidirectional Encoder Representations from Transformers)**: Modelo pré-treinado que considera o contexto à esquerda e à direita de uma palavra simultaneamente.
+- **ELMo (Embeddings from Language Models)**: Gera embeddings dinâmicos considerando o contexto completo da palavra na frase.
+- **Outros**: GPT, RoBERTa, que também são modelos avançados para representação de textos.
+
+
+# X - Programação e Ferramentas
+
+## 1. Linguagem de Programação Python
+- **Sintaxe Básica**: Regras fundamentais para escrever código Python, incluindo indentação obrigatória para definir blocos de código.
+- **Operadores**: Símbolos usados para realizar operações matemáticas, lógicas e de comparação (ex: `+`, `-`, `*`, `/`, `==`, `!=`, `and`, `or`).
+- **Variáveis**: Nomes que armazenam valores ou referências a objetos para uso posterior no código.
+- **Estruturas de Dados**:
+  - **Listas**: Coleções ordenadas e mutáveis de elementos.
+  - **Dicionários**: Coleções de pares chave-valor, permitindo acesso rápido aos valores através das chaves.
+  - **Conjuntos**: Coleções não ordenadas de elementos únicos.
+  - **Tuplas**: Coleções ordenadas e imutáveis de elementos.
+  - **DataFrames**: Estruturas de dados bidimensionais do pandas para manipulação de dados tabulares.
+- **Estruturas de Controle de Fluxo**: Comandos que alteram o fluxo de execução do programa (`if`, `else`, `for`, `while`, `break`, `continue`).
+- **Funções**: Blocos de código reutilizáveis que executam uma tarefa específica, podendo receber parâmetros e retornar valores.
+- **Escopo**: Área do programa onde uma variável está acessível (local ou global).
+- **Métodos**: Funções associadas a objetos que podem alterar o estado do objeto ou executar ações.
+- **Paralelização de Rotinas**: Execução simultânea de tarefas para melhorar a eficiência, utilizando bibliotecas como `multiprocessing` ou `threading`.
+- **Serialização e Desserialização**: Processos de converter objetos em um formato que possa ser armazenado ou transmitido (como JSON ou pickle) e reconvertê-los ao formato original.
+
+## 2. Bibliotecas Python
+- **Pandas**: Biblioteca para manipulação e análise de dados, oferecendo estruturas como DataFrames para limpeza, transformação e pré-processamento.
+- **NumPy**: Fornece suporte para arrays e matrizes multidimensionais, além de funções matemáticas de alto desempenho.
+- **Matplotlib e Seaborn**: Bibliotecas para visualização de dados; Matplotlib é versátil para gráficos gerais, enquanto Seaborn é focado em visualizações estatísticas.
+- **TensorFlow, Keras e PyTorch**: Plataformas para construção e treinamento de redes neurais e modelos de deep learning.
+- **Scikit-learn e XGBoost**: Bibliotecas de aprendizado de máquina que incluem algoritmos para classificação, regressão, clustering e redução de dimensionalidade.
+- **NLTK e spaCy**: Ferramentas para processamento de linguagem natural, permitindo manipulação e análise de texto.
+- **Hugging Face**: Biblioteca que disponibiliza modelos de linguagem de grande porte (LLMs) e ferramentas para NLP avançado.
+- **PySpark**: Interface para Apache Spark em Python, utilizada para processamento de big data de forma distribuída.
+- **Beautiful Soup**: Biblioteca para extração de dados de arquivos HTML e XML, facilitando o web scraping.
+- **Streamlit**: Framework para criação rápida de aplicações web interativas voltadas para dados e aprendizado de máquina.
+
+## 3. Linguagem SQL (Structured Query Language)
+- **Conceitos Introdutórios**: Linguagem padrão para gerenciar e manipular bancos de dados relacionais.
+- **Comandos Básicos para Consultas**:
+  - `SELECT`: Recupera dados de uma ou mais tabelas.
+  - `INSERT`: Insere novos registros em uma tabela.
+  - `UPDATE`: Atualiza dados existentes em uma tabela.
+  - `DELETE`: Remove registros de uma tabela.
+- **Análise de Dados com SQL**:
+  - **Funções de Agregação**: Operações como `SUM`, `COUNT`, `AVG`, `MIN`, `MAX` para resumir dados.
+  - **Filtros**: Uso de `WHERE` para selecionar registros que atendam a determinadas condições.
+  - **JOINS**: Combinação de registros de duas ou mais tabelas com base em campos relacionados.
+  - **Subconsultas**: Consultas aninhadas dentro de outras consultas para operações mais complexas.
+  - **Ordenação e Agrupamento**: Uso de `ORDER BY` e `GROUP BY` para organizar os resultados.
+
+## 4. Gestão de Código
+- **Qualidade de Código**: Práticas que visam manter o código limpo, legível e fácil de manter, seguindo padrões e convenções.
+- **Testes Automatizados**: Criação de testes que verificam automaticamente se o código funciona conforme o esperado, usando frameworks como `unittest` ou `pytest`.
+- **Versionamento (Git)**: Sistema de controle de versão que rastreia mudanças no código ao longo do tempo, facilitando colaboração e gerenciamento de projetos.
+
+## 5. Ambientes de Programação
+- **JupyterHub e Jupyter Notebooks**: Ambientes interativos que permitem combinar código, visualizações e texto explicativo em um único documento.
+- **Linha de Comando**:
+  - **Navegação em Diretórios**: Comandos como `cd`, `ls`, `pwd` para mover-se entre pastas.
+  - **Manipulação de Arquivos e Dados**: Comandos como `cp`, `mv`, `rm` para copiar, mover e remover arquivos.
+  - **Gerenciamento de Processos**: Comandos para iniciar, monitorar e encerrar processos (`ps`, `top`, `kill`).
+  - **Configuração de Ambientes e Variáveis de Ambiente**: Ajuste das configurações do sistema e definições de variáveis que influenciam o comportamento de programas.
+- **Gerenciamento de Pacotes Python (pip)**: Ferramenta para instalar, atualizar e remover pacotes Python.
+- **Ambientes Virtuais Python**: Criação de ambientes isolados para projetos, evitando conflitos de dependências, utilizando ferramentas como `venv` ou `conda`.
+
+## 6. Microsoft Power BI
+- **Conexão e Importação de Dados**: Importação de dados de diversas fontes, como bancos de dados, arquivos Excel ou serviços online.
+- **Modelagem de Dados**: Criação de relacionamentos entre tabelas e definição de hierarquias para facilitar a análise.
+- **Criação de Medidas e Colunas Calculadas**: Uso de DAX (Data Analysis Expressions) para criar cálculos personalizados.
+- **Visualizações e Gráficos**: Construção de gráficos interativos como tabelas, gráficos de barras, linhas, mapas e mais.
+- **Interações entre Visualizações**: Configuração de como os gráficos interagem entre si ao filtrar ou destacar informações.
+- **Criação de Relatórios e Painéis**: Montagem de páginas de relatório com visualizações e publicação de painéis para compartilhamento e monitoramento de métricas.
+
+# XI - Visualização, Storytelling e Comunicação Corporativa
+
+## 1. Principais Tipos de Visualizações e Gráficos
+- **Tabela**: Apresenta dados em formato de linhas e colunas, ideal para comparações detalhadas.
+- **Gráfico de Barras**: Usa barras para representar valores, facilitando comparações entre categorias.
+- **Gráfico de Linhas**: Conecta pontos de dados com linhas, mostrando tendências ao longo do tempo.
+- **Gráfico de Pizza**: Mostra proporções de um todo, dividindo um círculo em fatias.
+- **Gráfico de Dispersão**: Exibe a relação entre duas variáveis numéricas através de pontos em um plano cartesiano.
+- **Histograma**: Representa a distribuição de frequências de uma variável contínua através de barras.
+- **Gráfico de Área**: Similar ao gráfico de linhas, mas com a área abaixo da linha preenchida, destacando volumes.
+- **Boxplot**: Visualiza a distribuição de dados através de quartis, destacando medianas e outliers.
+- **Gráfico de Bolhas**: Extensão do gráfico de dispersão, onde o tamanho das bolhas representa uma terceira variável.
+- **Gráfico de Radar**: Exibe múltiplas variáveis em eixos que partem de um ponto central, formando uma forma poligonal.
+- **Mapas Cartográficos**: Representam dados geoespaciais em mapas, indicando distribuição geográfica.
+- **Mapa de Calor**: Usa cores para representar valores em uma matriz, destacando padrões e intensidades.
+
+## 2. Visualização de Dados
+- **Princípios de Design de Gráficos Efetivos**: Clareza, simplicidade e foco na mensagem principal; evitar elementos desnecessários que possam distrair.
+- **Principais Conceitos de Codificação Visual**: Uso adequado de cores, formas, tamanhos e posições para representar informações de forma intuitiva.
+- **Interatividade**: Permitir que o usuário explore os dados através de zoom, filtragens e detalhes sob demanda.
+- **Acessibilidade em Gráficos**: Garantir que visualizações sejam compreensíveis para todos, incluindo pessoas com deficiências visuais ou daltonismo.
+
+## 3. Dashboards
+- **Técnicas para Construção de Interfaces e Layout**: Organizar elementos de forma lógica e estética, facilitando a navegação e compreensão.
+- **Abordagens para Escolha de Designs**: Selecionar estilos que atendam às necessidades do público-alvo e ao contexto dos dados.
+- **Organização de Elementos Visuais e Gráficos**: Priorizar informações importantes e agrupar gráficos relacionados.
+- **Seleção de Gráficos e Visualizações**: Escolher o tipo de gráfico que melhor representa os dados e insights desejados.
+- **Interatividades e Drill-Downs**: Permitir que usuários aprofundem-se nos dados clicando em elementos para obter detalhes adicionais.
+- **Acessibilidade**: Construir dashboards que sejam utilizáveis por pessoas com diferentes habilidades e tecnologias assistivas.
+
+## 4. Storytelling com Dados
+- **Construção de Narrativas Visuais e Contextualizações**: Utilizar gráficos e textos para contar uma história clara e envolvente sobre os dados.
+- **Componentes de um Storytelling Efetivo**: Contexto, conflito, dados, insights e chamada à ação; conectar os dados a uma narrativa que ressoe com o público.
+
+## 5. Reportes Executivos
+- **Princípios de Comunicação Corporativa**: Comunicação clara, concisa e orientada a resultados; foco nas informações relevantes para a tomada de decisão.
+- **Interpretação e Apresentação de Dados de Resultados de Análises e de Insights**: Traduzir dados complexos em insights acionáveis, utilizando linguagem apropriada ao público executivo.
+
+# XII – Governança e Segurança de Dados
+
+## 1. Noções de Governança de Dados (DMBOK)
+- **Conceitos e Objetivos da Governança de Dados**: Estabelecer políticas e procedimentos para garantir a qualidade, disponibilidade e segurança dos dados na organização.
+- **Principais Técnicas de Qualidade e Integridade de Dados**: Implementação de processos para limpeza, validação e monitoramento contínuo dos dados.
+- **Princípios de Privacidade e Proteção a Dados**: Garantir o cumprimento de regulamentações como a LGPD, protegendo informações sensíveis e respeitando os direitos dos indivíduos.
+
+# XIII – Governança, Segurança e Aplicação Responsável de IA
+
+## 1. Noções de Governança de IA
+- **Conceitos e Objetivos da Governança de IA**: Definir estruturas e práticas para o desenvolvimento, implementação e monitoramento ético e eficaz de soluções de IA.
+- **Gestão de Riscos em IA**: Identificar, avaliar e mitigar riscos associados ao uso de IA, incluindo impactos legais, éticos e operacionais.
+- **Gestão de Ciclo de Vida de Modelos**: Acompanhar todas as etapas dos modelos de IA, desde o desenvolvimento até a desativação, garantindo performance e conformidade contínuas.
+
+## 2. Principais Riscos e Vulnerabilidades Relacionados à IA
+- **Viés Algorítmico**: Tendências injustas ou preconceituosas nos resultados da IA devido a dados ou modelos enviesados.
+- **Exposição de Dados Sensíveis**: Risco de que dados pessoais ou confidenciais sejam revelados por meio de modelos de IA.
+- **Envenenamento de Dados de Treinamento**: Inserção intencional de dados maliciosos para corromper o modelo.
+- **Ataques Adversariais**: Pequenas perturbações nos dados de entrada que enganam o modelo para produzir resultados incorretos.
+- **Ataques de Manipulação de Modelos**: Tentativas de alterar o comportamento do modelo sem autorização.
+- **Roubo de Modelos**: Risco de que terceiros possam reproduzir ou obter acesso não autorizado aos modelos proprietários.
+- **Ataque de Inferência**: Quando um invasor deduz informações confidenciais a partir das saídas do modelo.
+- **Alucinações**: Geração de informações falsas ou inconsistentes pelo modelo de IA, especialmente em modelos de linguagem.
+
+## 3. Aplicação de IA Responsável
+- **Definição**: Uso ético, transparente e justo de tecnologias de IA, visando benefícios sociais e minimizando impactos negativos.
+- **Ética**: Consideração de princípios morais na concepção e implementação de soluções de IA.
+- **Transparência**: Clareza sobre como os modelos de IA funcionam e tomam decisões.
+- **Justiça e Equidade**: Garantir que a IA não perpetue ou amplifique desigualdades existentes.
+- **Responsabilização**: Definição clara de responsabilidades em caso de falhas ou impactos negativos da IA.
+- **Segurança Cibernética**: Proteção dos sistemas de IA contra ameaças e ataques.
+- **Compliance Regulatório**: Adesão a leis e regulamentações aplicáveis ao uso de IA, garantindo conformidade legal.
